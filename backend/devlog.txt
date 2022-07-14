@@ -1,0 +1,8 @@
+[Yuri - 14/07]
+
+Criação dos primeiros arquivos da API e da estrutura básica, assim como a configuração básica de 
+ambiente. O ponto de entrada (main) cria uma nova instância da classe App (infra/App). Caso o
+parâmetro test seja passado(true), as opções configuração (porta e nome da api, retirada do arquivos
+de ambiente) são mostrados e a api encerra. Em caso negativo, ela passa rodar e aguardar requisições.
+
+--- 
