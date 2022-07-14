@@ -46,6 +46,15 @@ Maycon Rocha"/><br>
 ## :computer: # Front-end
 <table>
   <tr>
+    <td align="center">
+      	<a href="https://github.com/fercosta92">
+        <img src="https://avatars.githubusercontent.com/u/102771631?v=4" width="100px;" alt="Foto de 
+        Fernanda da Costa"/><br>
+        <sub>
+          <b>Fernanda da Costa</b>
+        </sub>
+      </a>
+    </td>
    	<td align="center">
       	<a href="https://github.com/JulianaAmancio">
         <img src="https://avatars.githubusercontent.com/u/102419005?v=4" width="100px;" alt="Foto de Juliana Amancio"/><br>
