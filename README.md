@@ -48,7 +48,7 @@ Maycon Rocha"/><br>
     </td>
        	<td align="center">
       	<a href="https://github.com/rafaelsangali">
-        <img src="https://avatars.githubusercontent.com/u/96629688?v=4 width="100px;" alt="Foto de Rafael Sangali"/><br>
+        <img src="https://avatars.githubusercontent.com/u/96629688?v=4" width="100px;" alt="Foto de Rafael Sangali"/><br>
         <sub>
           <b>Rafael Sangali</b>
         </sub>
