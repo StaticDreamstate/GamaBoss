@@ -12,6 +12,14 @@ Documentação em progresso....
 ## :computer: # Back-end
 <table>
   <tr>
+      <td align="center">
+      <a href="https://github.com/igorpardinho">
+        <img src="https://avatars.githubusercontent.com/u/81662339?v=4" width="100px;" alt="Foto do 
+Igor Pardinho"/><br>
+        <sub>
+          <b>Igor Pardinho</b>
+        </sub>
+      </a>
     </td>
     <td align="center">
       <a href="https://github.com/minrocha">
