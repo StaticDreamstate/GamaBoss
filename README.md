@@ -30,7 +30,7 @@ Maycon Rocha"/><br>
         </sub>
       </a>
     </td>
-    td align="center">
+    <td align="center">
       <a href="https://github.com/VictorBran">
         <img src="https://avatars.githubusercontent.com/u/102419013?v=4" width="100px;" alt="Foto do 
 Victor Brandão"/><br>
