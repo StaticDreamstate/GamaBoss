@@ -30,6 +30,15 @@ Maycon Rocha"/><br>
         </sub>
       </a>
     </td>
+    td align="center">
+      <a href="https://github.com/VictorBran">
+        <img src="https://avatars.githubusercontent.com/u/102419013?v=4" width="100px;" alt="Foto do 
+Victor Brandão"/><br>
+        <sub>
+          <b>Victor Brandão</b>
+        </sub>
+      </a>
+    </td>
      <td align="center">
       <a href="https://github.com/StaticDreamstate">
         <img src="https://avatars.githubusercontent.com/u/102414254?v=4" width="100px;" alt="Foto do Yuri Felipe Scabio"/><br>
