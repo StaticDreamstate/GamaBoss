@@ -1,0 +1,15 @@
+{"level":"info","message":"[setup] Teste de configuração executado.","service":"user-service","timestamp":"2022-07-15T23:01:49.953Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:03:07.507Z"}
+{"level":"warn","message":"[setup] Conexão Recusada: Porta em Uso.","service":"user-service","timestamp":"2022-07-15T23:03:56.681Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:05:00.840Z"}
+{"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:05:10.106Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:06:25.525Z"}
+{"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:06:30.058Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:07:03.110Z"}
+{"level":"warn","message":"[setup] Conexão Recusada: Porta em Uso.","service":"user-service","timestamp":"2022-07-15T23:07:07.378Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:28:38.599Z"}
+{"level":"info","message":"[setup] Teste de configuração executado.","service":"user-service","timestamp":"2022-07-15T23:28:49.841Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:30:39.773Z"}
+{"level":"warn","message":"[setup] Conexão Recusada: Porta em Uso.","service":"user-service","timestamp":"2022-07-15T23:31:28.309Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:32:42.841Z"}
+{"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:32:53.149Z"}

@@ -1,37 +1,54 @@
-import Express, {Application} from "express";
+import Express, { Application } from "express";
 import ENV from "../infra/config/env";
+import logger from "../infra/logger";
+import detect from "detect-port";
 
 type SetupOptions = {
-    test?: boolean;
-    port?: number;
+  test?: boolean;
+  port?: number;
 };
 
 export default class App {
-    private instance: Application;
-    private defaultPort: number = 4000;
+  private instance: Application;
+  private defaultPort: number = 4000;
 
-    constructor() {
-        this.instance = Express();
+  constructor() {
+    this.instance = Express();
+  }
+
+  async setup(options: SetupOptions): Promise<void> {
+    const selectedPort = options.port ? options.port : this.defaultPort;
+    this.instance.use(Express.json());
+
+    if (options.test) {
+      console.log("[OK] Teste de configuração.");
+      console.log(`API: ${ENV.API_NAME}`);
+      console.log(`Porta TCP: ${selectedPort}`);
+      console.log("Saindo...");
+      logger.info("[setup] Teste de configuração executado.");
+      return;
     }
 
-    async setup(options: SetupOptions): Promise<void> {
-        const selectedPort = options.port ? options.port : this.defaultPort;
-        this.instance.use(Express.json());
-        
-        if (options.test) {
-          console.log("[OK] Teste de configuração.");
-          console.log(`API: ${ENV.API_NAME}`);
-          console.log(`Porta TCP: ${selectedPort}`);
-          console.log("Saindo...");
-          return;
+    detect(selectedPort)
+      .then(_port => {
+        if (selectedPort == _port) {
+          this.instance.listen(selectedPort, () => {
+            console.log(`[OK] API aguardando requisições... [Porta TCP ${selectedPort}]`);
+            logger.info("[setup] API em execução.");
+          })
+        } else {
+          console.log("[!] Conexão Recusada.");
+          logger.warn("[setup] Conexão Recusada: Porta em Uso.");
         }
+      })
+      .catch(err => {
+        console.error("[!] Conexão Recusada.");
+        logger.error("[setup] Conexão Recusada:" + err);
+      });
 
-        this.instance.listen(selectedPort, () =>
-          console.log(`[OK] API aguardando requisições... [Porta TCP ${selectedPort}]`)
-        );
-      }
-    
-      getInstance() {
-        return this.instance;
-      }  
-    }
+  }
+
+  getInstance() {
+    return this.instance;
+  }
+}
