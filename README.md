@@ -72,6 +72,14 @@ Victor Brandão"/><br>
         </sub>
       </a>
     </td>
+     	<td align="center">
+      	<a href="https://github.com/Miguel1989-hub/">
+        <img src="https://avatars.githubusercontent.com/u/90945846?v=4" width="100px;" alt="Foto de Miguel Mendes de Barros"/><br>
+        <sub>
+          <b>Miguel Mendes de Barros</b>
+        </sub>
+      </a>
+    </td>
        	<td align="center">
       	<a href="https://github.com/rafaelsangali">
         <img src="https://avatars.githubusercontent.com/u/96629688?v=4" width="100px;" alt="Foto de Rafael Sangali"/><br>
