@@ -6,3 +6,20 @@ parâmetro test seja passado(true), as de opções configuração (porta e nome 
 de ambiente) são mostrados e a api encerra. Em caso negativo, ela passa rodar e aguardar requisições.
 
 --- 
+
+[Yuri - 15/07]
+
+Logger(winston) implementado com três níveis: error(0), warn(2) e info(3). Biblioteca detect-port usada
+para testar os logs ao detectar se a porta da api já está sendo utilizada por uma de suas instâncias
+(caso sim, gera um warn), além de testar outros erros genéricos. 
+
+Novos arquivos na estrutura:
+
+src/infra/logger -> arquivo de definição e configuração do logger.
+src/infra/logs -> "rotas" dos logs (errors.log, warns.log e info.log)
+
+Alterações: 
+
+src/infra/App.ts -> implementação da promise da detect-port.
+
+--- 
