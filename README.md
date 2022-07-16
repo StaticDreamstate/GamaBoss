@@ -66,7 +66,7 @@ Victor Brandão"/><br>
     </td>
       <td align="center">
       	<a href="https://github.com/pradojvictor">
-        <img src="https://avatars.githubusercontent.com/u/102419052?v=4 width="100px;" alt="Foto de 
+        <img src="https://avatars.githubusercontent.com/u/102419052?v=4" width="100px;" alt="Foto de 
         João Victor Prado"/><br>
         <sub>
           <b>João Victor Prado</b>
