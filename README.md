@@ -64,6 +64,15 @@ Victor Brandão"/><br>
         </sub>
       </a>
     </td>
+      <td align="center">
+      	<a href="https://github.com/pradojvictor">
+        <img src="https://avatars.githubusercontent.com/u/102419052?v=4 width="100px;" alt="Foto de 
+        João Victor Prado"/><br>
+        <sub>
+          <b>João Victor Prado</b>
+        </sub>
+      </a>
+    </td>
    	<td align="center">
       	<a href="https://github.com/JulianaAmancio">
         <img src="https://avatars.githubusercontent.com/u/102419005?v=4" width="100px;" alt="Foto de Juliana Amancio"/><br>
