@@ -81,6 +81,14 @@ Victor Brandão"/><br>
         </sub>
       </a>
     </td>
+    	<td align="center">
+      	<a href="https://github.com/tereus100">
+        <img src="https://avatars.githubusercontent.com/u/95185745?v=4" width="100px;" alt="Foto de Mateus Farias Santos"/><br>
+        <sub>
+          <b>Mateus Farias Santos</b>
+        </sub>
+      </a>
+    </td>
      	<td align="center">
       	<a href="https://github.com/Miguel1989-hub/">
         <img src="https://avatars.githubusercontent.com/u/90945846?v=4" width="100px;" alt="Foto de Miguel Mendes de Barros"/><br>
@@ -94,6 +102,14 @@ Victor Brandão"/><br>
         <img src="https://avatars.githubusercontent.com/u/96629688?v=4" width="100px;" alt="Foto de Rafael Sangali"/><br>
         <sub>
           <b>Rafael Sangali</b>
+        </sub>
+      </a>
+    </td>
+    <td align="center">
+      	<a href="https://github.com/SrNascimento40">
+        <img src="https://avatars.githubusercontent.com/u/65576111?v=4" width="100px;" alt="Foto de Wallace Nascimento"/><br>
+        <sub>
+          <b>Wallace Nascimento</b>
         </sub>
       </a>
     </td>
