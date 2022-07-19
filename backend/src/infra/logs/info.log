@@ -13,3 +13,7 @@
 {"level":"warn","message":"[setup] Conexão Recusada: Porta em Uso.","service":"user-service","timestamp":"2022-07-15T23:31:28.309Z"}
 {"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-15T23:32:42.841Z"}
 {"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:32:53.149Z"}
+{"level":"error","message":"[createConnection] Conexão Recusada:TypeError [ERR_INVALID_URL]: Invalid URL","service":"user-service","timestamp":"2022-07-19T20:57:12.395Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-19T20:57:12.427Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-19T20:57:57.637Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-19T20:57:57.657Z"}

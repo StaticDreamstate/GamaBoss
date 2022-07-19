@@ -1,3 +1,4 @@
 {"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:05:10.106Z"}
 {"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:06:30.058Z"}
 {"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:32:53.149Z"}
+{"level":"error","message":"[createConnection] Conexão Recusada:TypeError [ERR_INVALID_URL]: Invalid URL","service":"user-service","timestamp":"2022-07-19T20:57:12.395Z"}

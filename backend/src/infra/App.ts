@@ -2,6 +2,7 @@ import Express, { Application } from "express";
 import ENV from "../infra/config/env";
 import logger from "../infra/logger";
 import detect from "detect-port";
+import { mongoDB } from "../database";
 
 type SetupOptions = {
   test?: boolean;
@@ -19,11 +20,13 @@ export default class App {
   async setup(options: SetupOptions): Promise<void> {
     const selectedPort = options.port ? options.port : this.defaultPort;
     this.instance.use(Express.json());
+    await mongoDB.createConnection();
 
     if (options.test) {
       console.log("[OK] Teste de configuração.");
       console.log(`API: ${ENV.API_NAME}`);
       console.log(`Porta TCP: ${selectedPort}`);
+      console.log(`Banco de dados: ${ENV.DB_NAME}`);
       console.log("Saindo...");
       logger.info("[setup] Teste de configuração executado.");
       return;
@@ -37,12 +40,10 @@ export default class App {
             logger.info("[setup] API em execução.");
           })
         } else {
-          console.log("[!] Conexão Recusada.");
           logger.warn("[setup] Conexão Recusada: Porta em Uso.");
         }
       })
       .catch(err => {
-        console.error("[!] Conexão Recusada.");
         logger.error("[setup] Conexão Recusada:" + err);
       });
 

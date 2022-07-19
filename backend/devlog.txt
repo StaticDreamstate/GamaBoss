@@ -23,3 +23,26 @@ Alterações:
 src/infra/App.ts -> implementação da promise da detect-port.
 
 --- 
+
+[Yuri - 19/07]
+
+Implementação da estrutura básica do banco de dados mongoDB (conexão funcional) com o mongoose. acréscimo
+de variáveis do ambiente relacionadas ao banco (host, porta e nome do banco), além do uso do logger para
+registrar conexões ao banco e possíveis erros de conexão. Singela refatoração no arquivo App.ts.
+
+Novos arquivos na estrutura:
+
+src/database/Connection -> Configurações de conexão do banco de dados (com logger e env)
+src/database/index.ts -> Arquivo principal de conexão do banco de dados (mongoDB)
+
+Alterações: 
+
+src/infra/config/env.ts -> Variáveis de configuração do banco de dados adicionadas.
+src/infra/logger.ts -> Remoção (comentada) do logger.console() (desnecessário).
+.env -> Variáveis de configuração do banco de dados adicionadas.
+.env.example -> Variáveis de configuração do banco de dados adicionadas.
+package.json/package-lock.json -> instalação da lib mongoose. 
+App.ts -> acréscimo do banco de dados, remoção de alguns console.log() desnecessários e acréscimo do banco de dados no teste. 
+
+--- 
+

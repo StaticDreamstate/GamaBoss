@@ -9,7 +9,7 @@ const logger = winston.createLogger({
         winston.format.errors({stack: true})
     ),
     transports: [
-        new winston.transports.Console(),
+        // new winston.transports.Console(),
         new winston.transports.File({filename: path.resolve("src", "infra", "logs", "errors.log"), 
         level: "error"}),
         new winston.transports.File({filename: path.resolve("src", "infra", "logs", "warns.log"), 
