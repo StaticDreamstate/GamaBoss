@@ -1,0 +1,362 @@
+{
+	"info": {
+		"_postman_id": "6a0c43fe-5c23-4d58-96fe-42f5bf580ff9",
+		"name": "GamaBoss",
+		"description": "Documentação da API em progresso...",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cadastro",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "João Santos",
+							"description": "Nome completo do cliente",
+							"type": "default"
+						},
+						{
+							"key": "email",
+							"value": "jsantos@email.com",
+							"description": "E-mail para login posterior",
+							"type": "default"
+						},
+						{
+							"key": "senha",
+							"value": "abcd1234",
+							"description": "Senha para login",
+							"type": "default"
+						},
+						{
+							"key": "telefone",
+							"value": "(11)2222-2222",
+							"description": "Telefone de contato (opcional)",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "whatsapp",
+							"value": "(11)99999-9999",
+							"description": "Whatsapp de contato (opcional)",
+							"type": "default",
+							"disabled": true
+						},
+						{
+							"key": "avatar",
+							"description": "Imagem para avatar de perfil (opcional)",
+							"type": "file",
+							"src": "/home/static_dreamstate/Imagens/mr_robot.jpg",
+							"disabled": true
+						}
+					]
+				},
+				"url": {
+					"raw": "{{baseurl}}/cadastro",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"cadastro"
+					]
+				},
+				"description": "<h3><span style=\"color:#FFA500\">POST</span>:/cadastro</h3>\n\nRota inicial para cadastro de um cliente. Utiliza seis campos, sendo três deles obrigatórios para concluir o cadastro. No caso de um cadastro bem sucedido, um status 201 é retornado.  \n\nApós a conclusão do cadastro, as informações são enviadas para o banco de dados (coleção Clientes do MongoDB), possibilitando o cliente a usar a rota <span style=\"color:#00FF00\"><b>login</b></span> (usando o par email/senha cadastrado) para ter acesso ao cadastro dos seus animais e seleção do plano de saúde. \n\nCaso o usuário já esteja cadastrado, um erro 400 é retornado (\"E-mail já cadastrado\").\n\n<h4>Campos</h4>\n\n- Nome: Obrigatório (String)\n- Email: Obrigatório (String)\n- Senha: Obrigatório (String)\n- Telefone: Opcional (String)\n- Whatsapp: Opcional (String)\n- Avatar: Opcional (Interface: Campo para Upload)"
+			},
+			"response": [
+				{
+					"name": "Todos os campos",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "José Silva",
+									"description": "Nome completo do cliente",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "jsilva@email.com",
+									"description": "E-mail para login posterior",
+									"type": "default"
+								},
+								{
+									"key": "senha",
+									"value": "abcd1234",
+									"description": "Senha para login",
+									"type": "default"
+								},
+								{
+									"key": "telefone",
+									"value": "(11)2222-2222",
+									"description": "Telefone de contato (opcional)",
+									"type": "default"
+								},
+								{
+									"key": "whatsapp",
+									"value": "(11)99999-9999",
+									"description": "Whatsapp de contato (opcional)",
+									"type": "default"
+								},
+								{
+									"key": "avatar",
+									"description": "Imagem para avatar de perfil (opcional)",
+									"type": "file",
+									"src": "/home/static_dreamstate/Imagens/mr_robot.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/cadastro",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"cadastro"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "280"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"118-Gc0z313nx5kIPIDd8yowNPcjwD4\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Jul 2022 23:36:43 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nome\": \"José Silva\",\n    \"email\": \"jsilva@email.com\",\n    \"senha\": \"abcd1234\",\n    \"telefone\": \"(11)2222-2222\",\n    \"whatsapp\": \"(11)99999-9999\",\n    \"images\": [\n        \"62d9e30a647a0b21190efa44\"\n    ],\n    \"_id\": \"62d9e30a647a0b21190efa46\",\n    \"createdAt\": \"2022-07-21T23:36:42.991Z\",\n    \"updatedAt\": \"2022-07-21T23:36:42.991Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Cadastro repetido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "José Silva",
+									"description": "Nome completo do cliente",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "jsilva@email.com",
+									"description": "E-mail para login posterior",
+									"type": "default"
+								},
+								{
+									"key": "senha",
+									"value": "abcd1234",
+									"description": "Senha para login",
+									"type": "default"
+								},
+								{
+									"key": "telefone",
+									"value": "(11)2222-2222",
+									"description": "Telefone de contato (opcional)",
+									"type": "default"
+								},
+								{
+									"key": "whatsapp",
+									"value": "(11)99999-9999",
+									"description": "Whatsapp de contato (opcional)",
+									"type": "default"
+								},
+								{
+									"key": "avatar",
+									"description": "Imagem para avatar de perfil (opcional)",
+									"type": "file",
+									"src": "/home/static_dreamstate/Imagens/mr_robot.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/cadastro",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"cadastro"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "31"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1f-gslUYkGhLgAe2DPLnbxzZBWPItA\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Jul 2022 23:38:14 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Email já cadastrado no banco\""
+				},
+				{
+					"name": "Campos obrigatórios",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "João Santos",
+									"description": "Nome completo do cliente",
+									"type": "default"
+								},
+								{
+									"key": "email",
+									"value": "jsantos@email.com",
+									"description": "E-mail para login posterior",
+									"type": "default"
+								},
+								{
+									"key": "senha",
+									"value": "abcd1234",
+									"description": "Senha para login",
+									"type": "default"
+								},
+								{
+									"key": "telefone",
+									"value": "(11)2222-2222",
+									"description": "Telefone de contato (opcional)",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "whatsapp",
+									"value": "(11)99999-9999",
+									"description": "Whatsapp de contato (opcional)",
+									"type": "default",
+									"disabled": true
+								},
+								{
+									"key": "avatar",
+									"description": "Imagem para avatar de perfil (opcional)",
+									"type": "file",
+									"src": "/home/static_dreamstate/Imagens/mr_robot.jpg",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseurl}}/cadastro",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"cadastro"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "227"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"e3-x2kJ9WAoo9RNdXfp+US11afub4E\""
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 21 Jul 2022 23:40:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nome\": \"João Santos\",\n    \"email\": \"jsantos@email.com\",\n    \"senha\": \"abcd1234\",\n    \"images\": [\n        \"62d9e3d7647a0b21190efa4a\"\n    ],\n    \"_id\": \"62d9e3d7647a0b21190efa4c\",\n    \"createdAt\": \"2022-07-21T23:40:07.619Z\",\n    \"updatedAt\": \"2022-07-21T23:40:07.619Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "base-url",
+			"value": "http://localhost:5000/cadastro"
+		},
+		{
+			"key": "baseurl",
+			"value": "http://localhost:5000"
+		}
+	]
+}
