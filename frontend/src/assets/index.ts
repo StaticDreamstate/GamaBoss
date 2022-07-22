@@ -1,1 +1,1 @@
-// importar imagens e exportar como objeto
+//tratar imagem como componentes

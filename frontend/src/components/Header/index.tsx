@@ -7,7 +7,7 @@ export default function Header() {
   return (
     <header className="bg-white w-screen shadow-md flex items-center font-medium justify-around">
       <div className="p-5 md:w-auto w-full flex justify-between">
-        <img src={""} alt="Foto de Perfil" className="md:cursor-pointer h-9" />
+        <img src={""} alt="Foto de Perfil" className="md:cursor-pointer h-9 " />
         <button className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
           {open ? "fechar" : "abrir"}
         </button>
