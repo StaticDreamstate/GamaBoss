@@ -17,7 +17,7 @@ export function Routes() {
           <Header />
           <RoutesReact>
             <Route path="/" element={<Login />} />
-            <Route path="/home" element={<Private><Home /></Private>} />
+            <Route path="/home" element={<Home />} />
             <Route path="/perfil" element={<Profile />} />
             <Route path="/meu-plano" element={<MyPlan />} />
             <Route path="/alterar" element={<Change />} />
