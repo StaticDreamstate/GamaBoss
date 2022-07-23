@@ -25,3 +25,7 @@
 {"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-21T23:32:06.436Z"}
 {"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-22T00:32:07.571Z"}
 {"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-22T00:32:07.590Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-23T06:32:56.301Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-23T06:32:56.322Z"}
+{"level":"info","message":"[createClient] Cliente cadastrado: {\"nome\":\"Lady Thanatos\",\"email\":\"ladyt@tzimisce.com\",\"senha\":\"abcd1234\"} client_ip=","service":"user-service","timestamp":"2022-07-23T06:34:46.135Z"}
+{"level":"warn","message":"[createClient] Tentativa repetida de cadastro: {\"nome\":\"Lady Thanatos\",\"email\":\"ladyt@tzimisce.com\",\"senha\":\"abcd1234\"} client_ip=","service":"user-service","timestamp":"2022-07-23T06:36:06.102Z"}

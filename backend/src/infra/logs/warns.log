@@ -3,3 +3,4 @@
 {"level":"warn","message":"[setup] Conexão Recusada: Porta em Uso.","service":"user-service","timestamp":"2022-07-15T23:31:28.309Z"}
 {"level":"error","message":"[setup] Conexão Recusada:TypeError: logger_1.default.warning is not a function","service":"user-service","timestamp":"2022-07-15T23:32:53.149Z"}
 {"level":"error","message":"[createConnection] Conexão Recusada:TypeError [ERR_INVALID_URL]: Invalid URL","service":"user-service","timestamp":"2022-07-19T20:57:12.395Z"}
+{"level":"warn","message":"[createClient] Tentativa repetida de cadastro: {\"nome\":\"Lady Thanatos\",\"email\":\"ladyt@tzimisce.com\",\"senha\":\"abcd1234\"} client_ip=","service":"user-service","timestamp":"2022-07-23T06:36:06.102Z"}
