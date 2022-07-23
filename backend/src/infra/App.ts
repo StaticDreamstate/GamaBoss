@@ -4,6 +4,7 @@ import logger from "../infra/logger";
 import detect from "detect-port";
 import { mongoDB } from "../database";
 import BaseRoutes from "./BaseRoutes";
+import path from "path";
 
 type SetupOptions = {
   test?: boolean;
@@ -21,7 +22,7 @@ export default class App {
   async setup(options: SetupOptions): Promise<void> {
     const selectedPort = options.port ? options.port : this.defaultPort;
     this.instance.use(Express.json());
-    this.instance.use(Express.static("uploads"));
+    this.instance.use(Express.static(path.resolve("uploads", "images")));
     this.instance.use(BaseRoutes);
     await mongoDB.createConnection();
 

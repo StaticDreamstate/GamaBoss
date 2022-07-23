@@ -1,0 +1,3 @@
+{"level":"error","message":"[recover] token invalido, pois não existe o email","service":"user-service","timestamp":"2022-07-23T18:02:05.735Z"}
+{"level":"error","message":"[recover] token invalido, pois não existe o email","service":"user-service","timestamp":"2022-07-23T18:08:53.280Z"}
+{"level":"error","message":"[reset] Usuário não encontrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-23T18:27:21.625Z"}

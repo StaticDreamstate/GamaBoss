@@ -43,7 +43,7 @@ const controller = {
     return res.json(token);
   },
 
-  async reset(req: Request, res: Response) {
+  async gerarNovoHash(req: Request, res: Response) {
     logger.info(`[reset] Requisição de reset de senha: ${req.socket.remoteAddress}`);
 
     const { email } = req.body;
@@ -72,7 +72,7 @@ const controller = {
     return res.json(token);
   },
 
-  async recover(req: Request, res: Response) {
+  async recuperarSenha(req: Request, res: Response) {
     logger.info(
       `[recover] start function body = ${JSON.stringify(req.body)}`
     );
