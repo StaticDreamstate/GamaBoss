@@ -17,7 +17,7 @@ const controller = {
         });
     
         if (savedClient) {
-          logger.warn(`[createClient] Tentativa repetida de cadastro: client_ip=${req.ips}`);
+          logger.warn(`[createClient] Tentativa repetida de cadastro: ${req.socket.remoteAddress}`);
           return res.status(400).json("Email já cadastrado no banco");
         }
     
@@ -32,7 +32,7 @@ const controller = {
           images: [image._id],
         });
     
-        logger.info(`[createClient] Cliente cadastrado: client_ip=${req.ips}`);
+        logger.info(`[createClient] Cliente cadastrado: ${req.socket.remoteAddress}`);
         return res.status(201).json(newClient);
       },
 

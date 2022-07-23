@@ -14,18 +14,25 @@ const clientSchema = new Schema<IClient>(
     {
         nome: {
             type: Schema.Types.String,
+            required: true,
           },
           email: {
             type: Schema.Types.String,
+            required: true,
+            unique: true
           },
           senha: {
             type: Schema.Types.String,
+            required: true,
           },
           telefone: {
             type: Schema.Types.String,
+            required: false,
           },
           whatsapp: {
             type: Schema.Types.String,
+            required: false,
+            unique: true,
           },
           images: [
             {
