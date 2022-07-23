@@ -8,6 +8,7 @@ export interface IClient {
     telefone?: string;
     whatsapp?: string;
     images?: Schema.Types.ObjectId[] | IImages[];
+    hashReset: string | null ;
 }
 
 const clientSchema = new Schema<IClient>(
@@ -40,6 +41,9 @@ const clientSchema = new Schema<IClient>(
               ref: "Images",
             },
           ],
+          hashReset: {
+            type: Schema.Types.String,
+          },
     },
     { timestamps: true }
 );
