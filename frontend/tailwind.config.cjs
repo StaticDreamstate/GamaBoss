@@ -4,8 +4,12 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "primary-blue":"#027be3",
-        "primary-orange":"#ff593f",
+        "primary-blue-1":"#027be3",
+        "primary-blue-2":"#389CF2",
+        "primary-blue-3":"#8FC7F6",
+        "primary-orange-1":"#ff593f",
+        "primary-orange-2":"#FF7661",
+        "primary-orange-3":"#FF9584",
         "secondary": "#F5ECCD",
       },
       fontFamily: {
