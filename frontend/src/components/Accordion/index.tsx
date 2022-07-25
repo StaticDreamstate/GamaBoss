@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 interface IaccordionProps {
-    titleAccordion:string;
-    contentAccordion:string;
+  titleAccordion: string;
+  contentAccordion: string;
 }
 
 export default function Accordion(props: IaccordionProps) {
@@ -11,7 +11,6 @@ export default function Accordion(props: IaccordionProps) {
       id: Math.random(),
       state: false,
     },
-
   ]);
 
   function toggleAccordion(index: number) {
@@ -21,19 +20,20 @@ export default function Accordion(props: IaccordionProps) {
   }
 
   return (
-    <div>
+    <section>
       {activeAccordions.map((activeAccordion, index) => (
         <>
           <h2>
             <button
               onClick={() => toggleAccordion(index)}
               type="button"
-              className={`flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-800 dark:border-gray-700 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800 `}
+              className={`flex items-center justify-between w-full p-5 font-medium text-left text-gray-500 border border-b-0 border-gray-200 rounded-t-xl focus:ring-4 focus:ring-gray-200`}
             >
               <span>{props.titleAccordion}</span>
               <svg
                 className={`w-6 h-6  shrink-0 ${
-                  activeAccordion.state == true ? "rotate-180" : ""}`}
+                  activeAccordion.state == true ? "rotate-180" : ""
+                }`}
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,6 +57,6 @@ export default function Accordion(props: IaccordionProps) {
           </div>
         </>
       ))}
-    </div>
+    </section>
   );
 }
