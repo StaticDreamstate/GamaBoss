@@ -1,24 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { icons } from "../../assets";
 import { linksNav } from "./linksNav";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="bg-white w-screen shadow-md flex items-center font-medium justify-around">
-      <div className="p-5 md:w-auto w-full flex justify-between">
-        <img src={""} alt="Foto de Perfil" className="md:cursor-pointer h-9" />
-        <button className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
-          {open ? "fechar" : "abrir"}
-        </button>
-      </div>
+    <header className="bg-white w-screen h-12 shadow-md flex items-center justify-between font-libre px-4">
+      <button className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
+        <img className="w-5" src={icons.iconMenu} alt="Icone de menu" />
+      </button>
+      <img src={""} alt="Foto de Perfil" className="md:cursor-pointer h-9" />
       <nav>
         <ul className="md:flex hidden items-center gap-8">
           {linksNav.map((link, index) => (
             <li key={link.name + index}>
               <Link
                 to={link.redirect}
-                className="px-3 inline-block hover:text-green-400 transition-colors"
+                className="px-3 inline-block hover:text-primary-blue-1 transition-colors"
               >
                 {link.name}
               </Link>
@@ -26,15 +25,22 @@ export default function Header() {
           ))}
         </ul>
         <ul
-          className={`md:hidden bg-zinc-500 fixed w-3/5 top-0 overflow-y-auto bottom-0 py-24 pl-4 duration-500 ${
+          className={`md:hidden bg-zinc-500 fixed w-3/5 top-0 overflow-y-auto bottom-0 py-10 pl-4 duration-500 ${
             open ? "left-0" : "left-[-100%]"
           }`}
         >
+          <button className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
+            <img
+              className="w-5 absolute top-4"
+              src={icons.iconClose}
+              alt="Icone de menu"
+            />
+          </button>
           {linksNav.map((link, index) => (
             <li key={link.name + index}>
               <Link
                 to={link.redirect}
-                className="my-7 px-3 inline-block hover:text-green-400 transition-colors"
+                className="my-7 px-3 inline-block hover:text-primary-blue-1 transition-colors"
               >
                 {link.name}
               </Link>
