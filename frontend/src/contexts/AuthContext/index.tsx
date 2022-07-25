@@ -1,4 +1,3 @@
-import axios from "axios";
 import { createContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { requestApi } from "../../services/api";
@@ -28,7 +27,7 @@ export function AuthProvider({ children }: IAuthProvider) {
       .then(function (response) {
         localStorage.setItem("user", JSON.stringify(response.data));
         setUser(response.data);
-        navigate("/");
+        navigate("/home");
       })
       .catch(function (error) {
         console.log(error);
