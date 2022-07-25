@@ -8,7 +8,7 @@ export interface IClient {
     telefone?: string;
     whatsapp?: string;
     images?: Schema.Types.ObjectId[] | IImages[];
-    hashReset: string | null ;
+    hashReset?: string | null ;
 }
 
 const clientSchema = new Schema<IClient>(
@@ -33,7 +33,6 @@ const clientSchema = new Schema<IClient>(
           whatsapp: {
             type: Schema.Types.String,
             required: false,
-            unique: true,
           },
           images: [
             {
