@@ -39,3 +39,49 @@
 {"level":"error","message":"[reset] Usuário não encontrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-23T18:27:21.625Z"}
 {"level":"info","message":"[recover] start function body = {\"token\":\"U2FsdGVkX1+erBnMzLtKxGmzC1RgiB/9FcfD3nxXahg=\",\"senha\":\"1234abcd\"}","service":"user-service","timestamp":"2022-07-23T18:27:43.809Z"}
 {"level":"info","message":"[recover] Senha alterada: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-23T18:27:44.163Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:13:45.975Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:13:45.993Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:15:44.316Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:15:44.334Z"}
+{"level":"warn","message":"[login] Email não cadastrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-25T07:16:29.273Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:18:55.653Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:18:55.672Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:20:38.738Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:20:38.760Z"}
+{"level":"info","message":"[createClient] Cliente cadastrado: ::1","service":"user-service","timestamp":"2022-07-25T07:20:43.447Z"}
+{"level":"warn","message":"[createClient] Tentativa repetida de cadastro: ::1","service":"user-service","timestamp":"2022-07-25T07:20:55.947Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:22:49.902Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:22:49.921Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:24:01.027Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:24:01.045Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:25:43.411Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:25:43.427Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:28:44.347Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:28:44.368Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:29:13.130Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:29:13.148Z"}
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-25T07:29:50.730Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-25T07:29:50.752Z"}
+{"level":"info","message":"[createClient] Cliente cadastrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-25T07:29:53.398Z"}
+{"level":"error","message":"[login] Erro de login: ::1","service":"user-service","timestamp":"2022-07-25T07:39:59.664Z"}
+{"level":"warn","message":"[login] Email não cadastrado: ::1","service":"user-service","timestamp":"2022-07-25T07:42:00.678Z"}
+{"level":"info","message":"[reset] Requisição de reset de senha: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-25T07:58:24.232Z"}
+{"level":"error","message":"[reset] Usuário não encontrado: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-25T07:58:24.381Z"}
+{"level":"info","message":"[reset] Requisição de reset de senha: ::1","service":"user-service","timestamp":"2022-07-25T07:59:21.552Z"}
+{"level":"info","message":"nivel","service":"user-service","timestamp":"2022-07-25T07:59:21.587Z"}
+{"level":"info","message":"[reset] user = {\"_id\":\"62de467171812fb57ee82d17\",\"nome\":\"perry\",\"email\":\"perry@email.com\",\"senha\":\"$2a$10$G3qGMLdUTvsxi/ULiA8/yO2t9Cc1EsW9txRvTHQclwQ8WBguOS4mK\",\"telefone\":\"(11)2222-2222\",\"whatsapp\":\"(11)95555-5555\",\"images\":[\"62de467171812fb57ee82d15\"],\"createdAt\":\"2022-07-25T07:29:53.389Z\",\"updatedAt\":\"2022-07-25T07:29:53.389Z\",\"__v\":0} : ::1","service":"user-service","timestamp":"2022-07-25T07:59:21.594Z"}
+{"level":"info","message":"[reset] finish function","service":"user-service","timestamp":"2022-07-25T07:59:21.666Z"}
+{"level":"info","message":"[reset] Requisição de reset de senha: ::1","service":"user-service","timestamp":"2022-07-25T08:00:42.120Z"}
+{"level":"error","message":"[reset] Usuário não encontrado: ::1","service":"user-service","timestamp":"2022-07-25T08:00:42.125Z"}
+{"level":"info","message":"[reset] Requisição de reset de senha: ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-25T08:14:34.094Z"}
+{"level":"info","message":"nivel","service":"user-service","timestamp":"2022-07-25T08:14:34.122Z"}
+{"level":"info","message":"[reset] user = {\"_id\":\"62de467171812fb57ee82d17\",\"nome\":\"perry\",\"email\":\"perry@email.com\",\"senha\":\"$2a$10$G3qGMLdUTvsxi/ULiA8/yO2t9Cc1EsW9txRvTHQclwQ8WBguOS4mK\",\"telefone\":\"(11)2222-2222\",\"whatsapp\":\"(11)95555-5555\",\"images\":[\"62de467171812fb57ee82d15\"],\"createdAt\":\"2022-07-25T07:29:53.389Z\",\"updatedAt\":\"2022-07-25T07:59:21.620Z\",\"__v\":0,\"hashReset\":\"U2FsdGVkX1+qpe0T+IDd5ji4xljUuRHM7CNir01OMk8=\"} : ::ffff:127.0.0.1","service":"user-service","timestamp":"2022-07-25T08:14:34.123Z"}
+{"level":"info","message":"[reset] finish function","service":"user-service","timestamp":"2022-07-25T08:14:34.212Z"}
+{"level":"info","message":"[reset] Requisição de reset de senha: ::1","service":"user-service","timestamp":"2022-07-25T08:15:35.612Z"}
+{"level":"info","message":"nivel","service":"user-service","timestamp":"2022-07-25T08:15:35.615Z"}
+{"level":"info","message":"[reset] user = {\"_id\":\"62de467171812fb57ee82d17\",\"nome\":\"perry\",\"email\":\"perry@email.com\",\"senha\":\"$2a$10$G3qGMLdUTvsxi/ULiA8/yO2t9Cc1EsW9txRvTHQclwQ8WBguOS4mK\",\"telefone\":\"(11)2222-2222\",\"whatsapp\":\"(11)95555-5555\",\"images\":[\"62de467171812fb57ee82d15\"],\"createdAt\":\"2022-07-25T07:29:53.389Z\",\"updatedAt\":\"2022-07-25T08:14:34.139Z\",\"__v\":0,\"hashReset\":\"U2FsdGVkX1/BV4m3HnmV+Qq/0DSbafznfxnu4cxbpMA=\"} : ::1","service":"user-service","timestamp":"2022-07-25T08:15:35.616Z"}
+{"level":"info","message":"[reset] finish function","service":"user-service","timestamp":"2022-07-25T08:15:35.623Z"}
+{"level":"info","message":"[recover] start function body = {\"token\":\"U2FsdGVkX19q0Q4esaLQta/j2v5zQh+DmJgILaOd1B8=\",\"senha\":\"1234abcd\"}","service":"user-service","timestamp":"2022-07-25T08:16:32.940Z"}
+{"level":"info","message":"[recover] Senha alterada: ::1","service":"user-service","timestamp":"2022-07-25T08:16:33.281Z"}
+{"level":"info","message":"[recover] start function body = {\"token\":\"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\"senha\":\"1234abcd\"}","service":"user-service","timestamp":"2022-07-25T08:18:53.158Z"}
+{"level":"error","message":"[recover] token invalido, pois não existe o email","service":"user-service","timestamp":"2022-07-25T08:18:53.161Z"}
