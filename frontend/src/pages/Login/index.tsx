@@ -15,7 +15,7 @@ export default function Login() {
   }
 
   return (
-    <main className="pt-10 grid justify-items-stretc">
+    <main className="pt-10 grid justify-items-center">
       <img
         src={logo}
         alt="imagem de"
@@ -26,7 +26,9 @@ export default function Login() {
       <p className=" justify-self-center pt-2 pb-5 px-10">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       </p>
-      <form onSubmit={handleSubmit}>
+      <form 
+      className="w-2/3"
+      onSubmit={handleSubmit}>
         <input
           key={"email"}
           type="email"

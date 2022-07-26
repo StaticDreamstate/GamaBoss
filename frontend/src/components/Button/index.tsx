@@ -5,7 +5,7 @@ interface IButtonProps {
 
 export default function Button(props: IButtonProps) {
   return (
-    <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+    <button className="bg-primary-blue-1 hover:bg-primary-blue-2 text-white font-libre font-700 py-2 px-4 rounded transition-colors">
       {props.buttonLabel}
     </button>
   );
