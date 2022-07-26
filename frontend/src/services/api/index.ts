@@ -10,8 +10,9 @@ function getTokenFromLocalStorage() {
 }
 
 export const requestApi = axios.create({
-  baseURL: "https://reqres.in/api",
+  baseURL: "https://up.flickr.com/services/upload/",
   headers: {
     Authorization: `Bearer ${getTokenFromLocalStorage()}`,
+    // 'content-type': 'multipart/form-data',
   },
 });
