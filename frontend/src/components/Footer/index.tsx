@@ -50,17 +50,17 @@ export default function Footer() {
                 <div>
                     <h2 className="text-center sm:text-left mt-3 text-base font-libre font-semibold">Nos acompanhe</h2>
                     <div className="flex gap-5 justify-center mt-3">
-                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue-1 text-gray-500 hover:text-gray-900 dark:hover:text-white">
                             <img src={images.facebookIcon} className="p-2 " alt="logo facebook" />
                         </a>
-                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <img src={images.instagramIcon} className="p-2 " alt="logo facebook" />
+                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue-1 text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <img src={images.instagramIcon} className="p-2 " alt="logo instagram" />
                         </a>
-                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <img src={images.linkedinIcon} className="p-2 " alt="logo facebook" />
+                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue-1 text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <img src={images.linkedinIcon} className="p-2 " alt="logo linkedin" />
                         </a>
-                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue text-gray-500 hover:text-gray-900 dark:hover:text-white">
-                            <img src={images.whatsappIcon} className="p-2 " alt="logo facebook" />
+                        <a href="#" className="hover:scale-105 duration-500 rounded-full bg-primary-blue-1 text-gray-500 hover:text-gray-900 dark:hover:text-white">
+                            <img src={images.whatsappIcon} className="p-2 " alt="logo linkedin" />
                         </a>
                     </div>
                 </div>
