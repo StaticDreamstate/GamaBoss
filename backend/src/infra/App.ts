@@ -39,7 +39,7 @@ export default class App {
     detect(selectedPort)
       .then(_port => {
         if (selectedPort == _port) {
-          this.instance.listen(selectedPort, () => {
+          this.instance.listen(process.env.PORT || selectedPort, () => {
             console.log(`[OK] API aguardando requisições... [Porta TCP ${selectedPort}]`);
             logger.info("[setup] API em execução.");
           })
