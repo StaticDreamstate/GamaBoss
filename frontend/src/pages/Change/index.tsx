@@ -1,14 +1,30 @@
+import Accordion from "../../components/Accordion";
 import CheckBox from "../../components/CheckBox";
 
 export default function Change() {
   return (
-    <>
-      <main>Página de alteração</main>
-        <CheckBox labelContent="lorem ipsum ied est mor" />
-        <CheckBox labelContent="nemo tenetur se detegere" />
-        <CheckBox labelContent="nemo tenetur apocalipsis" />
-        <CheckBox labelContent="in vino veritas vade retrum" />
-    </>
-  )
+    <main className="flex flex-col items-center">
+      <div className="flex">
+        <CheckBox />
+        <Accordion
+          titleAccordion="titulo de algum conteudo"
+          contentAccordion="conteudoooooo"
+        />
+      </div>
+      <div className="flex ">
+        <CheckBox />
+        <Accordion
+          titleAccordion="titulo de algum conteudo"
+          contentAccordion="conteudoooooo"
+        />
+      </div>
+      <div className="flex ">
+        <CheckBox />
+        <Accordion
+          titleAccordion="titulo de algum conteudo"
+          contentAccordion="conteudoooooo"
+        />
+      </div>
+    </main>
+  );
 }
-

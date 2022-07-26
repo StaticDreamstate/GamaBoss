@@ -11,6 +11,13 @@ module.exports = {
         "primary-orange-2":"#FF7661",
         "primary-orange-3":"#FF9584",
         "secondary": "#F5ECCD",
+        "alert": "#A80511",
+        "gray-1": "#081420",
+        "gray-2": "#1A2430",
+        "gray-3": "#212D3B",
+        "gray-4": "#71798C",
+        "gray-5": "#ABAFC8",
+        "gray-6": "#F3F4F6",
       },
       fontWeight: {
         700: 700,
