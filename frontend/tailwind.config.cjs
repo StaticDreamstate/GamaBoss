@@ -4,12 +4,20 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "primary-blue":"#027be3",
-        "primary-orange":"#ff593f",
+        "primary-blue-1":"#027be3",
+        "primary-blue-2":"#389CF2",
+        "primary-blue-3":"#8FC7F6",
+        "primary-orange-1":"#ff593f",
+        "primary-orange-2":"#FF7661",
+        "primary-orange-3":"#FF9584",
         "secondary": "#F5ECCD",
-      },
-      fontFamily: {
-        "libre": ['Libre Franklin', 'sans-serif']
+        "alert": "#A80511",
+        "gray-1": "#081420",
+        "gray-2": "#1A2430",
+        "gray-3": "#212D3B",
+        "gray-4": "#71798C",
+        "gray-5": "#ABAFC8",
+        "gray-6": "#F3F4F6",
       },
       fontWeight: {
         700: 700,
