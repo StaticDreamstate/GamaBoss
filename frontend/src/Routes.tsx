@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes as RoutesReact } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Private from "./components/PrivateRoute";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -8,6 +9,7 @@ import Login from "./pages/Login";
 import MyPlan from "./pages/MyPlan";
 import Profile from "./pages/Profile";
 import Verification from "./pages/Verification";
+
 
 export function Routes() {
   return (
