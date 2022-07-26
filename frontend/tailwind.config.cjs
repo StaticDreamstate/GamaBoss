@@ -12,9 +12,6 @@ module.exports = {
         "primary-orange-3":"#FF9584",
         "secondary": "#F5ECCD",
       },
-      fontFamily: {
-        "libre": ['Libre Franklin', 'sans-serif']
-      },
       fontWeight: {
         700: 700,
         600: 600,

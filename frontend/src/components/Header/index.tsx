@@ -6,7 +6,7 @@ import { linksNav } from "./linksNav";
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="bg-white w-screen h-12 shadow-md flex items-center justify-between font-libre px-4">
+    <header className="bg-white w-screen h-12 shadow-md flex items-center justify-between px-4">
       <button className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
         <img className="w-5" src={icons.iconMenu} alt="Icone de menu" />
       </button>

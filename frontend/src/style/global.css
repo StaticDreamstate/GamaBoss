@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body{
+  font-family: 'Libre Franklin', 'sans-serif';
   -webkit-font-smoothing: antialiased;
 }
