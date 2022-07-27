@@ -1,0 +1,2 @@
+{"level":"info","message":"[createConnection] Conexão com o banco de dados realizada.","service":"user-service","timestamp":"2022-07-27T07:42:38.451Z"}
+{"level":"info","message":"[setup] API em execução.","service":"user-service","timestamp":"2022-07-27T07:42:38.616Z"}
