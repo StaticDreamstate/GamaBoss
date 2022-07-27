@@ -10,7 +10,6 @@ import MyPlan from "./pages/MyPlan";
 import Profile from "./pages/Profile";
 import Verification from "./pages/Verification";
 
-
 export function Routes() {
   return (
     <BrowserRouter>
@@ -25,6 +24,7 @@ export function Routes() {
             <Route path="/alterar" element={<Change />} />
             <Route path="/confirmacao" element={<Verification />} />
           </RoutesReact>
+          <Footer />
         </>
       </AuthProvider>
     </BrowserRouter>

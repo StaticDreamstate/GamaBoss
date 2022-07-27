@@ -43,8 +43,8 @@ export default function Accordion(props: IaccordionProps) {
           <div
             className={`${activeAccordion.state == false ? "hidden" : "block"}`}
           >
-            <div className="p-5 font-light border border-b-0 border-gray-200 dark:border-gray-700 dark:bg-gray-900">
-              <p className="mb-2 text-gray-500 dark:text-gray-400 ">
+            <div className="p-5 font-light border border-b-0 border-gray-200">
+              <p className="mb-2 text-gray-500 flex-wrap">
                 {props.contentAccordion}
               </p>
             </div>

@@ -1,6 +1,5 @@
 import { useContext, useState } from "react";
-import { stringify } from "uuid";
-import logo from "../../assets/hometest.png";
+import logo from "../../assets/icons/hometest.png";
 import Button from "../../components/Button";
 import { AuthContext } from "../../contexts/AuthContext";
 
@@ -26,9 +25,7 @@ export default function Login() {
       <p className=" justify-self-center pt-2 pb-5 px-10">
         Lorem ipsum, dolor sit amet consectetur adipisicing elit.
       </p>
-      <form 
-      className="w-2/3"
-      onSubmit={handleSubmit}>
+      <form className="w-2/3" onSubmit={handleSubmit}>
         <input
           key={"email"}
           type="email"
