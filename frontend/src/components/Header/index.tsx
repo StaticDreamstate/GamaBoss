@@ -6,11 +6,11 @@ import { linksNav } from "./linksNav";
 export default function Header() {
   const [open, setOpen] = useState(false);
   return (
-    <header className="bg-white w-screen h-12 shadow-md flex items-center justify-between px-4">
+    <header className="bg-white w-screen h-14 shadow-md flex items-center justify-between px-6">
       <button className="text-3xl md:hidden" onClick={() => setOpen(!open)}>
         <img className="w-5" src={icons.iconMenu} alt="Icone de menu" />
       </button>
-      <img src={""} alt="Foto de Perfil" className="md:cursor-pointer h-9" />
+      <h1 className="font-600 text-mobile-size-24px leading-mobile-line-26.4px text-primary-blue-1">NomePlano</h1>
       <nav>
         <ul className="md:flex hidden items-center gap-8">
           {linksNav.map((link, index) => (
@@ -25,7 +25,7 @@ export default function Header() {
           ))}
         </ul>
         <ul
-          className={`md:hidden bg-zinc-500 fixed w-3/5 top-0 overflow-y-auto bottom-0 py-10 pl-4 duration-500 ${
+          className={`md:hidden bg-zinc-500 fixed w-3/5 top-0 overflow-y-auto bottom-0 py-10 pl-4 duration-500 z-50 ${
             open ? "left-0" : "left-[-100%]"
           }`}
         >
