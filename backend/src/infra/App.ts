@@ -13,7 +13,7 @@ type SetupOptions = {
 
 export default class App {
   private instance: Application;
-  private defaultPort: number = 4000;
+  private defaultPort: number = 8080;
 
   constructor() {
     this.instance = Express();
