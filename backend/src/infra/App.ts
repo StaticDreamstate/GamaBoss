@@ -4,6 +4,7 @@ import logger from "../infra/logger";
 import detect from "detect-port";
 import { mongoDB } from "../database";
 import BaseRoutes from "./BaseRoutes";
+import path from "path";
 
 type SetupOptions = {
   test?: boolean;
@@ -12,7 +13,7 @@ type SetupOptions = {
 
 export default class App {
   private instance: Application;
-  private defaultPort: number = 4000;
+  private defaultPort: any = process.env.PORT || 8080;
 
   constructor() {
     this.instance = Express();
@@ -38,7 +39,7 @@ export default class App {
     detect(selectedPort)
       .then(_port => {
         if (selectedPort == _port) {
-          this.instance.listen(selectedPort, () => {
+          this.instance.listen(process.env.PORT || selectedPort, () => {
             console.log(`[OK] API aguardando requisições... [Porta TCP ${selectedPort}]`);
             logger.info("[setup] API em execução.");
           })
