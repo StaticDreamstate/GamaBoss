@@ -21,7 +21,7 @@ export default function Accordion(props: IaccordionProps) {
   }
 
   return (
-    <div>
+    <section>
       {activeAccordions.map((activeAccordion, index) => (
         <>
           <h2>
@@ -57,6 +57,6 @@ export default function Accordion(props: IaccordionProps) {
           </div>
         </>
       ))}
-    </div>
+    </section>
   );
 }
