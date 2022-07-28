@@ -1,4 +1,4 @@
-import { images } from "../../assets";
+import { icons } from "../../assets";
 import { Link } from "react-router-dom";
 
 export default function Footer() {
@@ -47,7 +47,7 @@ export default function Footer() {
               className="hover:scale-105 duration-500 rounded-full bg-primary-blue-3 text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <img
-                src={images.facebookIcon}
+                src={icons.facebookIcon}
                 className="p-2 "
                 alt="logo facebook"
               />
@@ -57,7 +57,7 @@ export default function Footer() {
               className="hover:scale-105 duration-500 rounded-full bg-primary-blue-3 text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <img
-                src={images.instagramIcon}
+                src={icons.instagramIcon}
                 className="p-2 "
                 alt="logo instagram"
               />
@@ -67,7 +67,7 @@ export default function Footer() {
               className="hover:scale-105 duration-500 rounded-full bg-primary-blue-3 text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <img
-                src={images.linkedinIcon}
+                src={icons.linkedinIcon}
                 className="p-2 "
                 alt="logo linkedin"
               />
@@ -77,7 +77,7 @@ export default function Footer() {
               className="hover:scale-105 duration-500 rounded-full bg-primary-blue-3 text-gray-500 hover:text-gray-900 dark:hover:text-white"
             >
               <img
-                src={images.whatsappIcon}
+                src={icons.whatsappIcon}
                 className="p-2 "
                 alt="logo linkedin"
               />
