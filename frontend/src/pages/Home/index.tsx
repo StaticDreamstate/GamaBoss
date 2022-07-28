@@ -1,4 +1,3 @@
-import logo from "../../assets/icons/hometest.png";
 import Box from "../../components/BoxHome";
 
 export default function Home() {
@@ -6,9 +5,9 @@ export default function Home() {
     <>
       <main className="pt-10 grid justify-items-stretc">
         <img
-          src={logo}
-          alt="imagem de"
-          className="justify-self-center h-60 rounded-2xl border-solid border-2 border-slate-200"
+          src={"logo"}
+          alt="imagem de pets"
+          className=""
         />
 
         <h2 className=" pt-10 px-20">Lorem ipsum dolor sit amet.</h2>
