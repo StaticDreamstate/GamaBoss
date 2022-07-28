@@ -5,7 +5,7 @@
   "main": "dist/main.js",
   "scripts": {
     "test": "jest",
-    "start": "node dist/main.js",
+    "start": "node -r dotenv/config dist/main.js",
     "postinstall": "tsc",
     "dev": "ts-node-dev --respawn --ignore-watch node_modules -r dotenv/config src/index.ts dotenv_config_path=.env --files"
   },
