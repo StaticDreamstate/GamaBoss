@@ -53,7 +53,7 @@ const controller = {
       return res.status(404).json("Email não encontrado");
     }
 
-    logger.info(`[reset] Usuário = ${JSON.stringify(savedClient)} : ${req.socket.remoteAddress}`);
+    logger.info(`[reset] Usuário = ${JSON.stringify(savedClient.email)} : ${req.socket.remoteAddress}`);
 
     const token = CryptoJS.AES.encrypt(
       `${savedClient.email}`,
@@ -64,7 +64,7 @@ const controller = {
 
     await savedClient.save();
     logger.info(`[reset] Hash gerado: ${req.socket.remoteAddress}`);
-    return res.json(token);
+    return res.status(200).json(token);
   },
 
   async recuperarSenha(req: Request, res: Response) {
