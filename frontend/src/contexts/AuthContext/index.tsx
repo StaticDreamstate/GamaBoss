@@ -7,7 +7,7 @@ export const AuthContext = createContext({} as IContext);
 
 export function AuthProvider({ children }: IAuthProvider) {
   const [user, setUser] = useState<IUser | null>();
-  const [errorResponse, setErrorResponse] = useState<any>();
+  const [errorResponse, setErrorResponse] = useState<any>(undefined);
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
 
@@ -27,11 +27,10 @@ export function AuthProvider({ children }: IAuthProvider) {
       });
       localStorage.setItem("user", JSON.stringify(response.data));
       setUser(response.data);
-      setErrorResponse(response.status);
       navigate("/home");
       return await response.data;
     } catch (error) {
-      setErrorResponse(error);
+      setErrorResponse("errorLogin");
     }
   }
 
@@ -48,7 +47,7 @@ export function AuthProvider({ children }: IAuthProvider) {
   const logout = () => {
     localStorage.removeItem("user");
     setUser(null);
-    navigate("/login");
+    navigate("/");
   };
 
   return (
@@ -61,6 +60,7 @@ export function AuthProvider({ children }: IAuthProvider) {
         writeError,
         loading,
         errorResponse,
+        setErrorResponse
       }}
     >
       {children}

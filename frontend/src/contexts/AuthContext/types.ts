@@ -11,6 +11,7 @@ export interface IContext extends IUser {
   logout: () => void;
   loading: boolean;
   errorResponse: any;
+  setErrorResponse: any
 }
 
 export interface IAuthProvider {

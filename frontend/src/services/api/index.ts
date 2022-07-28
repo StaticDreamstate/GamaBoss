@@ -10,6 +10,7 @@ function getTokenFromLocalStorage() {
 
 export const requestApi = axios.create({
   baseURL: "https://reqres.in/api",
+  // https://api-gamaboss.herokuapp.com
   headers: {
     Authorization: `Bearer ${getTokenFromLocalStorage()}`,
   },
