@@ -47,7 +47,7 @@ describe("POST /cadastro", () => {
                 senha: faker.internet.password(),
                 telefone: faker.phone.number(),
                 whatsapp: faker.phone.number(),
-                avatar: path.resolve("home", "static_dreamstate", "Imagens", "mr_robot.jpg"),
+                avatar: path.resolve("home", "user", "Imagens", "imagem.jpg"),
             })
             expect(response.statusCode).toEqual(201);
         });
