@@ -60,7 +60,7 @@ export function AuthProvider({ children }: IAuthProvider) {
         writeError,
         loading,
         errorResponse,
-        setErrorResponse
+        setErrorResponse,
       }}
     >
       {children}

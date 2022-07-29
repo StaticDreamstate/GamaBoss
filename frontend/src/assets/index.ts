@@ -5,7 +5,9 @@ import whatsappIcon from "./icons/whatsappIcon.png";
 import iconMenu from "./icons/iconMenu.svg";
 import iconClose from "./icons/iconClose.svg";
 import iconArrowDown from "./icons/iconArrowDown.svg";
-import imagePets from "./images/imagePets.svg"
+import imagePets from "./images/imagePets.svg";
+import iconEdit from "./icons/edit.svg"
+import iconCamera from "./icons/iconCamera.svg"
 
 export const images = {
   imagePets,
@@ -19,4 +21,6 @@ export const icons = {
   instagramIcon,
   linkedinIcon,
   whatsappIcon,
+  iconEdit,
+  iconCamera,
 };
