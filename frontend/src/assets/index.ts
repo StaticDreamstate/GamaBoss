@@ -2,9 +2,9 @@ import facebookIcon from "./icons/facebookIcon.png";
 import instagramIcon from "./icons/instagramIcon.png";
 import linkedinIcon from "./icons/linkedinIcon.png";
 import whatsappIcon from "./icons/whatsappIcon.png";
+import iconCircle from "./icons/iconCircle.png";
 import iconMenu from "./icons/iconMenu.svg";
 import iconClose from "./icons/iconClose.svg";
-import iconArrowDown from "./icons/iconArrowDown.svg";
 import imagePets from "./images/imagePets.svg";
 import iconEdit from "./icons/edit.svg"
 import iconCamera from "./icons/iconCamera.svg"
@@ -16,7 +16,7 @@ export const images = {
 export const icons = {
   iconMenu,
   iconClose,
-  iconArrowDown,
+  iconCircle,
   facebookIcon,
   instagramIcon,
   linkedinIcon,
