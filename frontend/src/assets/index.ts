@@ -8,6 +8,7 @@ import iconMenu from "./icons/iconMenu.svg";
 import iconClose from "./icons/iconClose.svg";
 import iconEdit from "./icons/edit.svg"
 import iconCamera from "./icons/iconCamera.svg"
+import avatarBar from "./icons/avatarBar.svg"
 
 //images
 import imagePets from "./images/imagePets.svg";
@@ -28,4 +29,5 @@ export const icons = {
   whatsappIcon,
   iconEdit,
   iconCamera,
+  avatarBar
 };
