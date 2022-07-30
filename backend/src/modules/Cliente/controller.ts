@@ -7,6 +7,10 @@ import bcrypt from "bcryptjs";
 
 const controller = {
 
+    start(req: Request, res: Response) {
+      return res.status(200).json("API em execução.");
+    },
+
     async createClient(req: Request, res: Response) {
       const hash = bcrypt.hashSync(req.body.senha, 10);  
       const { nome, email, senha, telefone, whatsapp } = req.body;

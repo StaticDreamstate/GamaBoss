@@ -11,13 +11,9 @@ const controller = {
   async login(req: Request, res: Response) {
     const { email, senha } = req.body;
 
-    console.log(email);
-
     const savedClient = await Client.findOne({
       email: email
     });
-
-    console.log(savedClient);
 
     if (!savedClient) {
       logger.warn(`[login] Email não cadastrado: ${req.socket.remoteAddress}`);
@@ -40,7 +36,7 @@ const controller = {
       ENV.KEY,
     );
 
-    return res.json(token);
+    return res.status(200).json(token);
   },
 
   async gerarNovoHash(req: Request, res: Response) {
@@ -57,8 +53,7 @@ const controller = {
       return res.status(404).json("Email não encontrado");
     }
 
-    logger.info("nivel", "mensagem");
-    logger.info(`[reset] user = ${JSON.stringify(savedClient)} : ${req.socket.remoteAddress}`);
+    logger.info(`[reset] Usuário = ${JSON.stringify(savedClient.email)} : ${req.socket.remoteAddress}`);
 
     const token = CryptoJS.AES.encrypt(
       `${savedClient.email}`,
@@ -68,13 +63,13 @@ const controller = {
     savedClient.hashReset = token;
 
     await savedClient.save();
-    logger.info(`[reset] finish function`);
-    return res.json(token);
+    logger.info(`[reset] Hash gerado: ${req.socket.remoteAddress}`);
+    return res.status(200).json(token);
   },
 
   async recuperarSenha(req: Request, res: Response) {
     logger.info(
-      `[recover] start function body = ${JSON.stringify(req.body)}`
+      `[recuperarSenha] Recuperação de senha em progresso: ${req.socket.remoteAddress}`
     );
     const { token, senha } = req.body;
 
@@ -82,7 +77,7 @@ const controller = {
     const email = bytes.toString(CryptoJS.enc.Utf8);
 
     if (!email) {
-      logger.error(`[recover] token invalido, pois não existe o email`);
+      logger.error(`[recuperarSenha] Token inválido - Email não existe:  ${req.socket.remoteAddress}`);
       return res.status(400).json("token invalido");
     }
 
@@ -92,18 +87,21 @@ const controller = {
 
 
     if (!savedClient) {
-      logger.error(`[recover] Email não encontrado email= ${email}`);
+      logger.error(`[recuperarSenha] Email não encontrado email= ${email} - ${req.socket.remoteAddress}`);
       return res.status(404).json("Email não encontrado");
     }
 
     if (!savedClient.hashReset || savedClient.hashReset !== token) {
       logger.error(
-        `[recover] Token diferente ou não existe no banco de dados`
+        `[recuperarSenha] Token diferente/Inexistente no banco de dados - ${req.socket.remoteAddress}`
       );
       return res.status(400).json("token invalido");
     }
 
     if (bcrypt.compareSync(senha, savedClient.senha)) {
+      logger.error(
+        `[recuperarSenha] Tentativa de mudança com a mesma senha - ${req.socket.remoteAddress}`
+      );
       return res.status(400).json("Senha ja utilizada");
     }
 
@@ -114,7 +112,7 @@ const controller = {
     savedClient.hashReset = null;
 
     await savedClient.save();
-    logger.info(`[recover] Senha alterada: ${req.socket.remoteAddress}`);
+    logger.info(`[recuperarSenha] Senha alterada: ${req.socket.remoteAddress}`);
 
     return res.sendStatus(201);
   },

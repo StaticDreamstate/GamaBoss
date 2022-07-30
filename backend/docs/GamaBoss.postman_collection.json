@@ -1,9 +1,10 @@
 {
 	"info": {
-		"_postman_id": "6a0c43fe-5c23-4d58-96fe-42f5bf580ff9",
+		"_postman_id": "7a7f843e-f378-4f16-8eec-e5eb27809e1d",
 		"name": "GamaBoss",
 		"description": "Documentação da API em progresso...",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22246307"
 	},
 	"item": [
 		{
@@ -16,13 +17,13 @@
 					"formdata": [
 						{
 							"key": "nome",
-							"value": "João Santos",
+							"value": "Perry",
 							"description": "Nome completo do cliente",
 							"type": "default"
 						},
 						{
 							"key": "email",
-							"value": "jsantos@email.com",
+							"value": "perry@email.com",
 							"description": "E-mail para login posterior",
 							"type": "default"
 						},
@@ -36,15 +37,13 @@
 							"key": "telefone",
 							"value": "(11)2222-2222",
 							"description": "Telefone de contato (opcional)",
-							"type": "default",
-							"disabled": true
+							"type": "default"
 						},
 						{
 							"key": "whatsapp",
 							"value": "(11)99999-9999",
 							"description": "Whatsapp de contato (opcional)",
-							"type": "default",
-							"disabled": true
+							"type": "default"
 						},
 						{
 							"key": "avatar",
@@ -64,7 +63,7 @@
 						"cadastro"
 					]
 				},
-				"description": "<h3><span style=\"color:#FFA500\">POST</span>:/cadastro</h3>\n\nRota inicial para cadastro de um cliente. Utiliza seis campos, sendo três deles obrigatórios para concluir o cadastro. No caso de um cadastro bem sucedido, um status 201 é retornado.  \n\nApós a conclusão do cadastro, as informações são enviadas para o banco de dados (coleção Clientes do MongoDB), possibilitando o cliente a usar a rota <span style=\"color:#00FF00\"><b>login</b></span> (usando o par email/senha cadastrado) para ter acesso ao cadastro dos seus animais e seleção do plano de saúde. \n\nCaso o usuário já esteja cadastrado, um erro 400 é retornado (\"E-mail já cadastrado\").\n\n<h4>Campos</h4>\n\n- Nome: Obrigatório (String)\n- Email: Obrigatório (String)\n- Senha: Obrigatório (String)\n- Telefone: Opcional (String)\n- Whatsapp: Opcional (String)\n- Avatar: Opcional (Interface: Campo para Upload)"
+				"description": "<h3>POST:/cadastro</h3>\n\nRota inicial para cadastro de um cliente. Utiliza seis campos, sendo três deles obrigatórios para concluir o cadastro. No caso de um cadastro bem sucedido, um status 201 é retornado.  \n\nApós a conclusão do cadastro, as informações são enviadas para o banco de dados (coleção Clientes do MongoDB), possibilitando o cliente a usar a rota <b>login</b>(usando o par email/senha cadastrado) para ter acesso ao cadastro dos seus animais e seleção do plano de saúde. \n\nCaso o usuário já esteja cadastrado, um erro 400 é retornado (\"E-mail já cadastrado\").\n\n<h4>Campos</h4>\n\n- Nome: Obrigatório (String)\n- Email: Obrigatório (String)\n- Senha: Obrigatório (String)\n- Telefone: Opcional (String)\n- Whatsapp: Opcional (String)\n- Avatar: Opcional (Interface: Campo para Upload)\n\n<b>Nota:</b> Usar Body->form-data"
 			},
 			"response": [
 				{
@@ -160,98 +159,6 @@
 					"body": "{\n    \"nome\": \"José Silva\",\n    \"email\": \"jsilva@email.com\",\n    \"senha\": \"abcd1234\",\n    \"telefone\": \"(11)2222-2222\",\n    \"whatsapp\": \"(11)99999-9999\",\n    \"images\": [\n        \"62d9e30a647a0b21190efa44\"\n    ],\n    \"_id\": \"62d9e30a647a0b21190efa46\",\n    \"createdAt\": \"2022-07-21T23:36:42.991Z\",\n    \"updatedAt\": \"2022-07-21T23:36:42.991Z\",\n    \"__v\": 0\n}"
 				},
 				{
-					"name": "Cadastro repetido",
-					"originalRequest": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "formdata",
-							"formdata": [
-								{
-									"key": "nome",
-									"value": "José Silva",
-									"description": "Nome completo do cliente",
-									"type": "default"
-								},
-								{
-									"key": "email",
-									"value": "jsilva@email.com",
-									"description": "E-mail para login posterior",
-									"type": "default"
-								},
-								{
-									"key": "senha",
-									"value": "abcd1234",
-									"description": "Senha para login",
-									"type": "default"
-								},
-								{
-									"key": "telefone",
-									"value": "(11)2222-2222",
-									"description": "Telefone de contato (opcional)",
-									"type": "default"
-								},
-								{
-									"key": "whatsapp",
-									"value": "(11)99999-9999",
-									"description": "Whatsapp de contato (opcional)",
-									"type": "default"
-								},
-								{
-									"key": "avatar",
-									"description": "Imagem para avatar de perfil (opcional)",
-									"type": "file",
-									"src": "/home/static_dreamstate/Imagens/mr_robot.jpg"
-								}
-							]
-						},
-						"url": {
-							"raw": "{{baseurl}}/cadastro",
-							"host": [
-								"{{baseurl}}"
-							],
-							"path": [
-								"cadastro"
-							]
-						}
-					},
-					"status": "Bad Request",
-					"code": 400,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "X-Powered-By",
-							"value": "Express"
-						},
-						{
-							"key": "Content-Type",
-							"value": "application/json; charset=utf-8"
-						},
-						{
-							"key": "Content-Length",
-							"value": "31"
-						},
-						{
-							"key": "ETag",
-							"value": "W/\"1f-gslUYkGhLgAe2DPLnbxzZBWPItA\""
-						},
-						{
-							"key": "Date",
-							"value": "Thu, 21 Jul 2022 23:38:14 GMT"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Keep-Alive",
-							"value": "timeout=5"
-						}
-					],
-					"cookie": [],
-					"body": "\"Email já cadastrado no banco\""
-				},
-				{
 					"name": "Campos obrigatórios",
 					"originalRequest": {
 						"method": "POST",
@@ -345,6 +252,492 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"nome\": \"João Santos\",\n    \"email\": \"jsantos@email.com\",\n    \"senha\": \"abcd1234\",\n    \"images\": [\n        \"62d9e3d7647a0b21190efa4a\"\n    ],\n    \"_id\": \"62d9e3d7647a0b21190efa4c\",\n    \"createdAt\": \"2022-07-21T23:40:07.619Z\",\n    \"updatedAt\": \"2022-07-21T23:40:07.619Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"harry@email.com\",\n  \"senha\": \"abcd1234\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseurl}}/login",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"login"
+					]
+				},
+				"description": "<h3>POST:/login</h3>\n\nApós o cadastro do usuário, ele deve usar esta rota para acessar sua conta. \n\nUtilizando-se do par email/senha cadastrados na rota anterior, o usuário poderá logar-se de fato. O email/senha fornecidos serão comparados com a dupla equivalente armazenada no banco de dados. Caso batam, um token json é retornado, o que valida o login.\n\nCaso o usuário não esteja cadastrado, um erro 400 é retornado (\"E-mail não cadastrado\").\n\nCaso as credenciais informadas não batam com as credenciais do banco, um erro 401 é retornado (\"E-mail ou senha inválidos\").\n\n<h4>Campos</h4>\n\n- Email: Obrigatório (String)\n- Senha: Obrigatório (String)\n\n<b>Nota:</b> Usar Body->raw(json)"
+			},
+			"response": [
+				{
+					"name": "login bem-sucedido (retorno do token)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"perry@email.com\",\n  \"senha\": \"abcd1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "205"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"cd-vjQKayuP57qwjeTje8YKQi8uZB8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 07:32:20 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyZGU0NjcxNzE4MTJmYjU3ZWU4MmQxNyIsImVtYWlsIjoicGVycnlAZW1haWwuY29tIiwibm9tZSI6InBlcnJ5IiwiaWF0IjoxNjU4NzM0MzQwfQ.TcUR5zfFrKUV4FPQmiRq46IiSTsZuRaCE3LfvnNRtbc\""
+				},
+				{
+					"name": "Credenciais inválidas",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"perry@email.com\",\n  \"senha\": \"1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Unauthorized",
+					"code": 401,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "28"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c-+qMt+l6C0YH+MoUxXpAGaUk0M6E\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 07:39:59 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Email ou senha inválidos.\""
+				},
+				{
+					"name": "Usuário não cadastrado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"harry@email.com\",\n  \"senha\": \"abcd1234\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/login",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "32"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"20-Mlwzk7PLLKon4r3h1eJd8Em3ijs\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 07:42:00 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Email não cadastrado no banco\""
+				}
+			]
+		},
+		{
+			"name": "reset-senha",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/reset-senha",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"reset-senha"
+					]
+				},
+				"description": "<h3>POST:/reset-senha</h3>\n\nSe o usuário desejar trocar a senha, esta rota é a primeira que deve ser usada para o processo de troca de senha ser completado. \n\nEssa rota pega o e-mail do usuário que deseja trocar de senha, compara com o e-mail cadastrado no banco e, caso bata (caso exista), ele retorna um hash e, através desse novo hash (em um campo chamado hashReset no banco), o processo de recuperação de senha continua na rota seguinte (/recuperar-senha).\n\nCaso o usuário não esteja cadastrado, um erro 404 é retornado (\"Email não encontrado\").\n\n<h4>Campos</h4>\n\n- Email: Obrigatório (String)\n\n<b>Nota:</b> Usar Body->raw(json)"
+			},
+			"response": [
+				{
+					"name": "Novo hash gerado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"perry@email.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/reset-senha",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"reset-senha"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "46"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2e-dj6SAi5cZS5Th4nu6+y90lMGQGk\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 07:59:21 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"U2FsdGVkX1+qpe0T+IDd5ji4xljUuRHM7CNir01OMk8=\""
+				},
+				{
+					"name": "Usuário não-cadastrado",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"email\": \"harry@email.com\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/reset-senha",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"reset-senha"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "23"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"17-TmN03dToCILAx5u6yhS2dqfwtwY\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 08:00:42 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Email não encontrado\""
+				}
+			]
+		},
+		{
+			"name": "recuperar-senha",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "{{baseurl}}/recuperar-senha",
+					"host": [
+						"{{baseurl}}"
+					],
+					"path": [
+						"recuperar-senha"
+					]
+				},
+				"description": "<h3>POST:/recuperar-senha</h3>\n\nSe o usuário desejar trocar a senha, esta rota é a segunda que deve ser usada para o processo de troca de senha ser completado. \n\nApós validar o usuário gerando o novo token pela rota anterior (/reset-senha), essa rota pega o novo token e a nova senha a ser definida, alterando-a por fim e gerando um status 201 para confirmar a troca. \n\nCaso o usuário não esteja cadastrado, um erro 404 é retornado (\"Email não encontrado\").\n\nCaso o token processado não seja o mesmo do token gerado (salvo em hashReset), um erro 400 (token inválido) é gerado. \n\nCaso o usuário informe a mesma senha, um erro 400 (senha já utilizada) é gerado. \n\n<h4>Campos</h4>\n\n- token: Obrigatório (String)\n- senha: Obrigatório (String)\n\n<b>Nota:</b> Usar Body->raw(json)"
+			},
+			"response": [
+				{
+					"name": "Senha alterada com sucesso",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\": \"U2FsdGVkX19q0Q4esaLQta/j2v5zQh+DmJgILaOd1B8=\",\n\"senha\": \"1234abcd\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/recuperar-senha",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"recuperar-senha"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "text/plain; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"7-rM9AyJuqT6iOan/xHh+AW+7K/T8\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 08:16:33 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "Created"
+				},
+				{
+					"name": "Exemplo de token inválido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"token\": \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\n\"senha\": \"1234abcd\"}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseurl}}/recuperar-senha",
+							"host": [
+								"{{baseurl}}"
+							],
+							"path": [
+								"recuperar-senha"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "16"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10-6BLLPqJTrvacC3UbupSgH3zh+Zw\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 25 Jul 2022 08:18:53 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"token invalido\""
 				}
 			]
 		}

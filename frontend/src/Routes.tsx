@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes as RoutesReact } from "react-router-dom";
+import Footer from "./components/Footer";
 import Header from "./components/Header";
 import Private from "./components/PrivateRoute";
 import { AuthProvider } from "./contexts/AuthContext";
@@ -23,6 +24,7 @@ export function Routes() {
             <Route path="/alterar" element={<Change />} />
             <Route path="/confirmacao" element={<Verification />} />
           </RoutesReact>
+          <Footer />
         </>
       </AuthProvider>
     </BrowserRouter>

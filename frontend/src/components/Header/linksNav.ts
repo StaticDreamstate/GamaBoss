@@ -1,6 +1,9 @@
 export const linksNav = [
-  { name: "Home", redirect: "/home" },
-  { name: "Perfil", redirect: "/perfil" },
-  { name: "Meu Plano", redirect: "/meu-plano" },
-  { name: "Sair", redirect: "/" },
+  { name: "Entrar/Cadastrar", redirect: "/" },
+  { name: "Quem Somos", redirect: "" },
+  { name: "Clínicas parceiras", redirect: "" },
+  { name: "Nossos planos", redirect: "/meu-plano" },
+  { name: "Nosso blog", redirect: "" },
+  { name: "Perfil pet", redirect: "/perfil" },
+  { name: "Meu plano", redirect: "/meu-plano" },
 ];
