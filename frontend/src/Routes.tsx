@@ -5,6 +5,7 @@ import Private from "./components/PrivateRoute";
 import { AuthProvider } from "./contexts/AuthContext";
 import Change from "./pages/Change";
 import Home from "./pages/Home";
+import HomeLogout from "./pages/HomeLogout";
 import Login from "./pages/Login";
 import MyPlan from "./pages/MyPlan";
 import Profile from "./pages/Profile";
@@ -19,6 +20,7 @@ export function Routes() {
           <RoutesReact>
             <Route path="/" element={<Login />} />
             <Route path="/home" element={<Home />} />
+            <Route path="/homeLogout" element={<HomeLogout />} />
             <Route path="/perfil" element={<Profile />} />
             <Route path="/meu-plano" element={<MyPlan />} />
             <Route path="/alterar" element={<Change />} />
