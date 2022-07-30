@@ -8,9 +8,17 @@ import iconClose from "./icons/iconClose.svg";
 import imagePets from "./images/imagePets.svg";
 import iconEdit from "./icons/edit.svg"
 import iconCamera from "./icons/iconCamera.svg"
+import adicionarPet from "./images/adicionarPet.png"
+import meuPlano from "./images/meuPlano.png"
+import monitorCard from "./images/monitorCard.png"
+import pataPet from "./images/pataPet.png"
 
 export const images = {
   imagePets,
+  adicionarPet,
+  meuPlano,
+  monitorCard,
+  pataPet,
 };
 
 export const icons = {
