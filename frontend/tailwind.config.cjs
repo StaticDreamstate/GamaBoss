@@ -18,6 +18,7 @@ module.exports = {
         "gray-4": "#71798C",
         "gray-5": "#ABAFC8",
         "gray-6": "#F3F4F6",
+        card: "#EDF7FF"
       },
       fontWeight: {
         700: 700,
