@@ -5,40 +5,39 @@ import PetAvatar from "../../components/PetAvatar";
 
 export default function MyPlan() {
   return (
-    <main className="flex flex-col items-center w-full">
-      <div className="pt-5 w-screen">
+    <main className="flex flex-col items-center w-full px-8 ">
+      <div className="pt-10">
         <PetAvatar />
       </div>
-      <p className="py-12 px-8 text-left leading-mobile-line-26.4px text-mobile-size-16px font-normal ">
+      <p className=" pt-14 pb-12 text-left leading-mobile-line-26.4px text-mobile-size-16px font-normal ">
         O plano atual do Tobias é <strong>plano simples</strong>. Veja abaixo o
         que está incluso.
       </p>
-
       <Accordion
         titleAccordion={"Teste 1"}
         contentAccordion={
-          "Flowbite is an open-source library of interactive components built on top of Tailwind CSS including buttons,"
+          "Teste Teste"
         }
       />
       <Accordion
-        titleAccordion={"Teste 2"}
+        titleAccordion={""}
         contentAccordion={
-          "F is an open-source library of interactive components built on top of Tailwind CSS including buttons,"
+          ""
         }
       />
       <Accordion
-        titleAccordion={"Teste 3"}
+        titleAccordion={""}
         contentAccordion={
-          " an open-source library of interactive components built on top of Tailwind CSS including buttons,"
+          " "
         }
       />
       <Accordion
-        titleAccordion={"Teste 4"}
+        titleAccordion={""}
         contentAccordion={
-          " an open-source library of interactive components built on top of Tailwind CSS including buttons,"
+          " "
         }
-      />   
-      <p className="pt-10 px-8 text-left text-mobile-size-16px leading-mobile-line-26.4px font-normal">
+      />
+      <p className="pt-10  text-left text-mobile-size-16px leading-mobile-line-26.4px font-normal">
         Você pode adicionar novos serviços ao seu plano.
       </p>
       <div className="pt-10 flex justify-center ">

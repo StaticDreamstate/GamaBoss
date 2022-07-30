@@ -24,7 +24,7 @@ export default function Accordion(props: IaccordionProps) {
     <section>
       {activeAccordions.map((activeAccordion, index) => (
         <div>
-          <h2 className="pb-6 px-7">
+          <h2 className="pb-4 ">
             <button
               onClick={() => toggleAccordion(index)}
               type="button"
@@ -35,16 +35,15 @@ export default function Accordion(props: IaccordionProps) {
                 className={`w-4 h-4  shrink-0 ${
                   activeAccordion.state == true ? "" : ""
                 }`}
-                src={icons.iconCircle}
-                alt="Icone de positivo"
-                
+                src={`${activeAccordion.state == false ? icons.iconCircle : icons.iconNegative}`}
+                alt="Icone de positivo e negativo"                              
               />
             </button>
           </h2>
           <div
             className={`${activeAccordion.state == false ? "hidden" : "block"}`}
           >
-            <div className="p-3 pl-8 w-72 font-libre">
+            <div className=" pl-6 w-72 font-libre">
               <p className="mb-2 text-gray-500 flex-wrap">
                 {props.contentAccordion}
               </p>
