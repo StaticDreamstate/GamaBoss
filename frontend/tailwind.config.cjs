@@ -18,6 +18,7 @@ module.exports = {
         "gray-4": "#71798C",
         "gray-5": "#ABAFC8",
         "gray-6": "#F3F4F6",
+        card: "#EDF7FF"
       },
       fontWeight: {
         700: 700,
@@ -32,11 +33,16 @@ module.exports = {
         "mobile-size-32px": "32px",
         "mobile-size-24px": "24px",
         "mobile-size-16px": "16px",
+        "mobile-size-14px": "14px",
+        "mobile-size-12px": "12px",
       },
       lineHeight: {
         "mobile-line-35.2px": "35.2px",
         "mobile-line-26.4px": "26.4px",
         "mobile-line-17.6px": "17.6px",
+      },
+      fontFamily: {
+        libre: ['Manrope, sans-serif'],
       },
     },
   },

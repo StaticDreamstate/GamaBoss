@@ -18,7 +18,7 @@ export default function Home() {
           <Box></Box>
           <Box></Box>
           <Box></Box>
-        </div><source media="(s)" srcset="" />
+        </div><source media="(s)" srcSet="" />
 
          <div className="flex justify-center gap-6 flex-wrap w-auto items-center ">
           <div className="bg-[#EDF7FF] w-[148px] h-[113px] pt-5 text-center text-[#027BE3]">

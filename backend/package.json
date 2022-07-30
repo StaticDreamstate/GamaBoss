@@ -7,6 +7,8 @@
     "test": "jest",
     "start": "node -r dotenv/config dist/main.js",
     "postinstall": "tsc",
+    "clearlogs": "rm -f src/infra/logs/*",
+    "clearuploads": "rm -f uploads/images/*",
     "dev": "ts-node-dev --respawn --ignore-watch node_modules -r dotenv/config src/index.ts dotenv_config_path=.env --files"
   },
   "repository": {
