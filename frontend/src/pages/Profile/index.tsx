@@ -1,31 +1,23 @@
 import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
+import MenuItemsProfile from "../../components/MenuItemsProfile";
+import PetAvatar from "../../components/PetAvatar";
+import { icons } from "../../assets";
 
 export default function Profile() {
   const navigate = useNavigate();
 
   return (
-    <main className="my-8 flex flex-col items-center">
-      <Button
-        onClick={() => navigate("/meu-plano")}
-        className="m-8"
-        buttonLabel="alterar perfil"
-      />
-      <section className="flex flex-col gap-2">
-        <div className="flex">
-          <img className="mx-1" src="" alt="Icone" />
-          <p className="mx-1">alguma funcionalidade</p>
-        </div>
-        <div className="flex">
-          <img className="mx-1" src="" alt="Icone" />
-          <p className="mx-1">alguma funcionalidade</p>
-        </div>
-        <div className="flex">
-          <img className="mx-1" src="" alt="Icone" />
-          <p className="mx-1">alguma funcionalidade</p>
-        </div>
+    <main >
+      <section className="mt-8">
+        <PetAvatar />
       </section>
-      <section>{/* colocar cards */}</section>
+      <section className="">
+        <MenuItemsProfile image={icons.facebookIcon} textContent="alguma coisa virá aqui" />
+        <MenuItemsProfile image={icons.facebookIcon} textContent="alguma coisa virá aqui" />
+        <MenuItemsProfile image={icons.facebookIcon} textContent="alguma coisa virá aqui" />
+        <MenuItemsProfile image={icons.facebookIcon} textContent="alguma coisa virá aqui" />
+        <MenuItemsProfile image={icons.facebookIcon} textContent="alguma coisa virá aqui" />
+      </section>
     </main>
   );
 }
