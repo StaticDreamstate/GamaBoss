@@ -12,6 +12,9 @@ import adicionarPet from "./images/adicionarPet.png"
 import meuPlano from "./images/meuPlano.png"
 import monitorCard from "./images/monitorCard.png"
 import pataPet from "./images/pataPet.png"
+import dog1 from "./images/dog1.png"
+import dog2 from "./images/dog2.png"
+import dog3 from "./images/dog3.png"
 import avatarBar from "./icons/avatarBar.svg"
 import iconCheck from "./icons/iconCheck.png"
 import iconArromRight from "./icons/iconArrowRight.png.png"
@@ -28,6 +31,9 @@ export const images = {
   meuPlano,
   monitorCard,
   pataPet,
+  dog1,
+  dog2,
+  dog3,
 };
 
 export const icons = {

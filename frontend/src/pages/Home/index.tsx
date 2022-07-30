@@ -38,7 +38,7 @@ export default function Home() {
            <button className=""> Meu plano</button>
            </div>
          </div>
-         {/* <img src={images.} className="p-12"   alt="Perfil Pet" /> */}
+      
       </main>
     </>
   );
