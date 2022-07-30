@@ -4,11 +4,7 @@ export default function Home() {
   return (
     <>
       <main className="pt-10 grid justify-items-stretc">
-        <img
-          src={"logo"}
-          alt="imagem de pets"
-          className=""
-        />
+        <img src={"logo"} alt="imagem de pets" className="" />
 
         <h2 className=" pt-10 px-20">Lorem ipsum dolor sit amet.</h2>
         <p className="pt-2 pb-5 px-20">

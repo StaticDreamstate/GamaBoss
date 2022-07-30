@@ -82,7 +82,12 @@ export default function Login() {
         </div>
         <div className="flex flex-col items-center">
           <Button className="w-auto" buttonLabel="Entrar" type="submit" />
-          <span className="font-400 text-[12px] my-2">Ainda não tem uma conta?<a className="font-600 text-[12px]" href="">Cadastre-se!</a></span>
+          <span className="font-400 text-[12px] my-2">
+            Ainda não tem uma conta?
+            <a className="font-600 text-[12px]" href="">
+              Cadastre-se!
+            </a>
+          </span>
         </div>
       </form>
     </main>

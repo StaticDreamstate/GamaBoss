@@ -5,11 +5,19 @@ import { plans } from "./objetc";
 export default function Change() {
   const [checked, setChecked] = useState(true);
 
-  function handleCheckbox(){
+  function handleCheckbox() {
     return console.log([
-      {title: "Consultas Clínicas", text:"03 consultas anuais de rotina com veterinário em uma das clínicas parceiras do plano.", userHas: !checked},
-  {title:"Vacinas básicas caninas", text: "02 doses das vacinas V8, V10 e V11. E vacina da gripe anual.", userHas: !checked},
-    ])
+      {
+        title: "Consultas Clínicas",
+        text: "03 consultas anuais de rotina com veterinário em uma das clínicas parceiras do plano.",
+        userHas: !checked,
+      },
+      {
+        title: "Vacinas básicas caninas",
+        text: "02 doses das vacinas V8, V10 e V11. E vacina da gripe anual.",
+        userHas: !checked,
+      },
+    ]);
   }
 
   return (
