@@ -26,6 +26,9 @@ module.exports = {
         500: 500,
         400: 400,
       },
+      width: {
+        '128': '54rem',
+      },
       fontSize: {
         "mobile-size-32px": "32px",
         "mobile-size-24px": "24px",

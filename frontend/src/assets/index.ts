@@ -8,6 +8,10 @@ import iconMenu from "./icons/iconMenu.svg";
 import iconClose from "./icons/iconClose.svg";
 import iconEdit from "./icons/edit.svg"
 import iconCamera from "./icons/iconCamera.svg"
+import adicionarPet from "./images/adicionarPet.png"
+import meuPlano from "./images/meuPlano.png"
+import monitorCard from "./images/monitorCard.png"
+import pataPet from "./images/pataPet.png"
 import avatarBar from "./icons/avatarBar.svg"
 import iconCheck from "./icons/iconCheck.png"
 import iconArromRight from "./icons/iconArrowRight.png.png"
@@ -16,9 +20,14 @@ import iconArromRight from "./icons/iconArrowRight.png.png"
 import imagePets from "./images/imagePets.svg";
 import DogHome from "./images/DogHome.png";
 
+
 export const images = {
   imagePets,
-  DogHome
+  DogHome,
+  adicionarPet,
+  meuPlano,
+  monitorCard,
+  pataPet,
 };
 
 export const icons = {

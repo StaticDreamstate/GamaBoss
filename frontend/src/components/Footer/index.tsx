@@ -1,10 +1,10 @@
 import { icons } from "../../assets";
 import { Link } from "react-router-dom";
-
+import Cartao from "../../assets/images/formasdepagamento.png"
 export default function Footer() {
   return (
     <footer className="mt-5 w-screen border-t-2">
-      <div className="py-4 sm:flex sm:justify-around lg:gap-20">
+      <div className="py-4 sm:flex sm:justify-evenly lg:gap-20">
         <div className="flex justify-evenly sm: sm:gap-20">
           <div className="p-3">
             <h2 className=" text-base font-semibold fontFamily">
@@ -22,7 +22,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
-          <div className="p-3">
+          <div className="p-3 mx-4">
             <h2 className=" font-semibold">Planos</h2>
             <ul>
               <li className="mt-2 ">
@@ -36,6 +36,10 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+        </div>
+        <div className="mt-3 flex flex-col">
+        <h2 className=" font-semibold flex justify-center ">Formas de pagamento</h2>
+        <img src={Cartao} className=" w-auto" alt="Imagem de cartão" />
         </div>
         <div>
           <h2 className="text-center sm:text-left mt-3 text-base font-semibold">
