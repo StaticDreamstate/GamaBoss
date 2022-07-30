@@ -12,6 +12,8 @@ import adicionarPet from "./images/adicionarPet.png"
 import meuPlano from "./images/meuPlano.png"
 import monitorCard from "./images/monitorCard.png"
 import pataPet from "./images/pataPet.png"
+import avatarBar from "./icons/avatarBar.svg"
+
 
 export const images = {
   imagePets,
@@ -31,4 +33,5 @@ export const icons = {
   whatsappIcon,
   iconEdit,
   iconCamera,
+  avatarBar
 };
