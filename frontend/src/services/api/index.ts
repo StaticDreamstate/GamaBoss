@@ -2,7 +2,6 @@ import axios from "axios";
 
 function getTokenFromLocalStorage() {
   const token = localStorage.getItem("user");
-  // console.log("the token from local storage is -> " + token);
   if (token === null) {
     return undefined;
   }
@@ -11,6 +10,7 @@ function getTokenFromLocalStorage() {
 
 export const requestApi = axios.create({
   baseURL: "https://reqres.in/api",
+  // https://api-gamaboss.herokuapp.com
   headers: {
     Authorization: `Bearer ${getTokenFromLocalStorage()}`,
   },

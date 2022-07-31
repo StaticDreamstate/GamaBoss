@@ -4,7 +4,7 @@ import logger from "../infra/logger";
 import detect from "detect-port";
 import { mongoDB } from "../database";
 import BaseRoutes from "./BaseRoutes";
-import path from "path";
+import cors from "cors";
 
 type SetupOptions = {
   test?: boolean;
@@ -13,7 +13,7 @@ type SetupOptions = {
 
 export default class App {
   private instance: Application;
-  private defaultPort: number = 4000;
+  private defaultPort: any = 8080;
 
   constructor() {
     this.instance = Express();
@@ -21,6 +21,7 @@ export default class App {
 
   async setup(options: SetupOptions): Promise<void> {
     const selectedPort = options.port ? options.port : this.defaultPort;
+    this.instance.use(cors());
     this.instance.use(Express.json());
     this.instance.use(Express.static("uploads"));
     this.instance.use(BaseRoutes);

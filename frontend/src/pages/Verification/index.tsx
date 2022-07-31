@@ -1,11 +1,14 @@
+<<<<<<< HEAD
 import Header from "../../components/Header"
 import Button from "../../components/Button"
 import logo from "../../assets/hometest.png"
 import CheckBox from "../../components/CheckBox";
+import PetAvatar from "../../components/PetAvatar";
 
 export default function Verification(){
   return (
     <main className="grid justify-items-stretc">
+      <PetAvatar />
       <img 
         src={logo}
         alt="imagem xxx"
