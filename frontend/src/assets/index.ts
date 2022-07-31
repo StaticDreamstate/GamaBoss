@@ -3,7 +3,8 @@ import facebookIcon from "./icons/facebookIcon.png";
 import instagramIcon from "./icons/instagramIcon.png";
 import linkedinIcon from "./icons/linkedinIcon.png";
 import whatsappIcon from "./icons/whatsappIcon.png";
-import iconCircle from "./icons/iconCircle.png";
+import iconCircle from "./icons/iconCircle+.png";
+import iconNegative from "./icons/iconCircle-.png"
 import iconMenu from "./icons/iconMenu.svg";
 import iconClose from "./icons/iconClose.svg";
 import iconEdit from "./icons/edit.svg"
@@ -39,6 +40,7 @@ export const images = {
 export const icons = {
   iconMenu,
   iconClose,
+  iconNegative,
   iconCircle,
   facebookIcon,
   instagramIcon,
