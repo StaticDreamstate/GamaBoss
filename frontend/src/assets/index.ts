@@ -23,6 +23,7 @@ import iconArromRight from "./icons/iconArrowRight.png.png"
 //images
 import imagePets from "./images/imagePets.svg";
 import DogHome from "./images/DogHome.png";
+import dogConf from "./images/dogConf.png";
 
 
 export const images = {
@@ -35,6 +36,7 @@ export const images = {
   dog1,
   dog2,
   dog3,
+  dogConf,
 };
 
 export const icons = {
