@@ -8,6 +8,7 @@ import Login from "./pages/Login";
 import MyPlan from "./pages/MyPlan";
 import Profile from "./pages/Profile";
 import Verification from "./pages/Verification";
+import Concluded from "./pages/Concluded";
 
 export function Routes() {
   return (
@@ -22,6 +23,7 @@ export function Routes() {
             <Route path="/meu-plano" element={<MyPlan />} />
             <Route path="/alterar" element={<Change />} />
             <Route path="/confirmacao" element={<Verification />} />
+            <Route path="/concluido" element={<Concluded /> } />
           </RoutesReact>
         </>
       </AuthProvider>
