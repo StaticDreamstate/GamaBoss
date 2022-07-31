@@ -1,7 +1,3 @@
-import PetAvatar from "../../components/PetAvatar";
-
 export default function Verification() {
-  return (
-    <PetAvatar />
-  )
+  return <main>página de confirmação</main>;
 }

@@ -3,46 +3,68 @@ import Accordion from "../../components/Accordion";
 import { plans } from "./objetc";
 
 export default function Change() {
-  const [checked, setChecked] = useState(true);
+  const [checked, setChecked] = useState([
+    {
+      id: Math.random(),
+      state: false,
+    },
+  ]);
 
-  function handleCheckbox() {
-    return console.log([
-      {
-        title: "Consultas Clínicas",
-        text: "03 consultas anuais de rotina com veterinário em uma das clínicas parceiras do plano.",
-        userHas: !checked,
-      },
-      {
-        title: "Vacinas básicas caninas",
-        text: "02 doses das vacinas V8, V10 e V11. E vacina da gripe anual.",
-        userHas: !checked,
-      },
-    ]);
+  function toggleCheckbox(index: number) {
+    const newCheck = [...checked, {
+      id: Math.random()
+      ,state: !checked}, ];
+    // newCheck[index].state = !newCheck[index].state;
+    console.log(newCheck);  
+    setChecked(newCheck);
+  }
+
+  function verLog(){
+    console.log(checked);
+    
   }
 
   return (
     <>
       <main className="flex flex-col items-center">
-        {plans.map((plan) => (
-          <div className="flex">
-            {plan.userHas ? (
-              <input
-                type="checkbox"
-                defaultChecked={plan.userHas}
-                onClick={handleCheckbox}
-                onChange={() => setChecked(!checked)}
-              />
-            ) : (
-              <input
-                type="checkbox"
-                defaultChecked={plan.userHas}
-                onChange={() => setChecked(!checked)}
-              />
-            )}
-            <Accordion
-              titleAccordion={plan.title}
-              contentAccordion={plan.text}
-            />
+        {plans.map((plan, index) => (
+          <div
+          key={plan.title+index}
+           className="flex">
+            {plan.userHas == false ? (
+              <>
+                <input
+                  type="checkbox"
+                  defaultChecked={plan.userHas}
+                  onClick={() => toggleCheckbox(index)}
+                />
+                <Accordion
+                  titleAccordion={plan.title}
+                  contentAccordion={plan.text}
+                />
+              </>
+            ) : ("")}
+          </div>
+        ))}
+
+        {plans.map((plan,index) => (
+          <div 
+          key={plan.title+index}
+          className="flex">
+            {plan.userHas == true ? (
+              <>
+                <input
+                  type="checkbox"
+                  defaultChecked={plan.userHas}
+                  //  onClick={"handleCheckbox"}
+                  // onChange={() => toggleCheckbox(index)}
+                />
+                <Accordion
+                  titleAccordion={plan.title}
+                  contentAccordion={plan.text}
+                />
+              </>
+            ) : ("")}
           </div>
         ))}
       </main>
