@@ -14,7 +14,7 @@ export default function Change() {
         </p>
 
         {plans.map((plan) => (
-          <div className="flex">
+          <div className="flex items-baseline">
             {plan.userHas == false ? (
               <>
                 <input className="m-2" type="checkbox" />
@@ -36,7 +36,7 @@ export default function Change() {
         </p>
 
         {plans.map((plan) => (
-          <div className="flex">
+          <div className="flex items-baseline">
             {plan.userHas == true ? (
               <>
                 <input
