@@ -19,12 +19,54 @@ export function Routes() {
           <Header />
           <RoutesReact>
             <Route path="/" element={<Login />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/homeLogout" element={<HomeLogout />} />
-            <Route path="/perfil" element={<Profile />} />
-            <Route path="/meu-plano" element={<MyPlan />} />
-            <Route path="/alterar" element={<Change />} />
-            <Route path="/confirmacao" element={<Verification />} />
+            <Route
+              path="/home"
+              element={
+                <Private>
+                  <Home />
+                </Private>
+              }
+            />
+            <Route
+              path="/homeLogout"
+              element={
+                <Private>
+                  <HomeLogout />
+                </Private>
+              }
+            />
+            <Route
+              path="/perfil"
+              element={
+                <Private>
+                  <Profile />
+                </Private>
+              }
+            />
+            <Route
+              path="/meu-plano"
+              element={
+                <Private>
+                  <MyPlan />
+                </Private>
+              }
+            />
+            <Route
+              path="/alterar"
+              element={
+                <Private>
+                  <Change />
+                </Private>
+              }
+            />
+            <Route
+              path="/confirmacao"
+              element={
+                <Private>
+                  <Verification />
+                </Private>
+              }
+            />
           </RoutesReact>
           <Footer />
         </>

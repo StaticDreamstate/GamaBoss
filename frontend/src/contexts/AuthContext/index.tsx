@@ -23,7 +23,7 @@ export function AuthProvider({ children }: IAuthProvider) {
     try {
       const response = await requestApi.post("/login", {
         email: email,
-        password: password,
+        senha: password,
       });
       localStorage.setItem("user", JSON.stringify(response.data));
       setUser(response.data);

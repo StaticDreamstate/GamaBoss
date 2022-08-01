@@ -1,5 +1,4 @@
 import Box from "../../components/BoxHome";
-import Cards from "../../assets/images/pet.png"
 import { images } from "../../assets";
 
 
