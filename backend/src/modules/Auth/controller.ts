@@ -9,6 +9,8 @@ import ENV from "../../infra/config/env";
 const controller = {
 
   async login(req: Request, res: Response) {
+
+    try {
     const { email, senha } = req.body;
 
     const savedClient = await Client.findOne({
@@ -31,15 +33,19 @@ const controller = {
         id: savedClient._id,
         email: savedClient.email,
         nome: savedClient.nome,
-        // nivel: targetUser.nivel,
       },
       ENV.KEY,
     );
 
     return res.status(200).json(token);
+    } catch(error) {
+      logger.error(`[login] Erro: ${error} - ${req.socket.remoteAddress}`);
+      return res.status(500).json(`${error}`);
+    }
   },
 
   async gerarNovoHash(req: Request, res: Response) {
+    try {
     logger.info(`[reset] Requisição de reset de senha: ${req.socket.remoteAddress}`);
 
     const { email } = req.body;
@@ -65,9 +71,14 @@ const controller = {
     await savedClient.save();
     logger.info(`[reset] Hash gerado: ${req.socket.remoteAddress}`);
     return res.status(200).json(token);
+    } catch(error) {
+      logger.error(`[reset] Erro: ${error} - ${req.socket.remoteAddress}`);
+      return res.status(500).json(`${error}`);
+    }
   },
 
   async recuperarSenha(req: Request, res: Response) {
+    try {
     logger.info(
       `[recuperarSenha] Recuperação de senha em progresso: ${req.socket.remoteAddress}`
     );
@@ -115,8 +126,11 @@ const controller = {
     logger.info(`[recuperarSenha] Senha alterada: ${req.socket.remoteAddress}`);
 
     return res.sendStatus(201);
-  },
-
+  } catch(error) {
+    logger.error(`[recuperarSenha] Erro: ${error} - ${req.socket.remoteAddress}`);
+    return res.status(500).json(`${error}`);
+  }
+}
 };
 
 export default controller;

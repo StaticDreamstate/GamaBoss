@@ -39,7 +39,7 @@ const controller = {
         return res.status(201).json(newPet);
     } catch(error) { 
         logger.error(`[createPet]Erro ao cadastrar pet: ${error}-  ${req.socket.remoteAddress}`);
-        return res.status(400).json("Erro de cadastro");
+        return res.status(500).json(`${error}`);
     }
     },
 
@@ -50,7 +50,7 @@ const controller = {
             return res.status(200).json(allPets);
         } catch (error) {
             logger.error(`[getPets]Erro ao consultar lista: ${error}-  ${req.socket.remoteAddress}`);
-            return res.status(400).json("Erro de consulta");
+            return res.status(500).json(`${error}`);
         }
     },
 
@@ -61,7 +61,7 @@ const controller = {
             return res.status(200).json(pet);
         } catch (error) {
             logger.error(`[getPetById]Erro ao consultar pet: ${error}-  ${req.socket.remoteAddress}`);
-            return res.status(400).json("Erro de consulta");
+            return res.status(500).json(`${error}`);
         }
     },
 
@@ -89,7 +89,7 @@ const controller = {
             return res.status(200).json(petUpdate);
         } catch (error) {
             logger.error(`[getPetById]Erro ao atualizar dados do pet: ${error}-  ${req.socket.remoteAddress}`);
-            return res.status(400).json("Erro de atualização");
+            return res.status(500).json(`${error}`);
         }
     },
 
@@ -102,7 +102,7 @@ const controller = {
             return res.sendStatus(204);
         } catch (error) {
             logger.error(`[deletePet]Erro ao deletar pet do banco: ${error}-  ${req.socket.remoteAddress}`);
-            return res.status(400).json("Erro de deleção");
+            return res.status(500).json(`${error}`);
         }
     },
 }
