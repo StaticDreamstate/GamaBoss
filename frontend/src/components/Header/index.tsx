@@ -14,7 +14,7 @@ export default function Header() {
         <img className="w-5" src={icons.iconMenu} alt="Icone de menu" />
       </button>
       <h1 className="font-600 text-mobile-size-24px leading-mobile-line-26.4px text-primary-blue-1">
-        NomePlano
+        PetPlan
       </h1>
       <nav>
         <ul className="md:flex hidden items-center gap-8">

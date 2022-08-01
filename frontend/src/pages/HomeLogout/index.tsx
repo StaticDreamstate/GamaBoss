@@ -1,6 +1,7 @@
 import Box from "../../components/BoxHome";
 import { icons, images } from "../../assets";
 import Button from "../../components/Button";
+import CardPets from "../../components/CardPets";
 
 
 export default function HomeLogout() {
@@ -67,15 +68,17 @@ export default function HomeLogout() {
           </div>
           <a href={"/home"} className="pt-[11px] flex font-600 text-mobile-size-12px font-libre leading-[16.8px]  text-primary-blue-1" >
             Ver mais dicas
-            <img  className="pl-[5px] h-[20px] w-[25px]" src={icons.iconArromRight} alt="icon arrom right" />
+            <img className="pl-[5px] h-[20px] w-[25px]" src={icons.iconArromRight} alt="icon arrom right" />
           </a>
 
         </div>
 
-        <div className="px-[45px] pt-[47px]">
-          <Box></Box>
-          <Box></Box>
-          <Box></Box>
+        <div className="mx-6 my-14">
+
+          <CardPets imagePet={images.dog1} texto={"O que fazer quando o pet é muito agitado?"} redirect={""} />
+          <CardPets imagePet={images.dog2} texto={"Quais as vantagens de um plano de saúde para pet?"} redirect={""} />
+          <CardPets imagePet={images.dog3} texto={"5 cuidados para o bem-estar do seu pet"} redirect={""}/>
+
         </div>
       </main>
     </>
