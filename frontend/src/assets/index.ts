@@ -20,6 +20,7 @@ import iconCheck from "./icons/iconCheck.png";
 import iconArromRight from "./icons/iconArrowRight.png.png";
 import imagePets from "./images/imagePets.svg";
 import DogHome from "./images/DogHome.png";
+import dogConf from "./images/dogConf.png";
 import petAvatar from "./images/petAvatar.png";
 
 export const images = {
@@ -32,6 +33,7 @@ export const images = {
   dog1,
   dog2,
   dog3,
+  dogConf,
   petAvatar,
 };
 

@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import MyPlan from "./pages/MyPlan";
 import Profile from "./pages/Profile";
 import Verification from "./pages/Verification";
+import Concluded from "./pages/Concluded";
 
 export function Routes() {
   return (
@@ -67,6 +68,7 @@ export function Routes() {
                 </Private>
               }
             />
+            <Route path="/concluido" element={<Concluded /> } />
           </RoutesReact>
           <Footer />
         </>
