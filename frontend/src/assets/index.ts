@@ -19,8 +19,6 @@ import dog3 from "./images/dog3.png"
 import avatarBar from "./icons/avatarBar.svg"
 import iconCheck from "./icons/iconCheck.png"
 import iconArromRight from "./icons/iconArrowRight.png.png"
-
-//images
 import imagePets from "./images/imagePets.svg";
 import DogHome from "./images/DogHome.png";
 
@@ -35,6 +33,7 @@ export const images = {
   dog1,
   dog2,
   dog3,
+  petAvatar,
 };
 
 export const icons = {
