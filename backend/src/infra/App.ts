@@ -4,7 +4,7 @@ import logger from "../infra/logger";
 import detect from "detect-port";
 import { mongoDB } from "../database";
 import BaseRoutes from "./BaseRoutes";
-import path from "path";
+import cors from "cors";
 
 type SetupOptions = {
   test?: boolean;
@@ -13,7 +13,7 @@ type SetupOptions = {
 
 export default class App {
   private instance: Application;
-  private defaultPort: any = process.env.PORT || 8080;
+  private defaultPort: any = 8080;
 
   constructor() {
     this.instance = Express();
@@ -21,6 +21,7 @@ export default class App {
 
   async setup(options: SetupOptions): Promise<void> {
     const selectedPort = options.port ? options.port : this.defaultPort;
+    this.instance.use(cors());
     this.instance.use(Express.json());
     this.instance.use(Express.static("uploads"));
     this.instance.use(BaseRoutes);
@@ -39,7 +40,7 @@ export default class App {
     detect(selectedPort)
       .then(_port => {
         if (selectedPort == _port) {
-          this.instance.listen(process.env.PORT || selectedPort, () => {
+          this.instance.listen(selectedPort, () => {
             console.log(`[OK] API aguardando requisições... [Porta TCP ${selectedPort}]`);
             logger.info("[setup] API em execução.");
           })

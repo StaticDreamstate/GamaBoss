@@ -1,4 +1,7 @@
 import Box from "../../components/BoxHome";
+import Cards from "../../assets/images/pet.png"
+import { images } from "../../assets";
+
 
 export default function Home() {
   return (
@@ -15,7 +18,27 @@ export default function Home() {
           <Box></Box>
           <Box></Box>
           <Box></Box>
-        </div>
+        </div><source media="(s)" srcSet="" />
+
+         <div className="flex justify-center gap-6 flex-wrap w-auto items-center ">
+          <div className="bg-[#EDF7FF] w-[148px] h-[113px] pt-5 text-center text-[#027BE3]">
+            <img src={images.pataPet} className="pl-12" />
+           <button className=""> Perfil Pet</button>
+           </div>
+          <div className="bg-[#EDF7FF] w-[148px] h-[113px] pt-5 text-center text-[#027BE3]">
+          <img src={images.monitorCard} className="pl-12" />
+           <button className=""> Nosso blog</button>
+           </div>
+          <div className="bg-[#EDF7FF]  w-[148px] h-[113px] pt-5 text-center text-[#027BE3]">
+          <img src={images.adicionarPet} className="pl-12" />
+           <button className=""> Adicionar Pet</button>
+           </div>
+          <div className="bg-[#EDF7FF] w-[148px] h-[113px] pt-5 text-center text-[#027BE3]">
+          <img src={images.meuPlano} className="pl-12" />
+           <button className=""> Meu plano</button>
+           </div>
+         </div>
+      
       </main>
     </>
   );
