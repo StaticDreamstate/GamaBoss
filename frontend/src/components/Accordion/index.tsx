@@ -4,6 +4,7 @@ import { icons } from "../../assets";
 interface IaccordionProps {
   titleAccordion: string;
   contentAccordion: string;
+  className?:string
 }
 
 export default function Accordion(props: IaccordionProps) {
@@ -21,7 +22,7 @@ export default function Accordion(props: IaccordionProps) {
   }
 
   return (
-    <section>
+    <section className={`${props.className}`}>
       {activeAccordions.map((activeAccordion, index) => (
         <>
           <h2>

@@ -1,10 +1,14 @@
 import { icons } from "../../assets";
 import { mockPet } from "./mock";
 
-export default function PetAvatar() {
+interface IPetAvatar {
+  className?: string
+}
+
+export default function PetAvatar(props:IPetAvatar) {
 
   return (
-    <div className="mx-6 w-80 flex items-center">
+    <div className={`w-80 flex items-center ${props.className}`}>
       <img
         className="w-16 h-16 rounded-full object-contain "
         src={mockPet.img}
