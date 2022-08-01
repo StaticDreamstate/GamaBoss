@@ -45,8 +45,8 @@ const controller = {
 
     async getPets(req: Request, res: Response) {
         try {
-            const allPets = await Pets.find().sort({ updated_at: -1 });
-
+            const { dono } = req.params;
+            const allPets = await Pets.find({dono: dono}).sort({ updated_at: -1 });
             return res.status(200).json(allPets);
         } catch (error) {
             logger.error(`[getPets]Erro ao consultar lista: ${error}-  ${req.socket.remoteAddress}`);
