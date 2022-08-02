@@ -1,4 +1,3 @@
-import Header from "../../components/Header";
 import Button from "../../components/Button";
 import CheckBox from "../../components/CheckBox";
 import { images } from "../../assets";
@@ -16,7 +15,7 @@ export default function Verification(){
         <p className="pl-16 font-sans text-xl">Ao confirmar os serviços adicionados, você receberá um e-mail de confirmação das alterações do seu plano atual.</p>
       </div>
       <div className="flex justify-center mt-5 font-sans text-xl">
-        <CheckBox labelContent={"Li os termos e confirmo a altereação"}> </CheckBox>
+        <CheckBox labelContent={"Li os termos e confirmo a altereação"} /> 
       </div>
     
 
@@ -35,10 +34,10 @@ export default function Verification(){
       </div> */}
 
       <div className="flex items-center justify-center mt-10">
-        <Button className="font-sans font-normal pt-4 pb-4 pr-8 pl-8 shadow-lg" buttonLabel={"Confirmar"}> </Button>
+        <Button className="font-600 w-[120px] sm:w-[165px] shadow-lg" buttonLabel={"Confirmar"} />
       </div>
       <div className="flex items-center justify-center mt-3 mb-28">
-        <Button className="font-normal text-black pt-3 pb-3 pr-7 pl-7 border-solid border-4 border-primary-blue-1 bg-white shadow-lg" buttonLabel={"Cancelar"}> </Button>
+        <Button className="font-600 text-black w-[118px] sm:w-[163px] border-solid border-2 border-primary-blue-1 bg-white shadow-lg hover:bg-gray-6" buttonLabel={"Cancelar"} /> 
       </div>
 
     </main>

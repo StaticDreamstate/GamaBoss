@@ -28,14 +28,7 @@ export function Routes() {
                 </Private>
               }
             />
-            <Route
-              path="/homeLogout"
-              element={
-                <Private>
-                  <HomeLogout />
-                </Private>
-              }
-            />
+            <Route path="/homeLogout" element={<HomeLogout />} />
             <Route
               path="/perfil"
               element={
@@ -68,7 +61,14 @@ export function Routes() {
                 </Private>
               }
             />
-            <Route path="/concluido" element={<Concluded /> } />
+            <Route
+              path="/concluido"
+              element={
+                <Private>
+                  <Concluded />{" "}
+                </Private>
+              }
+            />
           </RoutesReact>
           <Footer />
         </>
