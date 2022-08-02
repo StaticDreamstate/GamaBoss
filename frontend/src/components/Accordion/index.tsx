@@ -25,11 +25,11 @@ export default function Accordion(props: IaccordionProps) {
     <section className={`${props.className}`}>
       {activeAccordions.map((activeAccordion, index) => (
         <div>
-          <h2 className="pb-4 ">
+          <h2 className="">
             <button
               onClick={() => toggleAccordion(index)}
               type="button"
-              className={`flex items-center justify-between w-72 h-11 p-5 font-medium text-left text-gray-3 border border-b-1 border-gray-4 rounded-lg focus:ring-4 focus:ring-gray-200  `}
+              className={`flex items-center justify-between w-[308px] md:w-[490px] h-11 p-5 font-medium md:text-mobile-size-24px text-left text-gray-1 border-2  border-gray-4  rounded-b-sm rounded-t-lg `}
             >
               <span>{props.titleAccordion}</span>
               <img
@@ -44,8 +44,8 @@ export default function Accordion(props: IaccordionProps) {
           <div
             className={`${activeAccordion.state == false ? "hidden" : "block"}`}
           >
-            <div className=" pl-6 w-72 font-libre">
-              <p className="mb-2 text-gray-500 flex-wrap">
+            <div className="w-[308px] md:w-[490px]  ">
+              <p className="mb-2 px-6 py-3 text-gray-1 border-x-2 border-b-2 border-t-1 border-gray-4 rounded-b-lg flex-wrap  md:text-mobile-size-24px  ">
                 {props.contentAccordion}
               </p>
             </div>
