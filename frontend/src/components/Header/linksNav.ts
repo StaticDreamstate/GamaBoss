@@ -8,3 +8,9 @@ export const linksNav = [
   { name: "Perfil pet", redirect: "/perfil" },
   { name: "Meu plano", redirect: "/meu-plano" },
 ];
+
+export const linksNavDesktop = [
+  { name: "Perfil pet", redirect: "/perfil" },
+  { name: "Meu plano", redirect: "/meu-plano" },
+  { name: "Entrar/Cadastrar", redirect: "/" },
+];
