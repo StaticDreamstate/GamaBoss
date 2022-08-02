@@ -18,7 +18,7 @@ export default class Connection {
             this.instance = await connect(this.url_connection);
             logger.info("[createConnection] Conexão com o banco de dados realizada.");
         } catch(error) {
-            logger.error("[createConnection] Conexão Recusada:" + error);
+            logger.error(`[createConnection] Conexão Recusada: ${error}`);
         } 
     }
 

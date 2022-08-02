@@ -5,10 +5,12 @@ import Private from "./components/PrivateRoute";
 import { AuthProvider } from "./contexts/AuthContext";
 import Change from "./pages/Change";
 import Home from "./pages/Home";
+import HomeLogout from "./pages/HomeLogout";
 import Login from "./pages/Login";
 import MyPlan from "./pages/MyPlan";
 import Profile from "./pages/Profile";
 import Verification from "./pages/Verification";
+import Concluded from "./pages/Concluded";
 
 export function Routes() {
   return (
@@ -18,11 +20,55 @@ export function Routes() {
           <Header />
           <RoutesReact>
             <Route path="/" element={<Login />} />
-            <Route path="/home" element={<Home />} />
-            <Route path="/perfil" element={<Profile />} />
-            <Route path="/meu-plano" element={<MyPlan />} />
-            <Route path="/alterar" element={<Change />} />
-            <Route path="/confirmacao" element={<Verification />} />
+            <Route
+              path="/home"
+              element={
+                <Private>
+                  <Home />
+                </Private>
+              }
+            />
+            <Route
+              path="/homeLogout"
+              element={
+                <Private>
+                  <HomeLogout />
+                </Private>
+              }
+            />
+            <Route
+              path="/perfil"
+              element={
+                <Private>
+                  <Profile />
+                </Private>
+              }
+            />
+            <Route
+              path="/meu-plano"
+              element={
+                <Private>
+                  <MyPlan />
+                </Private>
+              }
+            />
+            <Route
+              path="/alterar"
+              element={
+                <Private>
+                  <Change />
+                </Private>
+              }
+            />
+            <Route
+              path="/confirmacao"
+              element={
+                <Private>
+                  <Verification />
+                </Private>
+              }
+            />
+            <Route path="/concluido" element={<Concluded /> } />
           </RoutesReact>
           <Footer />
         </>
