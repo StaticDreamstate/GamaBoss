@@ -229,7 +229,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://localhost:8080/listar-pets/Jeriscreudo",
+					"raw": "http://localhost:8080/listar-pets/62eac8889d137cf0dc20510a",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -237,10 +237,10 @@
 					"port": "8080",
 					"path": [
 						"listar-pets",
-						"Jeriscreudo"
+						"62eac8889d137cf0dc20510a"
 					]
 				},
-				"description": "<h3>GET:/listar-pets/:dono</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" o nome do dono como um parâmetro, para assim filtrar da base de dados somente os animais pertencentes ao dono em questão (evitando um dump de todo o banco). \n\nEssa rota retorna 200 tanto em caso de haver ou não o nome informado no banco de dados. Caso haja, as informações de todos os animais referentes ao dono serão retornados. Caso não, ela retorna um array vazio."
+				"description": "<h3>GET:/listar-pets/:dono</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" o id do dono como um parâmetro, para assim filtrar da base de dados somente os animais pertencentes ao dono em questão (evitando um dump de todo o banco). \n\nEssa rota retorna 200 tanto em caso de haver ou não o nome informado no banco de dados. Caso haja, as informações de todos os animais referentes ao dono serão retornados. Caso não, ela retorna um array vazio."
 			},
 			"response": [
 				{
@@ -249,7 +249,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/listar-pets/Jaconcio",
+							"raw": "http://localhost:8080/listar-pets/62ea6a2cab356ce807d9559d",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -257,7 +257,7 @@
 							"port": "8080",
 							"path": [
 								"listar-pets",
-								"Jaconcio"
+								"62ea6a2cab356ce807d9559d"
 							]
 						}
 					},
@@ -279,15 +279,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "253"
+							"value": "262"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"fd-62FDsAh+yuQ93KTH+J6mXkGgz7U\""
+							"value": "W/\"106-28VWJceV+0Cqrvdj10Y8qUtdBRo\""
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 02 Aug 2022 00:24:46 GMT"
+							"value": "Wed, 03 Aug 2022 19:33:57 GMT"
 						},
 						{
 							"key": "Connection",
@@ -299,15 +299,15 @@
 						}
 					],
 					"cookie": [],
-					"body": "[\n    {\n        \"_id\": \"62e86c00a1945a645c20a694\",\n        \"nome\": \"Violet\",\n        \"dono\": \"Jaconcio\",\n        \"raca\": \"srd\",\n        \"sexo\": \"F\",\n        \"idade\": \"900\",\n        \"peso\": \"10000000 kg\",\n        \"images\": [\n            \"62e86c00a1945a645c20a692\"\n        ],\n        \"createdAt\": \"2022-08-02T00:12:48.967Z\",\n        \"updatedAt\": \"2022-08-02T00:12:48.967Z\",\n        \"__v\": 0\n    }\n]"
+					"body": "[\n    {\n        \"_id\": \"62eac8889d137cf0dc20510a\",\n        \"nome\": \"Draco\",\n        \"dono\": \"62ea6a2cab356ce807d9559d\",\n        \"raca\": \"Pitbull\",\n        \"sexo\": \"M\",\n        \"idade\": \"10\",\n        \"peso\": \"30\",\n        \"images\": [\n            \"62eac8879d137cf0dc205108\"\n        ],\n        \"createdAt\": \"2022-08-03T19:12:08.236Z\",\n        \"updatedAt\": \"2022-08-03T19:12:08.236Z\",\n        \"__v\": 0\n    }\n]"
 				},
 				{
-					"name": "Dono não existe no banco de dados",
+					"name": "Cliente não existe no banco",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8080/listar-pets/Jeriscreudo",
+							"raw": "http://localhost:8080/listar-pets/62ea6a2cab356ce807d95593",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -315,7 +315,7 @@
 							"port": "8080",
 							"path": [
 								"listar-pets",
-								"Jeriscreudo"
+								"62ea6a2cab356ce807d95593"
 							]
 						}
 					},
@@ -345,7 +345,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 02 Aug 2022 00:30:51 GMT"
+							"value": "Wed, 03 Aug 2022 19:34:46 GMT"
 						},
 						{
 							"key": "Connection",
@@ -1283,7 +1283,7 @@
 			]
 		},
 		{
-			"name": "cadastrar-pet",
+			"name": "cadastrar-pet/:id",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -1293,11 +1293,6 @@
 						{
 							"key": "nome",
 							"value": "Violet",
-							"type": "text"
-						},
-						{
-							"key": "dono",
-							"value": "Jaconcio",
 							"type": "text"
 						},
 						{
@@ -1323,21 +1318,22 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8080/cadastrar-pet",
+					"raw": "http://localhost:8080/cadastrar-pet/62eac8889d137cf0dc20510a",
 					"protocol": "http",
 					"host": [
 						"localhost"
 					],
 					"port": "8080",
 					"path": [
-						"cadastrar-pet"
+						"cadastrar-pet",
+						"62eac8889d137cf0dc20510a"
 					]
 				},
-				"description": "<h3>POST:/cadastrar-pet</h3>\n\nUma vez que o usuário está cadastrado, ele poderá realizar os cadastros (criações dos perfis) de seus animais, fornecendo os campos abaixo. \n\nUma vez criado o perfil, a rota retorna um status 201, ou um 400, caso o animal já esteja cadastrado. \n\n<h4>Campos</h4>\n\n- nome: Obrigatório (String)\n- dono: Obrigatório (String)\n- raca: Opcional (String)\n- sexo: Obrigatório (String)\n- idade: Obrigatório (String)\n- peso: Obrigatório (String)\n- avatar: Opcional (imagem)\n\n<b>Nota:</b> O campo raca é opcional, caso o animal não tenha, embora é perfeitamente comum indicar SRD nesse campo."
+				"description": "<h3>POST:/cadastrar-pet</h3>\n\nUma vez que o usuário está cadastrado, ele poderá realizar os cadastros (criações dos perfis) de seus animais, fornecendo os campos abaixo. \n\nEssa é uma das rotas parametrizadas. Ela lê a id do cliente como parâmetro na url, associando-a ao campo dono do banco de dados. Os demais campos são enviados em um corpo json.\n\nUma vez criado o perfil, a rota retorna um status 201, ou um 400, caso o animal já esteja cadastrado. \n\n<h4>Campos</h4>\n\n- nome: Obrigatório (String)\n- raca: Opcional (String)\n- sexo: Obrigatório (String)\n- idade: Obrigatório (String)\n- peso: Obrigatório (String)\n- avatar: Opcional (imagem)\n\n<b>Nota:</b> O campo raca é opcional, caso o animal não tenha, embora é perfeitamente comum indicar SRD nesse campo."
 			},
 			"response": [
 				{
-					"name": "Cadastro bem-sucedido",
+					"name": "Tentativa bem-sucedida de cadastro",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -1347,11 +1343,6 @@
 								{
 									"key": "nome",
 									"value": "Violet",
-									"type": "text"
-								},
-								{
-									"key": "dono",
-									"value": "Jaconcio",
 									"type": "text"
 								},
 								{
@@ -1377,14 +1368,15 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8080/cadastrar-pet",
+							"raw": "http://localhost:8080/cadastrar-pet/62eac8889d137cf0dc20510a",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"cadastrar-pet"
+								"cadastrar-pet",
+								"62eac8889d137cf0dc20510a"
 							]
 						}
 					},
@@ -1406,15 +1398,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "251"
+							"value": "267"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"fb-fhgBDYCT2wbssHlVUQJpTYgfxMY\""
+							"value": "W/\"10b-LOuJhS3NUcW9JYnHChdVNFeuAH4\""
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 02 Aug 2022 00:12:49 GMT"
+							"value": "Wed, 03 Aug 2022 19:25:07 GMT"
 						},
 						{
 							"key": "Connection",
@@ -1426,10 +1418,10 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"nome\": \"Violet\",\n    \"dono\": \"Jaconcio\",\n    \"raca\": \"srd\",\n    \"sexo\": \"F\",\n    \"idade\": \"900\",\n    \"peso\": \"10000000 kg\",\n    \"images\": [\n        \"62e86c00a1945a645c20a692\"\n    ],\n    \"_id\": \"62e86c00a1945a645c20a694\",\n    \"createdAt\": \"2022-08-02T00:12:48.967Z\",\n    \"updatedAt\": \"2022-08-02T00:12:48.967Z\",\n    \"__v\": 0\n}"
+					"body": "{\n    \"nome\": \"Violet\",\n    \"dono\": \"62eac8889d137cf0dc20510a\",\n    \"raca\": \"srd\",\n    \"sexo\": \"F\",\n    \"idade\": \"900\",\n    \"peso\": \"10000000 kg\",\n    \"images\": [\n        \"62eacb939d137cf0dc205114\"\n    ],\n    \"_id\": \"62eacb939d137cf0dc205116\",\n    \"createdAt\": \"2022-08-03T19:25:07.536Z\",\n    \"updatedAt\": \"2022-08-03T19:25:07.536Z\",\n    \"__v\": 0\n}"
 				},
 				{
-					"name": "Tentativa repetida de cadastro",
+					"name": "Exemplo de erro de cadastro repetido",
 					"originalRequest": {
 						"method": "POST",
 						"header": [],
@@ -1439,11 +1431,6 @@
 								{
 									"key": "nome",
 									"value": "Violet",
-									"type": "text"
-								},
-								{
-									"key": "dono",
-									"value": "Jaconcio",
 									"type": "text"
 								},
 								{
@@ -1469,14 +1456,15 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8080/cadastrar-pet",
+							"raw": "http://localhost:8080/cadastrar-pet/62eac8889d137cf0dc20510a",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8080",
 							"path": [
-								"cadastrar-pet"
+								"cadastrar-pet",
+								"62eac8889d137cf0dc20510a"
 							]
 						}
 					},
@@ -1506,7 +1494,7 @@
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 02 Aug 2022 00:13:54 GMT"
+							"value": "Wed, 03 Aug 2022 19:26:10 GMT"
 						},
 						{
 							"key": "Connection",
@@ -1630,7 +1618,7 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:8080/editar-pet/Dracula/62e8786ffea69f4d0cd66c58",
+					"raw": "http://localhost:8080/editar-pet/62ea6a2cab356ce807d9559d/62eac8889d137cf0dc20510a",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -1638,15 +1626,15 @@
 					"port": "8080",
 					"path": [
 						"editar-pet",
-						"Dracula",
-						"62e8786ffea69f4d0cd66c58"
+						"62ea6a2cab356ce807d9559d",
+						"62eac8889d137cf0dc20510a"
 					]
 				},
-				"description": "<h3>PUT:/editar-pet/:dono/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" o nome do dono e o id do animal a ser editado como parâmetros (evitando assim que o dono tenha de escrever novamente seu próprio nome).\n\nO corpo recebe exatamente as mesmas informações que a /cadastrar-pet. As regras de campos opcionais e obrigatórios se aplicam aqui da mesma forma. \n\nEssa rota retorna 200 informando que a edição foi concluída com sucesso."
+				"description": "<h3>PUT:/editar-pet/:dono/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" o id do dono e o id do animal a ser editado como parâmetros.\n\nO corpo recebe exatamente as mesmas informações que a /cadastrar-pet. As regras de campos opcionais e obrigatórios se aplicam aqui da mesma forma. \n\nEssa rota retorna 200 informando que a edição foi concluída com sucesso."
 			},
 			"response": [
 				{
-					"name": "Edição de dados bem-sucedida",
+					"name": "Atualização de dados bem-sucedida",
 					"originalRequest": {
 						"method": "PUT",
 						"header": [],
@@ -1681,7 +1669,7 @@
 							]
 						},
 						"url": {
-							"raw": "http://localhost:8080/editar-pet/Dracula/62e8786ffea69f4d0cd66c58",
+							"raw": "http://localhost:8080/editar-pet/62ea6a2cab356ce807d9559d/62eac8889d137cf0dc20510a",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -1689,8 +1677,8 @@
 							"port": "8080",
 							"path": [
 								"editar-pet",
-								"Dracula",
-								"62e8786ffea69f4d0cd66c58"
+								"62ea6a2cab356ce807d9559d",
+								"62eac8889d137cf0dc20510a"
 							]
 						}
 					},
@@ -1712,15 +1700,15 @@
 						},
 						{
 							"key": "Content-Length",
-							"value": "249"
+							"value": "266"
 						},
 						{
 							"key": "ETag",
-							"value": "W/\"f9-pMhVmUcwjeScLUB+yXVRUfri9UY\""
+							"value": "W/\"10a-p+um2C14ty379zdpQubho7q7dhU\""
 						},
 						{
 							"key": "Date",
-							"value": "Tue, 02 Aug 2022 01:09:25 GMT"
+							"value": "Wed, 03 Aug 2022 19:39:23 GMT"
 						},
 						{
 							"key": "Connection",
@@ -1732,7 +1720,7 @@
 						}
 					],
 					"cookie": [],
-					"body": "{\n    \"_id\": \"62e8786ffea69f4d0cd66c58\",\n    \"nome\": \"Vasques\",\n    \"dono\": \"Dracula\",\n    \"raca\": \"Rotweiller\",\n    \"sexo\": \"M\",\n    \"idade\": \"5\",\n    \"peso\": \"1000\",\n    \"images\": [\n        \"62e87945fea69f4d0cd66c5a\"\n    ],\n    \"createdAt\": \"2022-08-02T01:05:51.618Z\",\n    \"updatedAt\": \"2022-08-02T01:09:25.300Z\",\n    \"__v\": 0\n}"
+					"body": "{\n    \"_id\": \"62eac8889d137cf0dc20510a\",\n    \"nome\": \"Vasques\",\n    \"dono\": \"62ea6a2cab356ce807d9559d\",\n    \"raca\": \"Rotweiller\",\n    \"sexo\": \"M\",\n    \"idade\": \"5\",\n    \"peso\": \"1000\",\n    \"images\": [\n        \"62eaceeb2b8da412cc937579\"\n    ],\n    \"createdAt\": \"2022-08-03T19:12:08.236Z\",\n    \"updatedAt\": \"2022-08-03T19:39:23.750Z\",\n    \"__v\": 0\n}"
 				}
 			]
 		},

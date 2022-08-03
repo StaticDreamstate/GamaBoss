@@ -9,12 +9,13 @@ const controller = {
 
     async createPet(req: Request, res: Response) {
         try {
-        const { nome, dono, raca, sexo, idade, peso } = req.body;
+        const { nome, raca, sexo, idade, peso } = req.body;
         const { file } = req;
-
+        const { id } = req.params;
+        
         const savedPet = await Pet.count({
             nome,
-            dono,
+            id,
             raca,
             sexo,
             idade,
@@ -33,6 +34,7 @@ const controller = {
 
         const newPet = await Pet.create({
             ...req.body,
+            dono: id,
             images: [image._id],
         });
 
@@ -68,7 +70,7 @@ const controller = {
 
     async editPet(req: Request, res: Response) {
         try {
-            const { id, dono } = req.params;
+            const { dono, id  } = req.params;
             const { nome, raca, sexo, idade, peso } = req.body;
             const { file } = req;
 
