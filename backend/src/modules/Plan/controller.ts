@@ -10,8 +10,8 @@ const controller = {
             const { id } = req.params;
 
             const plans = await Plan.findOne({ _id: id });
-            
-            if(!plans) {
+
+            if (!plans) {
                 logger.error(`[getPlans]Plano não encontrado: ${req.socket.remoteAddress}`);
                 return res.status(404).json("Plano não encontrado");
             }
@@ -23,7 +23,7 @@ const controller = {
             return res.status(500).json(`${error}`);
         }
     },
-    
+
     async createPlan(req: Request, res: Response) {
         try {
             const { consultaClinica, vacina, diariaInternacao, emergencia,
@@ -35,8 +35,13 @@ const controller = {
 
             const pet = await Pet.findById(id);
 
-            if(!pet) {
-                logger.error(`[createPlans]Pet não encontrado: ${req.socket.remoteAddress}`);
+            if (Object.keys(req.body).length === 0) {
+                logger.error(`[createPlan]Corpo vazio: ${req.socket.remoteAddress}`);
+                return res.status(400).json("Dados insuficientes para Cadastro");
+            }
+
+            if (!pet) {
+                logger.error(`[createPlan]Pet não encontrado: ${req.socket.remoteAddress}`);
                 return res.status(404).json("Pet não cadastrado");
             }
 
@@ -61,13 +66,18 @@ const controller = {
                 procedimentosCirurgicos,
             } = req.body;
 
-            const { id } = req.params; 
+            const { id } = req.params;
 
             const check = await Plan.findOne({ _id: id });
-            
-            if(!check){
-                logger.error(`[getPlans]Plano não encontrado: ${req.socket.remoteAddress}`);
+
+            if (!check) {
+                logger.error(`[editPlan]Plano não encontrado: ${req.socket.remoteAddress}`);
                 return res.status(404).json("Plano não encontrado");
+            }
+
+            if (Object.keys(req.body).length === 0) {
+                logger.error(`[editPlan]Corpo vazio: ${req.socket.remoteAddress}`);
+                return res.status(400).json("Dados insuficientes para Atualização");
             }
 
             const modifyPlan = await Plan.findOneAndUpdate(
@@ -82,8 +92,8 @@ const controller = {
 
             return res.status(201).json(modifyPlan);
 
-        }catch (error) {
-            logger.error(`[modifyPlan]Erro ao editar o plano: ${error}-  ${req.socket.remoteAddress}`);
+        } catch (error) {
+            logger.error(`[editPlan]Erro ao editar o plano: ${error}-  ${req.socket.remoteAddress}`);
             return res.status(500).json(`${error}`);
         }
 
