@@ -10,7 +10,6 @@ const controller = {
 
   async login(req: Request, res: Response) {
 
-    try {
     const { email, senha } = req.body;
 
     const savedClient = await Client.findOne({
@@ -38,10 +37,6 @@ const controller = {
     );
 
     return res.status(200).json(token);
-    } catch(error) {
-      logger.error(`[login] Erro: ${error} - ${req.socket.remoteAddress}`);
-      return res.status(500).json(`${error}`);
-    }
   },
 
   async gerarNovoHash(req: Request, res: Response) {
