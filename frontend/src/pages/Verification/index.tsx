@@ -1,6 +1,7 @@
 import Button from "../../components/Button";
 import CheckBox from "../../components/CheckBox";
 import { images } from "../../assets";
+import { mockPet } from "../../components/PetAvatar/mock";
 
 export default function Verification(){
   return (
@@ -9,7 +10,10 @@ export default function Verification(){
         <img src={images.dogConf} className="max-w-sm" alt="" />
       </div>
       <div className="mt-5 flex justify-center">
-        <p className="text-3xl pl-16 pt-5"><span className="text-primary-blue-1">Tobias </span> está ainda mais protegido!</p>
+        <p className="text-3xl pl-16 pt-5">
+        <span className="text-primary-blue-1"> {mockPet.name} </span>
+          {` está ainda mais protegido!`} 
+        </p>
       </div>
       <div className="mt-5 flex items-center justify-center pt-5 pr-14">
         <p className="pl-16 font-sans text-xl">Ao confirmar os serviços adicionados, você receberá um e-mail de confirmação das alterações do seu plano atual.</p>

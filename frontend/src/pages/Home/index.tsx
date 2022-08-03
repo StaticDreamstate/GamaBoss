@@ -24,10 +24,10 @@ export default function Home() {
 
         <source media="(s)" srcSet="" />
         <div className="flex justify-center gap-6 flex-wrap w-auto items-center">
-          <CardBluePets imagePet={images.pataPet} texto={"Perfil Pet"} redirect={""}/>
+          <CardBluePets imagePet={images.pataPet} texto={"Perfil Pet"} redirect={"/perfil"}/>
           <CardBluePets imagePet={images.monitorCard} texto={"Nosso blog"} redirect={""}/>
           <CardBluePets imagePet={images.adicionarPet} texto={"Adicionar Pet"} redirect={""}/>
-          <CardBluePets imagePet={images.meuPlano} texto={"Meu plano"} redirect={""}/>
+          <CardBluePets imagePet={images.meuPlano} texto={"Meu plano"} redirect={"/meu-plano"}/>
         </div>
 
 

@@ -19,7 +19,7 @@ export function Routes() {
         <>
           <Header />
           <RoutesReact>
-            <Route path="/" element={<Login />} />
+            <Route path="/login" element={<Login />} />
             <Route
               path="/home"
               element={
@@ -28,7 +28,7 @@ export function Routes() {
                 </Private>
               }
             />
-            <Route path="/homeLogout" element={<HomeLogout />} />
+            <Route path="/" element={<HomeLogout />} />
             <Route
               path="/perfil"
               element={
