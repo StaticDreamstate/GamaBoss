@@ -15,6 +15,9 @@ import pataPet from "./images/pataPet.png";
 import dog1 from "./images/dog1.png";
 import dog2 from "./images/dog2.png";
 import dog3 from "./images/dog3.png";
+import dog4 from "./images/dog4.png";
+import dog5 from "./images/dog5.png";
+import dog6 from "./images/dog6.png";
 import avatarBar from "./icons/avatarBar.svg";
 import iconCheck from "./icons/iconCheck.png";
 import iconArromRight from "./icons/iconArrowRight.png.png";
@@ -32,6 +35,9 @@ export const images = {
   dog1,
   dog2,
   dog3,
+  dog4,
+  dog5,
+  dog6,
   petAvatar,
 };
 
