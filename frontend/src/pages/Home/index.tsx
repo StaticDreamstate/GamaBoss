@@ -14,7 +14,7 @@ export default function Home() {
         <div className="">
 
           <h2 className="pt-[42px] px-[24px] font-600 text-mobile-size-24px font-libre leading-[26.4px]" >
-            {`Olá, `} <span className="text-primary-blue-1"> {mockPet.name} </span>
+            {`Olá, `} <span className="text-primary-blue-1"> {mockPet.dono} </span>
           </h2>
           <p className="px-[24px] pt-[8px] pb-12 font-400 text-mobile-size-16px font-libre leading-[22.4px]">
             O que você deseja fazer hoje?
