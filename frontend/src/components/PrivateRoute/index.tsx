@@ -9,7 +9,7 @@ export default function Private({ children }: any) {
     return <div className="text-2xl">CARREGANDO</div>;
   }
   if (!authenticated) {
-    return <Navigate to="/" />;
+    return <Navigate to="/login" />;
   }
 
   return children;
