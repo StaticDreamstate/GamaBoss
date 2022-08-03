@@ -4,6 +4,7 @@ import { images, icons } from "../../assets";
 import MenuItemsProfile from "../../components/MenuItemsProfile";
 import PetAvatar from "../../components/PetAvatar";
 import CardPets from "../../components/CardPets";
+import CardBluePets from "../../components/CardBluePets";
 
 export default function Profile() {
   const navigate = useNavigate();
@@ -33,20 +34,20 @@ export default function Profile() {
       <p className="pt-12 pb-9 pl-6 pr-10 border-t-2">
       Consulte a quantidade de serviços que você já utilizou
       </p>
-      <section className="flex justify-center gap-6 flex-wrap w-auto items-center ">
-        <CardPets
+      <section className="flex justify-center pt-2 gap-6 flex-wrap w-auto items-center ">
+        <CardBluePets
           imagePet={images.calendar_month}
           texto="Consultas"
           redirect="#"/>
-          <CardPets 
+          <CardBluePets
           imagePet={images.vaccines}
           texto="Vacinas"
           redirect="#"/>
-          <CardPets 
+          <CardBluePets
           imagePet={images.healing}
           texto="Internação"
           redirect="#"/>
-          <CardPets 
+          <CardBluePets
           imagePet={images.medical_service_card}
           texto="Emergência"
           redirect="#"/>
