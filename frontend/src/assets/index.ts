@@ -23,7 +23,17 @@ import iconCheck from "./icons/iconCheck.png";
 import iconArromRight from "./icons/iconArrowRight.png.png";
 import imagePets from "./images/imagePets.svg";
 import DogHome from "./images/DogHome.png";
+import dogConf from "./images/dogConf.png";
 import petAvatar from "./images/petAvatar.png";
+import calendar_today from "./icons/calendar_today.png";
+import edit from "./icons/edit.png";
+import medical_services from "./icons/medical_services.png";
+import vacine from "./icons/vacine.png";
+import consult from "./icons/consult.png";
+import medical_service_card from "./images/medical_service_card.png";
+import vaccines from "./images/vaccines.png";
+import healing from "./images/healing.png";
+import calendar_month from "./images/calendar_month.png";
 
 export const images = {
   imagePets,
@@ -38,7 +48,12 @@ export const images = {
   dog4,
   dog5,
   dog6,
+  dogConf,
   petAvatar,
+  calendar_month,
+  healing,
+  vaccines,
+  medical_service_card,
 };
 
 export const icons = {
@@ -55,4 +70,9 @@ export const icons = {
   avatarBar,
   iconCheck,
   iconArromRight,
+  calendar_today,
+  vacine,
+  medical_services,
+  edit,
+  consult,
 };

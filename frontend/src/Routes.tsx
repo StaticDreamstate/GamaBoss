@@ -10,6 +10,7 @@ import Login from "./pages/Login";
 import MyPlan from "./pages/MyPlan";
 import Profile from "./pages/Profile";
 import Verification from "./pages/Verification";
+import Concluded from "./pages/Concluded";
 
 export function Routes() {
   return (
@@ -27,14 +28,7 @@ export function Routes() {
                 </Private>
               }
             />
-            <Route
-              path="/homeLogout"
-              element={
-                <Private>
-                  <HomeLogout />
-                </Private>
-              }
-            />
+            <Route path="/homeLogout" element={<HomeLogout />} />
             <Route
               path="/perfil"
               element={
@@ -64,6 +58,14 @@ export function Routes() {
               element={
                 <Private>
                   <Verification />
+                </Private>
+              }
+            />
+            <Route
+              path="/concluido"
+              element={
+                <Private>
+                  <Concluded />{" "}
                 </Private>
               }
             />

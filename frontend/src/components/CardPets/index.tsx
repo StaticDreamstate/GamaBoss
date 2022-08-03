@@ -7,10 +7,9 @@ interface ICarPetProps {
 
 export default function CardPets(props: ICarPetProps) {
     return (
-        <a href={props.redirect} className="flex h-[120px] mb-4 rounded-lg border-solid border-0 bg-[#FAF6E6]">
-                <img className="rounded-l-lg w-[130px]" src={props.imagePet} alt="" />
-                <p className="mx-5 my-9 font-500 text-mobile-size-14px font-libre leading-[19.6px] ">{props.texto}</p>
-        
+        <a href={props.redirect} className="bg-[#EDF7FF] grid place-items-center w-[148px] h-[113px] pt-5 text-center text-[#027BE3]">
+                <img className="rounded-l-lg " src={props.imagePet} alt="" />
+                <p className="mx-5 font-500 text-mobile-size-14px font-libre leading-[19.6px] ">{props.texto}</p>
         </a>
     );
 }
