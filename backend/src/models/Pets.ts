@@ -5,6 +5,7 @@ export interface IPets {
   nome: string;
   dono: string;
   raca?: string;
+  sexo: string;
   idade: string;
   peso: string;
   images?: Schema.Types.ObjectId[] | IImages[];
@@ -20,6 +21,10 @@ const petSchema = new Schema<IPets>({
     required: true,
   },
   raca: {
+    type: Schema.Types.String,
+    required: false,
+  },
+  sexo: {
     type: Schema.Types.String,
     required: false,
   },

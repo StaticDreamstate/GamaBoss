@@ -2,7 +2,7 @@ import { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { icons } from "../../assets";
 import { AuthContext } from "../../contexts/AuthContext";
-import { linksNav } from "./linksNav";
+import { linksNav, linksNavDesktop } from "./linksNav";
 
 export default function Header() {
   const { logout } = useContext(AuthContext);
@@ -18,7 +18,7 @@ export default function Header() {
       </h1>
       <nav>
         <ul className="md:flex hidden items-center gap-8">
-          {linksNav.map((link, index) => (
+          {linksNavDesktop.map((link, index) => (
             <li key={link.name + index}>
               <Link
                 to={link.redirect}

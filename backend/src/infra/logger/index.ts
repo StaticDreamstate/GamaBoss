@@ -16,6 +16,8 @@ const logger = winston.createLogger({
         level: "warn"}),
         new winston.transports.File({filename: path.resolve("src", "infra", "logs", "info.log"), 
         level: "info"}),
+        new winston.transports.File({filename: path.resolve("src", "infra", "logs", "tests.log"), 
+        level: "debug"}),
     ],
 });
 
