@@ -362,6 +362,175 @@
 			]
 		},
 		{
+			"name": "/listar-plano/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/listar-plano/62ea32fa53b493f040b4c87a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listar-plano",
+						"62ea32fa53b493f040b4c87a"
+					]
+				},
+				"description": "<h3>GET:/listar-plano/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela pega o id de um plano existente e retorna todas as informações do plano e o animal ligado a ele (através do id do animal). \n\nEm uma requisição bem-sucedida, um objeto json retorna todas essas informações junto com um status 200. Caso o plano não exista (id inválido), um erro 404 com a mensagem \"Plano não encontrado\" vem como resposta."
+			},
+			"response": [
+				{
+					"name": "Retornando o plano (pelo id do plano) e seus recursos, assim como o id do animal associado a ele.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-plano/62ea32fa53b493f040b4c87a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-plano",
+								"62ea32fa53b493f040b4c87a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bb-UdlLIO2PFjUHbi0TRc2CVkRZBn0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 08:38:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62ea32fa53b493f040b4c87a\",\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"pet\": [\n        \"62e8786ffea69f4d0cd66c58\"\n    ],\n    \"createdAt\": \"2022-08-03T08:34:02.823Z\",\n    \"updatedAt\": \"2022-08-03T08:34:02.823Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "/novo-plano/:id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/novo-plano/62e8786ffea69f4d0cd66c58",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"novo-plano",
+						"62e8786ffea69f4d0cd66c58"
+					]
+				},
+				"description": "<h3>POST:/novo-plano/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela pega o id de um animal existente como parâmetro, um body com os campos desejados para aquele plano. \n\nCaso o id do pet não seja válido, um erro 404 é retornado.\n\nCaso o body esteja vazio, um erro 400 é retornado. Caso não, um status 201 confirma a criação do plano na base de dados com as informações enviadas. \n\n<h4>Campos: </h4>\n\n<b>Nota:</b> Todos os campos abaixo são do tipo booleano e são opcionais. Eles representam os recursos existentes para um novo plano. Contudo, ao menos um deles deve ser informado para se criar um plano válido.\n\n- consultaClinica \n- vacina\n- diariaInternacao \n- emergencia\n- teleAtendimento\n- coberturaNacional\n- consultaDomicilio\n- procedimentosCirurgicos"
+			},
+			"response": [
+				{
+					"name": "Novo plano associado a um animal cadastrado (pelo id do animal)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"teleAtendimento\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/novo-plano/62e8786ffea69f4d0cd66c58",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"novo-plano",
+								"62e8786ffea69f4d0cd66c58"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bb-wQGO7ELXN44TYmc+gojj7I++oS0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 08:34:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"pet\": [\n        \"62e8786ffea69f4d0cd66c58\"\n    ],\n    \"_id\": \"62ea32fa53b493f040b4c87a\",\n    \"createdAt\": \"2022-08-03T08:34:02.823Z\",\n    \"updatedAt\": \"2022-08-03T08:34:02.823Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
 			"name": "cadastro",
 			"request": {
 				"method": "POST",
@@ -1564,6 +1733,104 @@
 					],
 					"cookie": [],
 					"body": "{\n    \"_id\": \"62e8786ffea69f4d0cd66c58\",\n    \"nome\": \"Vasques\",\n    \"dono\": \"Dracula\",\n    \"raca\": \"Rotweiller\",\n    \"sexo\": \"M\",\n    \"idade\": \"5\",\n    \"peso\": \"1000\",\n    \"images\": [\n        \"62e87945fea69f4d0cd66c5a\"\n    ],\n    \"createdAt\": \"2022-08-02T01:05:51.618Z\",\n    \"updatedAt\": \"2022-08-02T01:09:25.300Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "/atualizar-plano/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"consultaClinica\": true,\n    \"vacina\": true, \n    \"diariaInternacao\": true, \n    \"emergencia\": true,\n    \"teleAtendimento\": true, \n    \"coberturaNacional\": true, \n    \"consultaDomicilio\": true,\n    \"procedimentosCirurgicos\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/atualizar-plano/62ea32fa53b493f040b4c87a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"atualizar-plano",
+						"62ea32fa53b493f040b4c87a"
+					]
+				},
+				"description": "<h3>PUT:/atualizar-plano/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela pega o id de um plano existente como parâmetro e um body com os campos desejados para atualizar plano. \n\nCaso o id do plano não seja válido, um erro 404 é retornado.\n\nCaso o body esteja vazio, um erro 400 é retornado. Caso não, um status 201 confirma a criação do plano na base de dados com as informações enviadas. \n\n<h4>Campos: </h4>\n\n<b>Nota:</b> Todos os campos abaixo são do tipo booleano e são opcionais. Eles representam os recursos existentes para atualizar o plano. Contudo, ao menos um deles deve ser informado para se atualizar um plano.\n\n- consultaClinica \n- vacina\n- diariaInternacao \n- emergencia\n- teleAtendimento\n- coberturaNacional\n- consultaDomicilio\n- procedimentosCirurgicos"
+			},
+			"response": [
+				{
+					"name": "Atualização de plano existente para todos os recursos",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"consultaClinica\": true,\n    \"vacina\": true, \n    \"diariaInternacao\": true, \n    \"emergencia\": true,\n    \"teleAtendimento\": true, \n    \"coberturaNacional\": true, \n    \"consultaDomicilio\": true,\n    \"procedimentosCirurgicos\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/atualizar-plano/62ea32fa53b493f040b4c87a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atualizar-plano",
+								"62ea32fa53b493f040b4c87a"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "315"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13b-+WtuRPusn4CzdxnSCmOjgKFmRkg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 08:43:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62ea32fa53b493f040b4c87a\",\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"pet\": [\n        \"62e8786ffea69f4d0cd66c58\"\n    ],\n    \"createdAt\": \"2022-08-03T08:34:02.823Z\",\n    \"updatedAt\": \"2022-08-03T08:43:29.734Z\",\n    \"__v\": 0,\n    \"coberturaNacional\": true,\n    \"consultaClinica\": true,\n    \"consultaDomicilio\": true,\n    \"diariaInternacao\": true,\n    \"procedimentosCirurgicos\": true\n}"
 				}
 			]
 		}

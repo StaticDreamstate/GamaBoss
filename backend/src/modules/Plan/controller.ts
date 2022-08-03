@@ -60,7 +60,15 @@ const controller = {
                 teleAtendimento, coberturaNacional, consultaDomicilio,
                 procedimentosCirurgicos,
             } = req.body;
+
             const { id } = req.params; 
+
+            const check = await Plan.findOne({ _id: id });
+            
+            if(!check){
+                logger.error(`[getPlans]Plano não encontrado: ${req.socket.remoteAddress}`);
+                return res.status(404).json("Plano não encontrado");
+            }
 
             const modifyPlan = await Plan.findOneAndUpdate(
                 { _id: id },
