@@ -3,8 +3,9 @@ import { Link } from "react-router-dom";
 import Cartao from "../../assets/images/formasdepagamento.png"
 export default function Footer() {
   return (
-    <footer className="mt-5 w-screen border-t-2">
-      <div className="py-4 sm:flex sm:justify-evenly lg:gap-20">
+
+    <footer className="mt-5 border-t-2">
+      <div className="py-4 sm:flex sm:justify-around lg:gap-20">
         <div className="flex justify-evenly sm: sm:gap-20">
           <div className="p-3">
             <h2 className=" text-base font-semibold fontFamily">
@@ -100,4 +101,3 @@ export default function Footer() {
     </footer>
   );
 }
-3;

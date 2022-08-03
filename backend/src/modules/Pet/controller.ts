@@ -9,13 +9,14 @@ const controller = {
 
     async createPet(req: Request, res: Response) {
         try {
-        const { nome, dono, raca, idade, peso } = req.body;
+        const { nome, dono, raca, sexo, idade, peso } = req.body;
         const { file } = req;
 
         const savedPet = await Pet.count({
             nome,
             dono,
             raca,
+            sexo,
             idade,
             peso,
         });
@@ -46,7 +47,7 @@ const controller = {
     async getPets(req: Request, res: Response) {
         try {
             const { dono } = req.params;
-            const allPets = await Pets.find({dono: dono}).sort({ updated_at: -1 });
+            const allPets = await Pets.find({dono: dono}).sort({ updated_at: -1 }); 
             return res.status(200).json(allPets);
         } catch (error) {
             logger.error(`[getPets]Erro ao consultar lista: ${error}-  ${req.socket.remoteAddress}`);
@@ -67,8 +68,8 @@ const controller = {
 
     async editPet(req: Request, res: Response) {
         try {
-            const { id } = req.params;
-            const { nome, dono, raca, idade, peso } = req.body;
+            const { id, dono } = req.params;
+            const { nome, raca, sexo, idade, peso } = req.body;
             const { file } = req;
 
             const image = await Image.create({
@@ -77,7 +78,7 @@ const controller = {
             });
 
             const petUpdate = await Pets.findOneAndUpdate(
-                { _id: id },
+                { _id: id, dono: dono },
                 {
                     ...req.body,
                     images: [image._id]
