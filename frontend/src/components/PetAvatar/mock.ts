@@ -5,4 +5,5 @@ export const mockPet = {
   name: "Tobias",
   age: 5 ,
   weight: 8,
+  dono: "Alessandra"
 }

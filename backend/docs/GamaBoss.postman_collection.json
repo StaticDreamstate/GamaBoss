@@ -8,6 +8,529 @@
 	},
 	"item": [
 		{
+			"name": "/",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						""
+					]
+				},
+				"description": "<h3>GET:/</h3>\n\nEssa é a rota inicial (padrão). Sua única função é mostrar se a API está ou não no ar. Caso esteja, ela retorna um status 200 com a mensagem \"API em execução\"."
+			},
+			"response": [
+				{
+					"name": "Api rodando",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								""
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "20"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"14-X6QGYkIEbFJra4quohHYfqv9kkI\""
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 01 Aug 2022 23:55:17 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"API em execução.\""
+				}
+			]
+		},
+		{
+			"name": "listar-pet/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/listar-pet/62e86c11a1945a645c20a694",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listar-pet",
+						"62e86c11a1945a645c20a694"
+					]
+				},
+				"description": "<h3>GET:/listar-pet/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" um id de um pet específico como um parâmetro, para assim filtrar da base de dados somente os dados pertencentes a um pet em particular de um determinado dono(evitando um dump de todos os animais que o usuário possa ter cadastrado).\n\nEssa rota retorna 200 tanto em caso de haver ou não o id informado no banco de dados. Caso haja, as informações referentes ao animal serão retornadas. Caso não, ela retorna null."
+			},
+			"response": [
+				{
+					"name": "Retorno bem-sucedido",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-pet/62e86c00a1945a645c20a694",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-pet",
+								"62e86c00a1945a645c20a694"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "251"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"fb-DxMtbllfBeDHW0b1d2wu8Fkl5PY\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 00:43:05 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62e86c00a1945a645c20a694\",\n    \"nome\": \"Violet\",\n    \"dono\": \"Jaconcio\",\n    \"raca\": \"srd\",\n    \"sexo\": \"F\",\n    \"idade\": \"900\",\n    \"peso\": \"10000000 kg\",\n    \"images\": [\n        \"62e86c00a1945a645c20a692\"\n    ],\n    \"createdAt\": \"2022-08-02T00:12:48.967Z\",\n    \"updatedAt\": \"2022-08-02T00:12:48.967Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Um pet com id que não existe",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-pet/62e86c11a1945a645c20a694",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-pet",
+								"62e86c11a1945a645c20a694"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"4-K+iMpCQsduglOsYkdIUQZQMtaDM\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 00:44:06 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "null"
+				}
+			]
+		},
+		{
+			"name": "listar-pets/:dono",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/listar-pets/62eac8889d137cf0dc20510a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listar-pets",
+						"62eac8889d137cf0dc20510a"
+					]
+				},
+				"description": "<h3>GET:/listar-pets/:dono</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" o id do dono como um parâmetro, para assim filtrar da base de dados somente os animais pertencentes ao dono em questão (evitando um dump de todo o banco). \n\nEssa rota retorna 200 tanto em caso de haver ou não o nome informado no banco de dados. Caso haja, as informações de todos os animais referentes ao dono serão retornados. Caso não, ela retorna um array vazio."
+			},
+			"response": [
+				{
+					"name": "Retorno bem-sucedido",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-pets/62ea6a2cab356ce807d9559d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-pets",
+								"62ea6a2cab356ce807d9559d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "262"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"106-28VWJceV+0Cqrvdj10Y8qUtdBRo\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 19:33:57 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"_id\": \"62eac8889d137cf0dc20510a\",\n        \"nome\": \"Draco\",\n        \"dono\": \"62ea6a2cab356ce807d9559d\",\n        \"raca\": \"Pitbull\",\n        \"sexo\": \"M\",\n        \"idade\": \"10\",\n        \"peso\": \"30\",\n        \"images\": [\n            \"62eac8879d137cf0dc205108\"\n        ],\n        \"createdAt\": \"2022-08-03T19:12:08.236Z\",\n        \"updatedAt\": \"2022-08-03T19:12:08.236Z\",\n        \"__v\": 0\n    }\n]"
+				},
+				{
+					"name": "Cliente não existe no banco",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-pets/62ea6a2cab356ce807d95593",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-pets",
+								"62ea6a2cab356ce807d95593"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "2"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"2-l9Fw4VUO7kr8CvBlt4zaMCqXZ0w\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 19:34:46 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[]"
+				}
+			]
+		},
+		{
+			"name": "/listar-plano/:id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/listar-plano/62ea32fa53b493f040b4c87a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"listar-plano",
+						"62ea32fa53b493f040b4c87a"
+					]
+				},
+				"description": "<h3>GET:/listar-plano/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela pega o id de um plano existente e retorna todas as informações do plano e o animal ligado a ele (através do id do animal). \n\nEm uma requisição bem-sucedida, um objeto json retorna todas essas informações junto com um status 200. Caso o plano não exista (id inválido), um erro 404 com a mensagem \"Plano não encontrado\" vem como resposta."
+			},
+			"response": [
+				{
+					"name": "Retornando o plano (pelo id do plano) e seus recursos, assim como o id do animal associado a ele.",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/listar-plano/62ea32fa53b493f040b4c87a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"listar-plano",
+								"62ea32fa53b493f040b4c87a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bb-UdlLIO2PFjUHbi0TRc2CVkRZBn0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 08:38:15 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62ea32fa53b493f040b4c87a\",\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"pet\": [\n        \"62e8786ffea69f4d0cd66c58\"\n    ],\n    \"createdAt\": \"2022-08-03T08:34:02.823Z\",\n    \"updatedAt\": \"2022-08-03T08:34:02.823Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "/novo-plano/:id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/novo-plano/62e8786ffea69f4d0cd66c58",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"novo-plano",
+						"62e8786ffea69f4d0cd66c58"
+					]
+				},
+				"description": "<h3>POST:/novo-plano/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela pega o id de um animal existente como parâmetro, um body com os campos desejados para aquele plano. \n\nCaso o id do pet não seja válido, um erro 404 é retornado.\n\nCaso o body esteja vazio, um erro 400 é retornado. Caso não, um status 201 confirma a criação do plano na base de dados com as informações enviadas. \n\n<h4>Campos: </h4>\n\n<b>Nota:</b> Todos os campos abaixo são do tipo booleano e são opcionais. Eles representam os recursos existentes para um novo plano. Contudo, ao menos um deles deve ser informado para se criar um plano válido.\n\n- consultaClinica \n- vacina\n- diariaInternacao \n- emergencia\n- teleAtendimento\n- coberturaNacional\n- consultaDomicilio\n- procedimentosCirurgicos"
+			},
+			"response": [
+				{
+					"name": "Novo plano associado a um animal cadastrado (pelo id do animal)",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"teleAtendimento\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/novo-plano/62e8786ffea69f4d0cd66c58",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"novo-plano",
+								"62e8786ffea69f4d0cd66c58"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "187"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"bb-wQGO7ELXN44TYmc+gojj7I++oS0\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 08:34:03 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"pet\": [\n        \"62e8786ffea69f4d0cd66c58\"\n    ],\n    \"_id\": \"62ea32fa53b493f040b4c87a\",\n    \"createdAt\": \"2022-08-03T08:34:02.823Z\",\n    \"updatedAt\": \"2022-08-03T08:34:02.823Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
 			"name": "cadastro",
 			"request": {
 				"method": "POST",
@@ -468,6 +991,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "{{baseurl}}/reset-senha",
 					"host": [
@@ -607,6 +1139,15 @@
 			"request": {
 				"method": "POST",
 				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"token\": \"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA\",\n\"senha\": \"1234abcd\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "{{baseurl}}/recuperar-senha",
 					"host": [
@@ -740,16 +1281,572 @@
 					"body": "\"token invalido\""
 				}
 			]
+		},
+		{
+			"name": "cadastrar-pet/:id",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Violet",
+							"type": "text"
+						},
+						{
+							"key": "raca",
+							"value": "srd",
+							"type": "text"
+						},
+						{
+							"key": "sexo",
+							"value": "F",
+							"type": "text"
+						},
+						{
+							"key": "idade",
+							"value": "900",
+							"type": "text"
+						},
+						{
+							"key": "peso",
+							"value": "10000000 kg",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/cadastrar-pet/62eac8889d137cf0dc20510a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"cadastrar-pet",
+						"62eac8889d137cf0dc20510a"
+					]
+				},
+				"description": "<h3>POST:/cadastrar-pet</h3>\n\nUma vez que o usuário está cadastrado, ele poderá realizar os cadastros (criações dos perfis) de seus animais, fornecendo os campos abaixo. \n\nEssa é uma das rotas parametrizadas. Ela lê a id do cliente como parâmetro na url, associando-a ao campo dono do banco de dados. Os demais campos são enviados em um corpo json.\n\nUma vez criado o perfil, a rota retorna um status 201, ou um 400, caso o animal já esteja cadastrado. \n\n<h4>Campos</h4>\n\n- nome: Obrigatório (String)\n- raca: Opcional (String)\n- sexo: Obrigatório (String)\n- idade: Obrigatório (String)\n- peso: Obrigatório (String)\n- avatar: Opcional (imagem)\n\n<b>Nota:</b> O campo raca é opcional, caso o animal não tenha, embora é perfeitamente comum indicar SRD nesse campo."
+			},
+			"response": [
+				{
+					"name": "Tentativa bem-sucedida de cadastro",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Violet",
+									"type": "text"
+								},
+								{
+									"key": "raca",
+									"value": "srd",
+									"type": "text"
+								},
+								{
+									"key": "sexo",
+									"value": "F",
+									"type": "text"
+								},
+								{
+									"key": "idade",
+									"value": "900",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "10000000 kg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/cadastrar-pet/62eac8889d137cf0dc20510a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cadastrar-pet",
+								"62eac8889d137cf0dc20510a"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "267"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10b-LOuJhS3NUcW9JYnHChdVNFeuAH4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 19:25:07 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"nome\": \"Violet\",\n    \"dono\": \"62eac8889d137cf0dc20510a\",\n    \"raca\": \"srd\",\n    \"sexo\": \"F\",\n    \"idade\": \"900\",\n    \"peso\": \"10000000 kg\",\n    \"images\": [\n        \"62eacb939d137cf0dc205114\"\n    ],\n    \"_id\": \"62eacb939d137cf0dc205116\",\n    \"createdAt\": \"2022-08-03T19:25:07.536Z\",\n    \"updatedAt\": \"2022-08-03T19:25:07.536Z\",\n    \"__v\": 0\n}"
+				},
+				{
+					"name": "Exemplo de erro de cadastro repetido",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Violet",
+									"type": "text"
+								},
+								{
+									"key": "raca",
+									"value": "srd",
+									"type": "text"
+								},
+								{
+									"key": "sexo",
+									"value": "F",
+									"type": "text"
+								},
+								{
+									"key": "idade",
+									"value": "900",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "10000000 kg",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/cadastrar-pet/62eac8889d137cf0dc20510a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cadastrar-pet",
+								"62eac8889d137cf0dc20510a"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "29"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1d-pgPXfep7OlFpOlBeyqdNO5HXmzc\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 19:26:10 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "\"Pet já cadastrado no banco\""
+				}
+			]
+		},
+		{
+			"name": "deletar-pet/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/deletar-pet/62e86c00a1945a645c20a694",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"deletar-pet",
+						"62e86c00a1945a645c20a694"
+					]
+				},
+				"description": "<h3>GET:/deletar-pet/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" um id de um pet específico como um parâmetro, deletando permanentemente os dados referentes a esse pet do banco. Ela retorna um status 204, sem nenhuma mensagem, para confirmar que a deleção ocorreu. Caso um cadastro (já) inexistente tentar ser deletado, a resposta é a mesma."
+			},
+			"response": [
+				{
+					"name": "Cadastro do animal deletado.",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/deletar-pet/62e86c00a1945a645c20a694",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"deletar-pet",
+								"62e86c00a1945a645c20a694"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "plain",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"a-bAsFyilMr4Ra1hIU5PyoyFRunpI\""
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 02 Aug 2022 00:55:35 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
+		},
+		{
+			"name": "editar-pet/:dono/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "nome",
+							"value": "Vasques",
+							"type": "text"
+						},
+						{
+							"key": "raca",
+							"value": "Rotweiller",
+							"type": "text"
+						},
+						{
+							"key": "sexo",
+							"value": "M",
+							"type": "text"
+						},
+						{
+							"key": "idade",
+							"value": "5",
+							"type": "text"
+						},
+						{
+							"key": "peso",
+							"value": "1000",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/editar-pet/62ea6a2cab356ce807d9559d/62eac8889d137cf0dc20510a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"editar-pet",
+						"62ea6a2cab356ce807d9559d",
+						"62eac8889d137cf0dc20510a"
+					]
+				},
+				"description": "<h3>PUT:/editar-pet/:dono/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela \"lê\" o id do dono e o id do animal a ser editado como parâmetros.\n\nO corpo recebe exatamente as mesmas informações que a /cadastrar-pet. As regras de campos opcionais e obrigatórios se aplicam aqui da mesma forma. \n\nEssa rota retorna 200 informando que a edição foi concluída com sucesso."
+			},
+			"response": [
+				{
+					"name": "Atualização de dados bem-sucedida",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "nome",
+									"value": "Vasques",
+									"type": "text"
+								},
+								{
+									"key": "raca",
+									"value": "Rotweiller",
+									"type": "text"
+								},
+								{
+									"key": "sexo",
+									"value": "M",
+									"type": "text"
+								},
+								{
+									"key": "idade",
+									"value": "5",
+									"type": "text"
+								},
+								{
+									"key": "peso",
+									"value": "1000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/editar-pet/62ea6a2cab356ce807d9559d/62eac8889d137cf0dc20510a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"editar-pet",
+								"62ea6a2cab356ce807d9559d",
+								"62eac8889d137cf0dc20510a"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "266"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"10a-p+um2C14ty379zdpQubho7q7dhU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 19:39:23 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62eac8889d137cf0dc20510a\",\n    \"nome\": \"Vasques\",\n    \"dono\": \"62ea6a2cab356ce807d9559d\",\n    \"raca\": \"Rotweiller\",\n    \"sexo\": \"M\",\n    \"idade\": \"5\",\n    \"peso\": \"1000\",\n    \"images\": [\n        \"62eaceeb2b8da412cc937579\"\n    ],\n    \"createdAt\": \"2022-08-03T19:12:08.236Z\",\n    \"updatedAt\": \"2022-08-03T19:39:23.750Z\",\n    \"__v\": 0\n}"
+				}
+			]
+		},
+		{
+			"name": "/atualizar-plano/:id",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"consultaClinica\": true,\n    \"vacina\": true, \n    \"diariaInternacao\": true, \n    \"emergencia\": true,\n    \"teleAtendimento\": true, \n    \"coberturaNacional\": true, \n    \"consultaDomicilio\": true,\n    \"procedimentosCirurgicos\": true\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/atualizar-plano/62ea32fa53b493f040b4c87a",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"atualizar-plano",
+						"62ea32fa53b493f040b4c87a"
+					]
+				},
+				"description": "<h3>PUT:/atualizar-plano/:id</h3>\n\nEssa é uma das rotas parametrizadas. Ela pega o id de um plano existente como parâmetro e um body com os campos desejados para atualizar plano. \n\nCaso o id do plano não seja válido, um erro 404 é retornado.\n\nCaso o body esteja vazio, um erro 400 é retornado. Caso não, um status 201 confirma a criação do plano na base de dados com as informações enviadas. \n\n<h4>Campos: </h4>\n\n<b>Nota:</b> Todos os campos abaixo são do tipo booleano e são opcionais. Eles representam os recursos existentes para atualizar o plano. Contudo, ao menos um deles deve ser informado para se atualizar um plano.\n\n- consultaClinica \n- vacina\n- diariaInternacao \n- emergencia\n- teleAtendimento\n- coberturaNacional\n- consultaDomicilio\n- procedimentosCirurgicos"
+			},
+			"response": [
+				{
+					"name": "Atualização de plano existente para todos os recursos",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"consultaClinica\": true,\n    \"vacina\": true, \n    \"diariaInternacao\": true, \n    \"emergencia\": true,\n    \"teleAtendimento\": true, \n    \"coberturaNacional\": true, \n    \"consultaDomicilio\": true,\n    \"procedimentosCirurgicos\": true\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/atualizar-plano/62ea32fa53b493f040b4c87a",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"atualizar-plano",
+								"62ea32fa53b493f040b4c87a"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "315"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"13b-+WtuRPusn4CzdxnSCmOjgKFmRkg\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 03 Aug 2022 08:43:29 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"62ea32fa53b493f040b4c87a\",\n    \"vacina\": true,\n    \"emergencia\": true,\n    \"pet\": [\n        \"62e8786ffea69f4d0cd66c58\"\n    ],\n    \"createdAt\": \"2022-08-03T08:34:02.823Z\",\n    \"updatedAt\": \"2022-08-03T08:43:29.734Z\",\n    \"__v\": 0,\n    \"coberturaNacional\": true,\n    \"consultaClinica\": true,\n    \"consultaDomicilio\": true,\n    \"diariaInternacao\": true,\n    \"procedimentosCirurgicos\": true\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"variable": [
 		{
-			"key": "base-url",
-			"value": "http://localhost:5000/cadastro"
-		},
-		{
 			"key": "baseurl",
-			"value": "http://localhost:5000"
+			"value": "http://localhost:8080"
 		}
 	]
 }

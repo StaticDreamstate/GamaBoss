@@ -37,9 +37,9 @@ module.exports = {
         "mobile-size-12px": "12px",
       },
       lineHeight: {
-        "mobile-line-35.2px": "35.2px",
-        "mobile-line-26.4px": "26.4px",
-        "mobile-line-17.6px": "17.6px",
+        "mobile-line-35.2px": "33.6px",
+        "mobile-line-26.4px": "22.4px",
+        "mobile-line-17.6px": "16.8.6px",
       },
       fontFamily: {
         libre: ['Manrope, sans-serif'],

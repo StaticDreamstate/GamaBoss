@@ -1,4 +1,4 @@
-import Box from "../../components/BoxHome";
+
 import { icons, images } from "../../assets";
 import Button from "../../components/Button";
 import CardPets from "../../components/CardPets";

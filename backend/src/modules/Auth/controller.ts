@@ -10,7 +10,6 @@ const controller = {
 
   async login(req: Request, res: Response) {
 
-    try {
     const { email, senha } = req.body;
 
     const savedClient = await Client.findOne({
@@ -19,7 +18,7 @@ const controller = {
 
     if (!savedClient) {
       logger.warn(`[login] Email não cadastrado: ${req.socket.remoteAddress}`);
-      return res.status(400).json("Email não cadastrado no banco");
+      return res.status(404).json("Email não cadastrado no banco");
     }
 
     const validPass = bcrypt.compareSync(senha, savedClient.senha);
@@ -38,10 +37,6 @@ const controller = {
     );
 
     return res.status(200).json(token);
-    } catch(error) {
-      logger.error(`[login] Erro: ${error} - ${req.socket.remoteAddress}`);
-      return res.status(500).json(`${error}`);
-    }
   },
 
   async gerarNovoHash(req: Request, res: Response) {

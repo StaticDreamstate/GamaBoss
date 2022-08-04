@@ -1,71 +1,59 @@
 import server from "supertest";
 import App from "../../../infra/App";
-import {faker} from "@faker-js/faker";
-import path from "path";
+import { faker } from "@faker-js/faker";
+import Clients from '../../../models/Clients'
+import logger from "../../../infra/logger";
 
-describe("GET /", () => {
+const payload: any = {
+    nome: faker.name.firstName(),
+    email: faker.internet.email(),
+    senha: faker.internet.password(),
+    telefone: String(faker.phone.number()),
+    whatsapp: String(faker.phone.number()),
+}
 
-    test("Verifica se a API está executando.", async () => {
+const usuario: any = payload;
+
+beforeAll(() => {
+    logger.debug("[beforeAll] Início dos testes do módulo Cliente");
+    Clients.create(usuario);
+  });
+
+afterAll(() => {
+    logger.debug("[beforeAll] Fim dos testes do módulo Cliente");
+    Clients.findOneAndDelete({nome: usuario.nome});
+  });
+
+describe("Testes do módulo Cliente", () => {
+
+    logger.debug("Teste da rota /");
+
+    test("Verificar se a API está de pé", async () => {
         const app = new App();
         await app.setup({
             test: true,
-          });
+        });
         const instance = app.getInstance();
         const response = await server(instance).get("/");
         expect(response.statusCode).toEqual(200);
+        logger.debug(`[/] Status da API: ${response.statusCode}`);
     });
 
-});
+    logger.debug("Teste da rota /cadastro");
 
-describe("POST /cadastro", () => {
-
-    describe("Cadastro parcial e completo", () =>{
-
-        test("Parcial: Deve retornar um status 201 em caso de sucesso.", async () => {
-            const app = new App();
-            await app.setup({
-                test: true,
-              });
-            const instance = app.getInstance();
-            const response = await server(instance).post("/cadastro").send({
-                nome: faker.name.firstName(),
-                email: faker.internet.email(),
-                senha: faker.internet.password(),
-            })
-            expect(response.statusCode).toEqual(201);
+    test("Cadastro de cliente", async () => {
+        const app = new App();
+        await app.setup({
+            test: true,
         });
-
-        test("Completo: Deve retornar um status 201 em caso de sucesso.", async () => {
-            const app = new App();
-            await app.setup({
-                test: true,
-              });
-            const instance = app.getInstance();
-            const response = await server(instance).post("/cadastro").send({
-                nome: faker.name.firstName(),
-                email: faker.internet.email(),
-                senha: faker.internet.password(),
-                telefone: faker.phone.number(),
-                whatsapp: faker.phone.number(),
-                avatar: path.resolve("home", "user", "Imagens", "imagem.jpg"),
-            })
-            expect(response.statusCode).toEqual(201);
+        const instance = app.getInstance();
+        const response = await server(instance).post("/cadastro").send({
+            ...usuario,
         });
-
-        test("Cadastro de usuário repetido.", async () => {
-            const app = new App();
-            await app.setup({
-                test: true,
-              });
-            const instance = app.getInstance();
-            const response = await server(instance).post("/cadastro").send({
-                nome: "golden",
-                email: "golden@email.com",
-                senha: faker.internet.password(),
-            })
-            expect(response.statusCode).toEqual(400);
-        });
-
+        //400 indica uma tentiva repetida de cadastro.
+        //Ou seja, o cadastro já foi bem-sucedido em beforeAll.
+        expect(response.statusCode).toEqual(400);
+        logger.debug(`[/cadastro] Cadastro de cliente: ${response.statusCode}`);
     });
 
 });
