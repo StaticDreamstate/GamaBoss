@@ -1,5 +1,7 @@
 import MenuItemsProfile from "../../components/MenuItemsProfile";
 import PetAvatar from "../../components/PetAvatar";
+
+import CardPets from "../../components/CardPets";
 import CardBluePets from "../../components/CardBluePets";
 import { mockPlansIcons, mockServicesUsed } from "./mockPlansIcons";
 
@@ -21,6 +23,7 @@ export default function Profile() {
       </p>
       <section className="flex justify-center pt-2 gap-6 flex-wrap w-auto items-center mb-20">
         {mockServicesUsed.map((service) => (
+
           <CardBluePets
             imagePet={service.image}
             texto={service.text}
