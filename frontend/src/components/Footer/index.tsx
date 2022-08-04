@@ -1,9 +1,8 @@
 import { icons } from "../../assets";
 import { Link } from "react-router-dom";
-import Cartao from "../../assets/images/formasdepagamento.png"
+import Cartao from "../../assets/images/formasdepagamento.png";
 export default function Footer() {
   return (
-
     <footer className="mt-5 border-t-2">
       <div className="py-4 sm:flex sm:justify-around lg:gap-20">
         <div className="flex justify-evenly sm: sm:gap-20">
@@ -39,12 +38,14 @@ export default function Footer() {
           </div>
         </div>
         <div className="mt-3 flex flex-col items-center">
-        <h2 className=" font-semibold flex justify-center ">Formas de pagamento</h2>
-        <img src={Cartao} className=" w-52 " alt="Imagem de cartão" />
+          <h2 className=" pt-5 md:pt-0 md:font-600 flex justify-center text-mobile-size-12px md:text-mobile-size-16px font-400">
+            Formas de pagamento
+          </h2>
+          <img src={Cartao} className=" w-52 " alt="Imagem de cartão" />
         </div>
         <div>
-          <h2 className="text-center sm:text-left mt-3 text-base font-semibold">
-            Nos acompanhe
+          <h2 className="pt-5 md:pt-0 md:font-600 text-center sm:text-left mt-3 text-base text-mobile-size-12px md:text-mobile-size-16px font-400">
+            Siga a PetPlan
           </h2>
           <div className="flex gap-5 justify-center mt-3">
             <a
@@ -90,13 +91,13 @@ export default function Footer() {
           </div>
         </div>
       </div>
-      <div className="text-center mt-2 sm:mt-1">
-        <p className="text-sm text-center text-gray-500 ">
-          © {new Date().getFullYear()} - All Rights Reserved.{" "}
-        </p>
+      <div className="text-center mt-4 sm:mt-1">
         <a href="#" className=" pb-3 text-sm text-center text-gray-500 ">
           Política de privacidade
         </a>
+        <p className="text-sm text-center text-gray-500 ">
+          © {new Date().getFullYear()} - PetPlan{" "}
+        </p>
       </div>
     </footer>
   );
