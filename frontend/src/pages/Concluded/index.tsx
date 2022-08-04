@@ -6,7 +6,7 @@ export default function Verification(){
   return (
     <main className="">
       <div className="flex justify-center">
-        <img src={images.dogConf} className="max-w-sm" alt="" />
+        <img src={images.dogConf} className="w-screen" alt="" />
       </div>
       <div className="mt-5 flex justify-center">
         <p className="text-3xl pl-16 pt-5"><span className="text-primary-blue-1">Tobias </span> está ainda mais protegido!</p>

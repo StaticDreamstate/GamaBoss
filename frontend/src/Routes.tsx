@@ -68,7 +68,14 @@ export function Routes() {
                 </Private>
               }
             />
-            <Route path="/concluido" element={<Concluded /> } />
+            <Route
+              path="/concluido"
+              element={
+                <Private>
+                  <Concluded />
+                </Private>
+              }
+            />
           </RoutesReact>
           <Footer />
         </>
