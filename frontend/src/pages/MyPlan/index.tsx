@@ -7,13 +7,13 @@ import { plans } from "../Change/objetc";
 
 export default function MyPlan() {
   return (
-    <main className="flex flex-col items-center w-full px-8">
+    <main className="flex flex-col items-center w-full px-6 font-libre">
       <div className="pt-10">
-        <PetAvatar className="" />
+        <PetAvatar className="flex justify-end" />
       </div>
       <section className="flex flex-col items-center w-full md:bg-[#FAFCFF] md:w-[1150px] ">
         <p
-          className=" pt-14 pb-8 px-4 text-left leading-mobile-line-26.4px md:leading-mobile-line-35.2px text-mobile-size-16px
+          className=" pt-14 pb-8 text-left leading-mobile-line-26.4px md:leading-mobile-line-35.2px text-mobile-size-16px
          md:text-mobile-size-24px font-normal "
         >
           O plano atual do {mockPet.name} é <strong>plano simples</strong>. Veja
@@ -35,7 +35,7 @@ export default function MyPlan() {
           </div>
         ))}
         <p
-          className="pt-10 px-8 text-left text-mobile-size-16px md:text-mobile-size-24px leading-mobile-line-26.4px 
+          className="pt-10 px-5 text-left text-mobile-size-16px md:text-mobile-size-24px leading-mobile-line-26.4px 
           md:leading-mobile-line-35.2px font-normal"
         >
           Você pode adicionar novos serviços ao seu plano.
