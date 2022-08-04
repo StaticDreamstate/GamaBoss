@@ -8,7 +8,7 @@ import { plans } from "./objetc";
 export default function Change() {
   return (
     <>
-      <main className="grid gap-2 my-16 mx-6 md:items-center justify-center">
+      <main className="grid gap-2 my-16 mx-6 md:items-center justify-center font-libre">
         <PetAvatar />
         <p className="w-full mt-12 mb-7 md:text-mobile-size-24px md:leading-mobile-line-35.2px">
           Abaixo os serviços que você pode incluir ao plano de {mockPet.name}.

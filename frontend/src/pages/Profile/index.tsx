@@ -23,7 +23,6 @@ export default function Profile() {
       </p>
       <section className="flex justify-center pt-2 gap-6 flex-wrap w-auto items-center mb-20">
         {mockServicesUsed.map((service) => (
-
           <CardBluePets
             imagePet={service.image}
             texto={service.text}
