@@ -12,6 +12,7 @@ export default function Home() {
 
           <h2 className="pt-[42px] px-[24px] font-600 text-mobile-size-24px font-libre leading-[26.4px]" >
             {`Olá, `} <span className="text-primary-blue-1"> Alessandra!</span>
+          </h2>
 
           <h2 className="pt-[42px] px-[24px] font-600 text-mobile-size-24px font-libre leading-[26.4px]">
             {`Olá, `}{" "}
@@ -62,6 +63,7 @@ export default function Home() {
           <CardPets imagePet={images.dog4} texto={"Seu amigo pet precisa de uma companhia?"} redirect={""} />
           <CardPets imagePet={images.dog5} texto={"Dicas para seu cachorro conviver melhor com gatos"} redirect={""} />
           <CardPets imagePet={images.dog6} texto={"Saiba quando seu pet deve tomar as vacinas V8 e V10"} redirect={""} />
+        </div>
 
         <div className="mx-6 my-14 flex flex-wrap ">
           <CardPets

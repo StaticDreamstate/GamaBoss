@@ -7,9 +7,9 @@ import { plans } from "../Change/objetc";
 
 export default function MyPlan() {
   return (
-    <main className="flex flex-col items-center w-full px-8">
+    <main className="flex flex-col items-center w-full px-8 font-libre">
       <div className="pt-10">
-        <PetAvatar className="" />
+        <PetAvatar className="flex justify-end" />
       </div>
       <section className="flex flex-col items-center w-full md:bg-[#FAFCFF] md:w-[1150px] ">
         <p

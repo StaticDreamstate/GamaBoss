@@ -8,7 +8,7 @@ interface IPetAvatar {
 export default function PetAvatar(props:IPetAvatar) {
 
   return (
-    <div className={`w-80 flex items-center ${props.className}`}>
+    <div className={`w-80 flex justify-end items-center ${props.className}`}>
       <img
         className="w-16 h-16 rounded-full object-contain "
         src={mockPet.img}
