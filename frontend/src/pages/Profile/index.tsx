@@ -34,7 +34,7 @@ export default function Profile() {
       <p className="pt-12 pb-9 pl-6 pr-10 border-t-2">
       Consulte a quantidade de serviços que você já utilizou
       </p>
-      <section className="flex justify-center pt-2 gap-6 flex-wrap w-auto items-center ">
+      <section className="flex justify-center gap-6 flex-wrap w-auto items-center ">
         <CardBluePets
           imagePet={images.calendar_month}
           texto="Consultas"

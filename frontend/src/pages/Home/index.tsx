@@ -14,7 +14,7 @@ export default function Home() {
         <div className="">
 
           <h2 className="pt-[42px] px-[24px] font-600 text-mobile-size-24px font-libre leading-[26.4px]" >
-            {`Olá, `} <span className="text-primary-blue-1"> {mockPet.name} </span>
+            {`Olá, `} <span className="text-primary-blue-1"> Alessandra!</span>
           </h2>
           <p className="px-[24px] pt-[8px] pb-12 font-400 text-mobile-size-16px font-libre leading-[22.4px]">
             O que você deseja fazer hoje?
@@ -40,11 +40,11 @@ export default function Home() {
           </span>
         </div>
 
-        <div className="mx-6 my-14">
+        <div className=" flex justify-center gap-10  col flex-wrap mx-6 my-14">
 
-          <CardPets imagePet={images.dog4} texto={"O que fazer quando o pet é muito agitado?"} redirect={""} />
-          <CardPets imagePet={images.dog5} texto={"Quais as vantagens de um plano de saúde para pet?"} redirect={""} />
-          <CardPets imagePet={images.dog6} texto={"5 cuidados para o bem-estar do seu pet"} redirect={""} />
+          <CardPets imagePet={images.dog4} texto={"Seu amigo pet precisa de uma companhia?"} redirect={""} />
+          <CardPets imagePet={images.dog5} texto={"Dicas para seu cachorro conviver melhor com gatos"} redirect={""} />
+          <CardPets imagePet={images.dog6} texto={"Saiba quando seu pet deve tomar as vacinas V8 e V10"} redirect={""} />
 
         </div>
         <div className="justify-self-end mr-5">
