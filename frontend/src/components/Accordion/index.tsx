@@ -29,7 +29,7 @@ export default function Accordion(props: IaccordionProps) {
             <button
               onClick={() => toggleAccordion(index)}
               type="button"
-              className={`flex items-center justify-between w-[308px] md:w-[564px] h-11 p-5 md:p-7 font-medium text-mobile-size-16px md:text-mobile-size-24px text-left text-gray-1 border-2 hover:border-primary-blue-2 border-gray-4  rounded-b-md rounded-t-md `}
+              className={`flex items-center justify-between w-[308px] md:w-[564px] h-11 p-5 md:p-7 font-medium text-mobile-size-16px md:text-mobile-size-24px text-left text-gray-3 border-2 hover:border-primary-blue-2 border-gray-4  rounded-b-md rounded-t-md `}
             >
               <span>{props.titleAccordion}</span>
               <img
