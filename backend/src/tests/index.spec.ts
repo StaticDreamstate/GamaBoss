@@ -14,8 +14,8 @@ const payload: any = {
 }
 
 let novoHash: string = "";
-let plano: any;
-const usuario: any = payload;
+let usuario: any = payload;
+let userID: any;
 
 const pet: any = {
     nome: faker.name.firstName(),
@@ -31,8 +31,6 @@ beforeAll(() => {
 
 afterAll(() => {
     logger.debug("[beforeAll] Fim da bateria de testes.");
-    Clients.findOneAndDelete(usuario._id);
-    Pets.findOneAndDelete(pet._id);
 });
 
 describe("Bateria de testes integrados", () => {
@@ -122,116 +120,119 @@ describe("Bateria de testes integrados", () => {
     test("Novo cadastro de pet", async () => {
         const app = new App();
         await app.setup({
-            test: true,
+            test: false,
         });
+        userID = Clients.find({nome: usuario.nome});
+        console.log(userID._id); //retornando "undefined"
         const instance = app.getInstance();
-        const response = await server(instance).post(`/cadastrar-pet/${usuario._id}/`).send({
+        const response = await server(instance).post(`/cadastrar-pet/${userID._id}`).send({
             ...pet,
         });
 
         expect(response.statusCode).toEqual(201);
-        logger.debug(`[/cadastrar-pet] Cadastro de pet: ${response.statusCode}`);
+        logger.debug(`[/cadastrar-pet/${userID._id}] Cadastro de pet: ${response.statusCode}`);
     });
 
-    logger.debug("Teste da rota /listar-pets/:dono");
 
-    test("Pegando todos os pets de um determinado cliente", async () => {
-        const app = new App();
-        await app.setup({
-            test: true,
-        });
-        const instance = app.getInstance();
-        const response = await server(instance).get(`/listar-pets/${pet.dono}`);
-        expect(response.statusCode).toEqual(200);
-        logger.debug(`[/listar-pets/${pet.dono}] Retorno dos pets de ${pet.dono}: ${response.statusCode}`);
-    });
+    // logger.debug("Teste da rota /listar-pets/:dono");
 
-    logger.debug("Teste da rota /listar-pet/:id");
+    // test("Pegando todos os pets de um determinado cliente", async () => {
+    //     const app = new App();
+    //     await app.setup({
+    //         test: true,
+    //     });
+    //     const instance = app.getInstance();
+    //     const response = await server(instance).get(`/listar-pets/${pet.dono}`);
+    //     expect(response.statusCode).toEqual(200);
+    //     logger.debug(`[/listar-pets/${pet.dono}] Retorno dos pets de ${pet.dono}: ${response.statusCode}`);
+    // });
 
-    test("Pegando um determinado pet pelo id", async () => {
-        const app = new App();
-        await app.setup({
-            test: true,
-        });
-        const instance = app.getInstance();
-        const response = await server(instance).get(`/listar-pet/${pet._id}`);
-        expect(response.statusCode).toEqual(200);
-        logger.debug(`[/listar-pet/${pet._id}] Retorno de um pet específico: ${pet._id} - ${response.statusCode}`);
-    });
+    // logger.debug("Teste da rota /listar-pet/:id");
 
-    logger.debug("Teste da rota /editar-pet/:dono/:id");
+    // test("Pegando um determinado pet pelo id", async () => {
+    //     const app = new App();
+    //     await app.setup({
+    //         test: true,
+    //     });
+    //     const instance = app.getInstance();
+    //     const response = await server(instance).get(`/listar-pet/${pet._id}`);
+    //     expect(response.statusCode).toEqual(200);
+    //     logger.debug(`[/listar-pet/${pet._id}] Retorno de um pet específico: ${pet._id} - ${response.statusCode}`);
+    // });
 
-    test("Editando informações de um determinado pet", async () => {
-        const app = new App();
-        await app.setup({
-            test: true,
-        });
+    // logger.debug("Teste da rota /editar-pet/:dono/:id");
 
-        const newData: any = {
-            nome: faker.name.firstName(),
-            raca: faker.animal.dog(),
-            sexo: faker.name.gender(true),
-            idade: String(faker.datatype.number()),
-            peso: String(faker.datatype.number()),
-        };
+    // test("Editando informações de um determinado pet", async () => {
+    //     const app = new App();
+    //     await app.setup({
+    //         test: true,
+    //     });
 
-        const instance = app.getInstance();
-        const response = await server(instance).put(`/editar-pet/${usuario._id}/${pet._id}`).send({
-            ...newData,
-        });
-        expect(response.statusCode).toEqual(200);
-        logger.debug(`[/editar-pet/${usuario._id}/${pet._id}] Edição das informações do pet ${pet._id}: ${response.statusCode}`);
-    });
+    //     const newData: any = {
+    //         nome: faker.name.firstName(),
+    //         raca: faker.animal.dog(),
+    //         sexo: faker.name.gender(true),
+    //         idade: String(faker.datatype.number()),
+    //         peso: String(faker.datatype.number()),
+    //     };
 
-    logger.debug("Teste da rota /novo-plano/:id");
+    //     const instance = app.getInstance();
+    //     const response = await server(instance).put(`/editar-pet/${usuario._id}/${pet._id}`).send({
+    //         ...newData,
+    //     });
+    //     expect(response.statusCode).toEqual(200);
+    //     logger.debug(`[/editar-pet/${usuario._id}/${pet._id}] Edição das informações do pet ${pet._id}: ${response.statusCode}`);
+    // });
 
-    test("Criando um plano para um animal já cadastrado (pelo seu id)", async () => {
-        const app = new App();
-        await app.setup({
-            test: true,
-        });
-        const instance = app.getInstance();
-        const response = await server(instance).post(`/novo-plano/${pet._id}`).send({
-            vacina: true,
-        });
-        plano = response;
-        expect(response.statusCode).toEqual(200);
-        logger.debug(`[/novo-plano/${pet._id}] Criação de novo plano: ${response.statusCode}`);
-    });
+    // logger.debug("Teste da rota /novo-plano/:id");
 
-    logger.debug("Teste da rota /listar-plano/:id");
+    // test("Criando um plano para um animal já cadastrado (pelo seu id)", async () => {
+    //     const app = new App();
+    //     await app.setup({
+    //         test: true,
+    //     });
+    //     const instance = app.getInstance();
+    //     const response = await server(instance).post(`/novo-plano/${pet._id}`).send({
+    //         vacina: true,
+    //     });
+    //     plano = response;
+    //     expect(response.statusCode).toEqual(200);
+    //     logger.debug(`[/novo-plano/${pet._id}] Criação de novo plano: ${response.statusCode}`);
+    // });
 
-    test("Listando os dados de um plano por id", async () => {
-        const app = new App();
-        await app.setup({
-            test: true,
-        });
-        const instance = app.getInstance();
-        const response = await server(instance).get(`/listar-plano/${plano._id}`);
-        expect(response.statusCode).toEqual(200);
-        logger.debug(`[/listar-plano/${plano._id}] Dados do plano ${plano._id}: ${response.statusCode}`);
-    });
+    // logger.debug("Teste da rota /listar-plano/:id");
 
-    logger.debug("Teste da rota /atualizar-plano/:id");
+    // test("Listando os dados de um plano por id", async () => {
+    //     const app = new App();
+    //     await app.setup({
+    //         test: true,
+    //     });
+    //     const instance = app.getInstance();
+    //     const response = await server(instance).get(`/listar-plano/${plano._id}`);
+    //     expect(response.statusCode).toEqual(200);
+    //     logger.debug(`[/listar-plano/${plano._id}] Dados do plano ${plano._id}: ${response.statusCode}`);
+    // });
 
-    test("Editando informações de um determinado plano", async () => {
-        const app = new App();
-        await app.setup({
-            test: true,
-        });
+    // logger.debug("Teste da rota /atualizar-plano/:id");
 
-        const newData: any = {
-            vacina: true,
-            emergencia: true,
-            teleAtendimento: true,
-        };
+    // test("Editando informações de um determinado plano", async () => {
+    //     const app = new App();
+    //     await app.setup({
+    //         test: true,
+    //     });
 
-        const instance = app.getInstance();
-        const response = await server(instance).put(`/atualizar-plano/${plano._id}/`).send({
-            ...newData,
-        });
-        expect(response.statusCode).toEqual(200);
-        logger.debug(`[/atualizar-plano/${plano._id}/] Edição das informações do plano ${plano._id}: ${response.statusCode}`);
-    });
+    //     const newData: any = {
+    //         vacina: true,
+    //         emergencia: true,
+    //         teleAtendimento: true,
+    //     };
+
+    //     const instance = app.getInstance();
+    //     const response = await server(instance).put(`/atualizar-plano/${plano._id}/`).send({
+    //         ...newData,
+    //     });
+    //     expect(response.statusCode).toEqual(200);
+    //     logger.debug(`[/atualizar-plano/${plano._id}/] Edição das informações do plano ${plano._id}: ${response.statusCode}`);
+    // });
 
 });
