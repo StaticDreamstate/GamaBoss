@@ -1,54 +1,34 @@
-import { images, icons } from "../../assets";
 import MenuItemsProfile from "../../components/MenuItemsProfile";
 import PetAvatar from "../../components/PetAvatar";
 
 import CardPets from "../../components/CardPets";
 import CardBluePets from "../../components/CardBluePets";
+import { mockPlansIcons, mockServicesUsed } from "./mockPlansIcons";
 
 export default function Profile() {
-
   return (
-    <main >
+    <main className="px-6">
       <section className="mt-8">
         <PetAvatar />
       </section>
-      <section>
-        <div className="py-3 px-6">
-          <MenuItemsProfile image={icons.calendar_today} textContent="Agendar consulta"/>
-        </div>
-        <div className="py-3 px-6">
-          <MenuItemsProfile image={icons.vacine} textContent="Agendar vacina" />
-        </div>
-        <div className="py-3 px-6">
-          <MenuItemsProfile image={icons.medical_services} textContent="Atendimento de emergência" />
-        </div>
-        <div className="py-3 px-6">
-          <MenuItemsProfile image={icons.consult} textContent="Consultar especialista" />
-        </div>
-        <div className="py-3 px-6">
-          <MenuItemsProfile image={icons.edit} textContent="Alterar plano" />
-        </div>
+      <section className="flex flex-col md:flex-row sm:my-10 md:flex-wrap lg:mx-[230px] ">
+        {mockPlansIcons.map((plan, index) => (
+          <div key={plan.title + index} className="py-3 px-6 w-[260px]">
+            <MenuItemsProfile image={plan.image} textContent={plan.title} />
+          </div>
+        ))}
       </section>
       <p className="pt-12 pb-9 pl-6 pr-10 border-t-2">
-      Consulte a quantidade de serviços que você já utilizou
+        Consulte a quantidade de serviços que você já utilizou
       </p>
-      <section className="flex justify-center pt-2 gap-6 flex-wrap w-auto items-center ">
-        <CardBluePets
-          imagePet={images.calendar_month}
-          texto="Consultas"
-          redirect="#"/>
+      <section className="flex justify-center pt-2 gap-6 flex-wrap w-auto items-center mb-20">
+        {mockServicesUsed.map((service) => (
           <CardBluePets
-          imagePet={images.vaccines}
-          texto="Vacinas"
-          redirect="#"/>
-          <CardBluePets
-          imagePet={images.healing}
-          texto="Internação"
-          redirect="#"/>
-          <CardBluePets
-          imagePet={images.medical_service_card}
-          texto="Emergência"
-          redirect="#"/>
+            imagePet={service.image}
+            texto={service.text}
+            redirect={service.redirect}
+          />
+        ))}
       </section>
     </main>
   );
