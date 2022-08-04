@@ -10,7 +10,7 @@ export default function Header() {
   const navigate = useNavigate();
 
   return (
-    <header className="bg-white w-screen h-14 shadow-md flex items-center justify-center md:justify-between px-3">
+    <header className="bg-white w-full h-14 shadow-md flex items-center justify-center md:justify-between px-3">
       <button
         className="absolute left-3 text-3xl md:hidden"
         onClick={() => setOpen(!open)}
