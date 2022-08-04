@@ -1,11 +1,13 @@
 interface ICarPetProps {
-    children?: JSX.Element;
-    imagePet: any;
-    texto: string;
-    redirect: string;
+  children?: JSX.Element;
+  imagePet: any;
+  texto: string;
+  redirect: string;
+  className?: string;
 }
 
 export default function CardPets(props: ICarPetProps) {
+
     return (
         <a href={props.redirect} className="flex md:h-[231px]  mb-4 items-center md:w-[500px]
         rounded-lg border-solid border-0 bg-[#FAF6E6]">
@@ -14,4 +16,17 @@ export default function CardPets(props: ICarPetProps) {
         
         </a>
     );
+
+  return (
+    <a
+      href={props.redirect}
+      className={`flex h-[120px] w-[311px] mb-4 rounded-lg border-solid border-0 bg-[#FAF6E6] ${props.className}`}
+    >
+      <img className="rounded-l-lg w-[130px]" src={props.imagePet} alt="" />
+      <p className="mx-5 my-9 font-500 text-mobile-size-14px font-libre leading-[19.6px] ">
+        {props.texto}
+      </p>
+    </a>
+  );
+
 }
