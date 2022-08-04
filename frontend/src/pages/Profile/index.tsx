@@ -1,13 +1,9 @@
-import { useNavigate } from "react-router-dom";
-import Button from "../../components/Button";
 import { images, icons } from "../../assets";
 import MenuItemsProfile from "../../components/MenuItemsProfile";
 import PetAvatar from "../../components/PetAvatar";
-import CardPets from "../../components/CardPets";
 import CardBluePets from "../../components/CardBluePets";
 
 export default function Profile() {
-  const navigate = useNavigate();
 
   return (
     <main >
