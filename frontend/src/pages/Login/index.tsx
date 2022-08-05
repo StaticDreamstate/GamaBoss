@@ -25,7 +25,8 @@ export default function Login() {
         alt="imagem de pets"
         className="w-screen md:absolute md:left-0 md:h-[468px]"
       />
-      <div className=" grid justify-around md:justify-items-center p-5 w-full z-10 md:rounded-[32px] md:border-2 md:border-primary-blue-1 md:mt-2 md:w-[536px] md:bg-white ">
+      <section className="md:py-64 md:justify-items-center z-10">
+      <div className=" grid justify-around md:justify-items-center p-5 w-full z-10 md:rounded-[32px] md:border-2 md:border-primary-blue-1 md:mt-6 lg:w-[914px] lg:h-[839] md:bg-white ">
         <h2 className="justify-self-left  w-[244px] sm:w-full pt-6 font-600 text-mobile-size-24px leading-mobile-line-26.4px text-primary-blue-1">
           Que bom ter você com a gente!
         </h2>
@@ -97,6 +98,7 @@ export default function Login() {
           </div>
         </form>
       </div>
+      </section>
     </main>
   );
 }
