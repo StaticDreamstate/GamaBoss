@@ -84,7 +84,7 @@ cd backend/docs
 Utilizando as plataformas de hospedagem fizemos o deploy da aplicação em diferentes links:
 
 * [Back-end](https://api-gamaboss.herokuapp.com) 
-* [Front-end](https://gama-boss-pet-plan.vercel.app/)
+* [Front-end](https://pet-plan.vercel.app/)
 
 <div>
   <br>
