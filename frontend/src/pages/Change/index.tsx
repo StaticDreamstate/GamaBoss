@@ -8,17 +8,17 @@ import { plans } from "./objetc";
 export default function Change() {
   return (
     <>
-      <main className="px-6">
-        <section className="mt-8">
-          <PetAvatar className="w-max"/>
+      <main className="pr-5  justify-center">
+        <section className="mt-8 pl-6">
+          <PetAvatar className="w-max m-10" />
         </section>
-        <section className="gap-2 my-16 mx-6 md:items-center text-center justify-center font-libre">
-          <p className="w-full mt-12 mb-7 md:text-mobile-size-24px md:leading-mobile-line-35.2px">
+        <section className="gap-2 my-10 mx-6 md:items-center text-left  flex justify-center flex-col">
+          <p className="w-full mt-7 mb-7  text-left md:text-center md:text-mobile-size-24px md:leading-mobile-line-35.2px">
             Abaixo os serviços que você pode incluir ao plano de {mockPet.name}.
           </p>
 
           {plans.map((plan) => (
-            <div className="flex items-baseline justify-center ">
+            <div className="flex items-baseline ">
               {plan.userHas == false ? (
                 <>
                   <input className="m-2 md:w-6 md:h-6" type="checkbox" />
@@ -33,17 +33,17 @@ export default function Change() {
               )}
             </div>
           ))}
-<div className="flex items-baseline justify-center">
-          <p
-            className="w-[319px] text-mobile-size-16px leading-mobile-line-26.4px md:w-[424px] lg:w-[631px] md:text-mobile-size-24px
+          <div className="flex items-baseline ">
+            <p
+              className="w-[319px] text-mobile-size-16px leading-mobile-line-26.4px md:w-[424px] lg:w-[631px] md:text-mobile-size-24px
           md:leading-mobile-line-35.2px"
-          >
-            O plano atual do {mockPet.name} é <strong>plano simples. </strong>
-            Veja abaixo o que está incluso.
-          </p>
-</div>
+            >
+              O plano atual do {mockPet.name} é <strong>plano simples. </strong>
+              Veja abaixo o que está incluso.
+            </p>
+          </div>
           {plans.map((plan) => (
-            <div className="flex items-baseline justify-center ">
+            <div className="flex items-baseline  ">
               {plan.userHas == true ? (
                 <>
                   <input
