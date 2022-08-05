@@ -8,55 +8,63 @@ import { Link } from "react-router-dom";
 
 export default function Verification(){
   return (
-    <main className="grid justify-items-center font-normal">
+    <main className="grid justify-items-center">
         <img
           src={images.dogConf}
           className="w-screen md:absolute md:left-0 md:h-[468px]"
-          alt="" />
-      <div className="grid justify-items-center w-full z-10 md:rounded-[32px] md:border-2 md:border-primary-blue-1 md:mt-60 md:w-[500px] md:bg-white font-normal mb-32">
-        <p className="text-3xl pl-16 pt-10">
-          <span className="text-primary-blue-1"> {mockPet.name} </span>
-            {` está próximo de ter ainda mais proteção!`} 
-        </p>
-        <div className="font-sans">
-          <p className="pl-16 font-sans text-xl pt-10">Ao confirmar os serviços adicionados, você receberá um e-mail de confirmação das alterações do seu plano atual.</p>
+          alt=""
+        />
+        <div className="grid justify-items-center w-full z-10 md:rounded-[32px] md:border-2 md:border-primary-blue-1 md:mt-60 md:w-[500px] md:bg-white mb-32">
+          <p className="text-2xl mt-10 ml-6 mr-6">
+            <span className="text-primary-blue-1"> {mockPet.name} </span>
+              {` está próximo de ter ainda mais proteção!`} 
+          </p>
+          <div className="">
+            <p className="pl-6 pr-4 text-base pt-10">Ao confirmar os serviços <strong>adicionados</strong>, você receberá um e-mail de confirmação das alterações do seu plano atual.</p>
         </div>
-        <div className="font-sans mt-10"> 
-          <div className="flex items-center space-x-8">
+
+        <div 
+          className="sm:font-sans grid grid-cols-1 gap-6 sm:grid-cols-2 items-center mt-10"
+        >
+          <div className="">
             <img
-              className="pr-[1px]"
+              className="pr-[10px] inline-block"
               src={icons.iconCheck}
               alt="icon check"
             /> 
-            <p className="">
+            <span className="">
             {mockVerification.servico1}            
-            </p>
-            <img
-              className="pr-[1px]"
-              src={icons.iconCheck}
-              alt="icon check"
-            /> 
-            <p className="">
-            {mockVerification.servico2}            
-            </p>
+            </span>
           </div>
-          <div className="flex items-center space-x-5 mt-4">
+          <div className="">
             <img
-              className="pr-[10px]"
+              className="pr-[10px] inline-block"
               src={icons.iconCheck}
               alt="icon check"
             /> 
-            <p className="">
+            <span className="">
+            {mockVerification.servico2}            
+            </span>
+          </div>
+          <div className="">
+            <img
+              className="pr-[10px] inline-block"
+              src={icons.iconCheck}
+              alt="icon check"
+            /> 
+            <span className="">
             {mockVerification.servico3}            
-            </p>
+            </span>
+          </div>
+          <div className="">
             <img
-              className="pr-[10px]"
+              className="pr-[10px] inline-block"
               src={icons.iconCheck}
               alt="icon check"
             /> 
-            <p className="">
+            <span className="">
             {mockVerification.servico4}            
-            </p>
+            </span>
           </div>
         </div>
         <div className="font-sans mt-10">
@@ -77,17 +85,16 @@ export default function Verification(){
                     </label>
                 </div> */}
 
-        <div className="flex items-center justify-center mt-10 font-normal mb-10 space-x-4">
+        <div className="sm:font-sans grid grid-cols-1 gap-6 sm:grid-cols-2 items-center mt-10 mb-16">
           <Link to={"/alterar"}>
             <Button
               className="font-sans text-black pt-2 pb-2 pr-7 pl-7 border-solid border-2 border-primary-blue-1 bg-white shadow-lg"
-              src=""
               buttonLabel={"Cancelar"}>
             </Button>
           </Link>
           <Link to={"/concluido"}>
             <Button
-              className="font-sans pt-3 pb-3 pr-8 pl-8 shadow-lg"
+              className="font-sans pt-2 pb-2 pr-7 pl-7 shadow-lg"
               src=""
               buttonLabel={"Confirmar"}>
             </Button>

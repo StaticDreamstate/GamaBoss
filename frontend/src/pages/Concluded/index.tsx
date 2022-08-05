@@ -9,8 +9,8 @@ export default function Verification() {
           src={images.dogConf}
           className="w-screen md:absolute md:left-0 md:h-[468px]"
           alt="" />
-      <div className="grid justify-items-center w-full z-10 md:rounded-[32px] md:border-2 md:border-primary-blue-1 md:mt-80 md:w-[600px] md:bg-white font-normal mb-32">
-        <p className="text-3xl pt-10 pl-2">
+      <div className="grid justify-items-center w-full z-10 md:rounded-[32px] md:border-2 md:border-primary-blue-1 md:mt-80 md:w-[600px] md:bg-white mb-32">
+        <p className="text-3xl pt-10 pl-6">
           <span className="text-primary-blue-1">Tobias </span> está ainda mais
           protegido!
         </p>
@@ -22,7 +22,7 @@ export default function Verification() {
           </p>
         </div>
 
-        <div className="flex items-center justify-center mt-12 font-normal mb-10 space-x-8">
+        <div className="sm:font-sans grid grid-cols-1 gap-6 sm:grid-cols-2 items-center mt-10 mb-12">
           <Link to={"/home"}>
             <Button
               className="font-sans text-black pt-2 pb-2 pr-7 pl-7 border-solid border-2 border-primary-blue-1 bg-white shadow-lg"
