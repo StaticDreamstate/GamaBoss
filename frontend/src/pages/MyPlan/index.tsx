@@ -7,7 +7,7 @@ import { plans } from "../Change/objetc";
 
 export default function MyPlan() {
   return (
-    <main className="px-6">
+    <main className="px-7">
       <section className="mt-8">
         <PetAvatar className="w-max" />
       </section>
