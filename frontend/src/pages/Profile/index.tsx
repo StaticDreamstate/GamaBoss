@@ -9,9 +9,9 @@ export default function Profile() {
   return (
     <main className="px-6">
       <section className="mt-8">
-        <PetAvatar />
+        <PetAvatar className="w-max" />
       </section>
-      <section className="flex flex-col md:flex-row sm:my-10 md:flex-wrap lg:mx-[230px]">
+      <section className="flex flex-col md:flex-row sm:my-10 md:flex-wrap lg:mx-[230px] ">
         {mockPlansIcons.map((plan, index) => (
           <div key={plan.title + index} className="py-3 px-6 w-[260px] border-b-2 md:border-none">
             <MenuItemsProfile image={plan.image} textContent={plan.title} />

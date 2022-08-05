@@ -8,19 +8,20 @@ interface IPetAvatar {
 export default function PetAvatar(props:IPetAvatar) {
 
   return (
-    <div className={`w-80 flex justify-end items-center ${props.className}`}>
+    <div className="flex items-center">
       <img
-        className="w-16 h-16 rounded-full object-contain "
+        className="rounded-full object-contain sm:w-[180px] w-[70px]"
         src={mockPet.img}
         alt="Foto do pet"
       />
-      <span className="px-2 text-white font-700 text-mobile-size-16px bg-[url('../../assets/icons/avatarBar.svg)]">{mockPet.name}</span>
-      <img src={icons.avatarBar} alt="" />
-      <span className="px-3 text-white font-500 text-mobile-size-14px">{mockPet.age}  anos</span>
-      <img src={icons.avatarBar} alt="" />
-      <span className="px-3 text-white font-500 text-mobile-size-14px">{mockPet.weight}  kg</span>
-      <span className="bg-primary-blue-1 h-8 absolute w-[290px] -z-10 rounded ml-5"></span>
-      <img  className="ml-7 p-1 cursor-pointer rounded-sm hover:bg-white hover:bg-opacity-50 transition-colors" width={23} src={icons.iconEdit} alt="Icone de editar dados do pet" />
+      <div className="w-full sm:mt-12 sm:h-16 h-8 flex justify-around items-center bg-primary-blue-1 text-white relative right-5 -z-10">
+        <span className=" pl-4 font-700 text-mobile-size-16px">{mockPet.name}</span>
+        <span className="border-r-2 h-6"></span>
+        <span className="font-500 text-mobile-size-14px">{mockPet.age} anos</span>
+        <span className="border-r-2 h-6"></span>
+        <span className="font-500 text-mobile-size-14px">{mockPet.weight} kg</span>
+        <img src={icons.iconEdit} alt="Icone de editar dados do pet"/>
+      </div>
     </div>
   );
 }

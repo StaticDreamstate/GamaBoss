@@ -24,7 +24,7 @@ export default function Verification(){
         </div>
 
         <div 
-          className="sm:font-sans grid grid-cols-1 gap-6 sm:grid-cols-2 items-center mt-10"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2 items-center mt-10 pl-2 pr-2"
         >
           <div className="">
             <img
@@ -67,7 +67,7 @@ export default function Verification(){
             </span>
           </div>
         </div>
-        <div className="font-sans mt-10">
+        <div className="mt-10">
           <CheckBox labelContent={"Li os termos e confirmo a altereção"} /> 
         </div>
     
@@ -85,16 +85,16 @@ export default function Verification(){
                     </label>
                 </div> */}
 
-        <div className="sm:font-sans grid grid-cols-1 gap-6 sm:grid-cols-2 items-center mt-10 mb-16">
+        <div className="sm:font-sans gap-6 flex flex-col-reverse md:flex-row items-center mt-10 mb-12">
           <Link to={"/alterar"}>
             <Button
-              className="font-sans text-black pt-2 pb-2 pr-7 pl-7 border-solid border-2 border-primary-blue-1 bg-white shadow-lg"
+              className="text-black pt-2 pb-2 pr-7 pl-7 border-solid border-2 border-primary-blue-1 bg-white shadow-lg "
               buttonLabel={"Cancelar"}>
             </Button>
           </Link>
           <Link to={"/concluido"}>
             <Button
-              className="font-sans pt-2 pb-2 pr-7 pl-7 shadow-lg"
+              className="pt-2 pb-2 pr-7 pl-7 shadow-lg"
               src=""
               buttonLabel={"Confirmar"}>
             </Button>
