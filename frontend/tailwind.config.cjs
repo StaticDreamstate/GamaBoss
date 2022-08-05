@@ -42,7 +42,7 @@ module.exports = {
         "mobile-line-17.6px": "16.8.6px",
       },
       fontFamily: {
-        libre: ['Manrope, sans-serif'],
+        libre: ['Libre Franklin, sans-serif'],
       },
     },
   },
