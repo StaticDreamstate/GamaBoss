@@ -18,7 +18,7 @@ export default function Header() {
         <img className="w-5" src={icons.iconMenu} alt="Icone de menu" />
       </button>
       <button
-        onClick={() => navigate("/perfil")}
+        onClick={() => navigate("/home")}
         className="font-600 text-mobile-size-24px leading-mobile-line-26.4px text-primary-blue-1 mx-3"
       >
         PetPlan
