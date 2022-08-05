@@ -69,7 +69,7 @@ export default function Home() {
           >
             Ver mais dicas
             <img
-              className="pl-[5px] h-[20px] w-[25px]"
+              className="pl-[5px] h-[20px] w-[25px] md:w-[35px] md:h-[24px]"
               src={icons.iconArromRight}
               alt="icon arrom right"
             />
