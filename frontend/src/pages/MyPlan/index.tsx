@@ -11,6 +11,7 @@ export default function MyPlan() {
       <section className="mt-8">
         <PetAvatar className="w-max" />
       </section>
+      <div className="flex justify-center">
       <section className="flex flex-col items-center w-full md:bg-[#FAFCFF] md:w-[1150px] ">
         <p
           className=" pt-14 pb-8 text-left leading-mobile-line-26.4px md:leading-mobile-line-35.2px text-mobile-size-16px
@@ -61,6 +62,7 @@ export default function MyPlan() {
           </div>
         </div>
       </section>
+      </div>
     </main>
   );
 }
