@@ -45,7 +45,7 @@ E  _voilà_
   <br>
 </div>
 
-## 📦 Desenvolvimento
+## Desenvolvimento 📦
 
 <table>
 <thead>

@@ -2,6 +2,9 @@ import Button from "../../components/Button";
 import CheckBox from "../../components/CheckBox";
 import { images } from "../../assets";
 import { mockPet } from "../../components/PetAvatar/mock";
+import { mockVerification } from "./mock";
+import { icons } from "../../assets";
+import { Link } from "react-router-dom";
 
 export default function Verification(){
   return (
@@ -18,8 +21,46 @@ export default function Verification(){
         <div className="font-sans">
           <p className="pl-16 font-sans text-xl pt-10">Ao confirmar os serviços adicionados, você receberá um e-mail de confirmação das alterações do seu plano atual.</p>
         </div>
+        <div className="font-sans mt-10"> 
+          <div className="flex items-center space-x-8">
+            <img
+              className="pr-[1px]"
+              src={icons.iconCheck}
+              alt="icon check"
+            /> 
+            <p className="">
+            {mockVerification.servico1}            
+            </p>
+            <img
+              className="pr-[1px]"
+              src={icons.iconCheck}
+              alt="icon check"
+            /> 
+            <p className="">
+            {mockVerification.servico2}            
+            </p>
+          </div>
+          <div className="flex items-center space-x-5 mt-4">
+            <img
+              className="pr-[10px]"
+              src={icons.iconCheck}
+              alt="icon check"
+            /> 
+            <p className="">
+            {mockVerification.servico3}            
+            </p>
+            <img
+              className="pr-[10px]"
+              src={icons.iconCheck}
+              alt="icon check"
+            /> 
+            <p className="">
+            {mockVerification.servico4}            
+            </p>
+          </div>
+        </div>
         <div className="font-sans mt-10">
-          <CheckBox labelContent={"Li os termos e confirmo a altereação"} /> 
+          <CheckBox labelContent={"Li os termos e confirmo a altereção"} /> 
         </div>
     
           {/* ------ Testando formas de check box com Tailwind -------
@@ -36,11 +77,21 @@ export default function Verification(){
                     </label>
                 </div> */}
 
-        <div className="flex items-center justify-center mt-10 font-normal">
-          <Button className="font-sans pt-4 pb-4 pr-8 pl-8 shadow-lg" src="" buttonLabel={"Confirmar"}> </Button>
-        </div>
-        <div className="flex items-center justify-center mt-3 mb-10 font-normal">
-          <Button className="font-sans text-black pt-3 pb-3 pr-7 pl-7 border-solid border-4 border-primary-blue-1 bg-white shadow-lg" buttonLabel={"Cancelar"}> </Button>
+        <div className="flex items-center justify-center mt-10 font-normal mb-10 space-x-4">
+          <Link to={"/alterar"}>
+            <Button
+              className="font-sans text-black pt-2 pb-2 pr-7 pl-7 border-solid border-2 border-primary-blue-1 bg-white shadow-lg"
+              src=""
+              buttonLabel={"Cancelar"}>
+            </Button>
+          </Link>
+          <Link to={"/concluido"}>
+            <Button
+              className="font-sans pt-3 pb-3 pr-8 pl-8 shadow-lg"
+              src=""
+              buttonLabel={"Confirmar"}>
+            </Button>
+          </Link>
         </div>
       </div>
     </main>
