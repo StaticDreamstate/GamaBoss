@@ -33,7 +33,7 @@ export default function Change() {
               )}
             </div>
           ))}
-
+<div className="flex items-baseline justify-center">
           <p
             className="w-[319px] text-mobile-size-16px leading-mobile-line-26.4px md:w-[424px] lg:w-[631px] md:text-mobile-size-24px
           md:leading-mobile-line-35.2px"
@@ -41,7 +41,7 @@ export default function Change() {
             O plano atual do {mockPet.name} é <strong>plano simples. </strong>
             Veja abaixo o que está incluso.
           </p>
-
+</div>
           {plans.map((plan) => (
             <div className="flex items-baseline justify-center ">
               {plan.userHas == true ? (
