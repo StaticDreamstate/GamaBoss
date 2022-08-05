@@ -22,16 +22,16 @@ export default function Verification() {
           </p>
         </div>
 
-        <div className="sm:font-sans grid grid-cols-1 gap-6 sm:grid-cols-2 items-center mt-10 mb-12">
+        <div className="gap-6 flex flex-col-reverse md:flex-row items-center mt-10 mb-12">
           <Link to={"/home"}>
             <Button
-              className="font-sans text-black pt-2 pb-2 pr-7 pl-7 border-solid border-2 border-primary-blue-1 bg-white shadow-lg"
+              className="text-black pt-2 pb-2 pr-7 pl-7 border-solid border-2 border-primary-blue-1 bg-white shadow-lg"
               buttonLabel={"Reportar um problema"}
             />
           </Link>
           <Link to={"/home"}>
             <Button
-              className="font-sans pt-3 pb-3 pr-8 pl-8 shadow-lg"
+              className="pt-3 pb-3 pr-8 pl-8 shadow-lg"
               buttonLabel={"Ir para a página inicial"}
             />
           </Link>
