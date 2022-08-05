@@ -9,7 +9,7 @@ export default function Change() {
   return (
     <>
       <main className="pr-5  justify-center">
-        <section className="mt-8 pl-6">
+        <section className="mt-8 pl-7">
           <PetAvatar className="w-max m-10" />
         </section>
         <section className="gap-2 my-10 mx-6 md:items-center text-left  flex justify-center flex-col">
