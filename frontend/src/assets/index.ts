@@ -21,7 +21,7 @@ import dog6 from "./images/dog6.png";
 import avatarBar from "./icons/avatarBar.svg";
 import iconCheck from "./icons/iconCheck.png";
 import iconArromRight from "./icons/iconArrowRight.png.png";
-import imagePets from "./images/imagePets.svg";
+import imagePets from "./images/Login.png";
 import DogHome from "./images/DogHome.png";
 import dogConf from "./images/dogConf.png";
 import petAvatar from "./images/petAvatar.png";
